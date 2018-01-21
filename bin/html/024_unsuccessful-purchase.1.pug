@@ -1,0 +1,11 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .purchase--page
+    .container
+      h1 
+        span.icon: svg: use(xlink:href="#danger")
+        span Покупка не удалась
+        small Попробуйте еще раз позже или напишите нам о проблеме
+  include templates/footer

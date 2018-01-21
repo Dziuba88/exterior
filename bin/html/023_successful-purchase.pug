@@ -1,0 +1,45 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .purchase--page
+    .container
+      h1 
+        span.icon: svg: use(xlink:href="#success")
+        span Спасибо за покупку!
+      table.cabinet--table.purchased
+        thead
+          tr
+            th(colspan="2") Название
+            th Розничная цена
+            th Цена дилера
+            th Кол-во
+            th Стоимость USD
+            th Стоимость MDL
+        tbody
+          - for (i=1; i<=3; i++)
+            tr
+              td: a(href="").purchased--item: img(src="img/product1.jpg", alt="")
+              td(data-header="Название") DH-IPC-HDBW2421R-ZSVFS
+              td(data-header="Розничная цена") 26 USD
+              td(data-header="Цена дилера") 26 USD
+              td(data-header="Кол-во") 1
+              td(data-header="Стоимость USD") 26 USD
+              td(data-header="Стоимость MDL") 1500 MDL
+      .row.purchase--summary
+        .col.md-7.lg-8
+          h4
+            svg: use(xlink:href="#truck")
+            span Выбранный Способ доставки
+          p: a(href="") Самовывоз
+        .col.md-5.lg-4
+          h4 Итого:
+          table
+            tr
+              th Доставка:
+              td 50 MDL
+            tr
+              th Всего к оплате:
+              td 1600 MDL
+          a.btn.btn--continue_shoping(href="") Продолжить покупки
+  include templates/footer

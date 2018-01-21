@@ -115,5 +115,62 @@
       }
     }
   }
+
+  &--table {
+    width: 100%;
+    border: 0;
+    border-spacing: 0;
+    border-collapse: collapse;
+
+    th, td {
+      vertical-align: middle;
+    }
+
+
+    &.purchased {
+      margin: 0 0 30px;
+      th, td {
+        text-align: right;
+        color: #050d33;
+        padding: 10px;
+      }
+      thead {
+        tr {
+          border-bottom: 2px solid #050d33;
+        }
+        th {
+          font-family: 'Open Sans Condensed', sans-serif;
+
+          &:first-child {
+            text-align: left;
+          }
+        }
+      }
+
+      tbody {
+        tr {
+          border-bottom: 1px solid #696e85;
+        }
+        td {
+          &:first-child, &:nth-child(2) {
+            text-align: left;
+          }
+        }
+      }
+
+      a.purchased--item {
+        display: block;
+
+        img {
+          display: block;
+          width: 60px;height: 60px;
+        }
+
+        &:hover {
+          opacity: .5;
+        }
+      }
+    }
+  }
 }
 

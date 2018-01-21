@@ -1,0 +1,72 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .cabinet--page
+    .container
+      h1 Личный кабинет
+      .row.bottom.cabinet--subnav
+        .col.md-8
+          nav.submenu: ul
+            li: a(href="") Заказы
+            li: a(href="") Акции
+            li: a(href="").active Сток
+            li: a(href="") Новинки
+            li: a(href="") Excoin
+            li: a(href="") В ремонте
+            li: a(href="") Профиль
+        .col.md-4
+          .cabinet--profile__informer
+            span.curs Курс USD: 21.65 MDL
+            span.balance Баланс: 
+              strong -200 MDL
+
+      .row
+        - for (i=1; i<=4; i++)
+          .col.md-3
+            .product
+              a(href="").product--image
+                img(src="img/product1.jpg", alt="")
+              a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+              p Протокол http; протокол https; протокол TCP
+              p 
+                span.old--price 1500 леев
+                span.new--price 1499 леев
+              .product--controls
+                //.number
+                  input(type='text', value='1', min='1')
+                  .btn-plus: svg: use(xlink:href="#plus")
+                  .btn-minus: svg: use(xlink:href="#minus")
+              button.btn.add-to-basket
+                span.inactive В корзину
+                span.active
+                  svg: use(xlink:href="#success")
+                  span добавлено
+          .col.md-3
+            .product
+              a(href="").product--image
+                img(src="img/product2.jpg", alt="")
+              a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+              p Протокол http; протокол https; протокол TCP
+              p 
+                span.old--price 1500 леев
+                span.new--price 1499 леев
+              .product--controls
+                //.number
+                  input(type='text', value='1', min='1')
+                  .btn-plus: svg: use(xlink:href="#plus")
+                  .btn-minus: svg: use(xlink:href="#minus")
+              button.btn.add-to-basket
+                span.inactive В корзину
+                span.active
+                  svg: use(xlink:href="#success")
+                  span добавлено
+
+      nav.pagination: ul
+        li: a(href="").active 1
+        li: a(href="") 2
+        li: a(href="") 3
+        li: a(href="") 4
+        li: a(href="") 5
+
+  include templates/footer
