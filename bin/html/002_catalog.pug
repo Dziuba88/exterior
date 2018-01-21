@@ -1,0 +1,14 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .categories
+    .container
+      h1 Каталог
+      .row
+        - for (i=1; i<=9; i++)
+          .col.md-4.sm-6
+            a.categories--item(href="")
+              img(src="img/category.jpg", alt="")
+              span Кабель силовой и сигнальный
+  include templates/footer

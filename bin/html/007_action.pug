@@ -1,0 +1,44 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .action--page
+    .container
+      .row
+        .col.md-6
+          .owl-carousel#actionsync-1
+            .item: img(src="img/action1.jpg", alt="")
+            .item: img(src="img/action2.jpg", alt="")
+            .item: img(src="img/action3.jpg", alt="")
+            .item: img(src="img/action4.jpg", alt="")
+            .item: img(src="img/action1.jpg", alt="")
+            .item: img(src="img/action2.jpg", alt="")
+            .item: img(src="img/action3.jpg", alt="")
+            .item: img(src="img/action4.jpg", alt="")
+          .owl-carousel#actionsync-2
+            .item: img(src="img/action1.jpg", alt="")
+            .item: img(src="img/action2.jpg", alt="")
+            .item: img(src="img/action3.jpg", alt="")
+            .item: img(src="img/action4.jpg", alt="")
+            .item: img(src="img/action1.jpg", alt="")
+            .item: img(src="img/action2.jpg", alt="")
+            .item: img(src="img/action3.jpg", alt="")
+            .item: img(src="img/action4.jpg", alt="")
+        .col.md-5.offset-md-1: .action--info
+          p.action--time
+            svg: use(xlink:href="#calendar")
+            span Действие акции с 20.02.2017 по 23.02.2017
+          h1 Комплект IP от Dahua
+          p Феномер "психической мутации" принимает во внимание резкий принцип артистизма, это применимо и к исключительным правам. Художественный ритуал, следовательно, принимает во внимание постмодернизм. Освобождение умышленно. Антропосоциология, как можно доказать с помощью не совсем тривиальных допущений, непредвзято раскладывает на элементы ничтожный декаданс. Выявляя устойчивые архетипы на примере художественного творчества, можно сказать, что отношение к современности продолжает взаимозачет.
+      .action--form
+        .row.bottom
+          .col.md-3.lg-4
+            label Имя
+            input(type="text")
+          .col.md-3.lg-4
+            label Телефон
+            input(type="tel")
+          .col.md-6.lg-4: button.btn.btn--action Заказать обратную связь
+
+
+  include templates/footer

@@ -1,0 +1,263 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .container
+    .product--page
+      .product--page__sidebar
+        include templates/categories
+        .item__featured
+          h2 Похожие товары
+          .product
+            a(href="").product--image.sale: img(src="img/product1.jpg", alt="")
+            a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+            p.product--info 1/3” Прогрессивная CMOS 4Megapixel
+            p 
+              span.old--price 1500 леев
+              span.new--price 1499 леев
+            button.btn.add-to-basket
+              span.inactive В корзину
+              span.active
+                svg: use(xlink:href="#success")
+                span добавлено
+          .product
+            a(href="").product--image: img(src="img/product2.jpg", alt="")
+            a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+            p.product--info 1/3” Прогрессивная CMOS 4Megapixel
+            p: span.price 1499 леев
+            button.btn.add-to-basket
+              span.inactive В корзину
+              span.active
+                svg: use(xlink:href="#success")
+                span добавлено
+          .product
+            a(href="").product--image.new: img(src="img/product1.jpg", alt="")
+            a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+            p.product--info 1/3” Прогрессивная CMOS 4Megapixel
+            p: span.price 1499 леев
+            button.btn.add-to-basket
+              span.inactive В корзину
+              span.active
+                svg: use(xlink:href="#success")
+                span добавлено
+      .product--page__main
+        h1 DH-IPC-HDBW2421R-ZSVFS
+        .item
+          .item__gallery.sale(data-gallery)
+            nav.preview: ul
+              li(data-image="1").active: img(src="img/product1.jpg", alt="")
+              li(data-image="2"): img(src="img/product2.jpg", alt="")
+              li(data-image="3"): img(src="img/product1.jpg", alt="")
+            nav.thumbs: ul
+              li(data-link="1").active: img(src="img/product1.jpg", alt="")
+              li(data-link="2"): img(src="img/product2.jpg", alt="")
+              li(data-link="3"): img(src="img/product1.jpg", alt="")
+            button.btn.btn--compare(data-class-toggle="active")
+              svg: use(xlink:href="#success")
+              span Сравнить
+          .item__info
+            p.art Артикул: 000245 
+            p.description 4 Megapixel IP сетевая камера IPC-HDBW2421R-ZS/VFS
+            .item--row
+              .col--left
+                dl.item__info--price
+                  dt Цена:
+                  dd
+                    span.price.old 1500 леев
+                    span.price.new 1499 леев
+                  dt Розничная цена:
+                  dd: span.price 1499 леев
+                  dt Цена дилера:
+                  dd: span.price 1499 леев
+              .col--right
+                .item--timer
+                  .title Акция
+                    small осталось:
+                  .counter(data-action)
+            .item--row
+              .col--left
+                .product--controls
+                  .number
+                    input(type='text', value='1', min='1')
+                    .btn-plus: svg: use(xlink:href="#plus")
+                    .btn-minus: svg: use(xlink:href="#minus")
+                  button.btn.add-to-basket
+                    span.inactive В корзину
+                    span.active
+                      svg: use(xlink:href="#success")
+                      span добавлено
+              .col--flex
+                .item__info--stock Осталось: 
+                  span.label.danger мало
+            .item__icons: img(src="img/infografic.png", alt="")
+        .item__more
+          nav.tabs: ul
+            li.active: a(href="#home" data-toggle="tab") Описание
+            li: a(href="#spec" data-toggle="tab") Характеристики
+            li: a(href="#accessories" data-toggle="tab") Аксессуары
+            li: a(href="#download" data-toggle="tab") Скачать
+            li: a(href="#video" data-toggle="tab") Видео
+          <!-- Tab panes -->
+          .tab-content
+            .tab-pane.active(role="tabpanel")#home
+              nav: ul
+                li 1/3” Прогрессивная CMOS 4Megapixel
+                li H.264+ & H.264 двойной поток кодирование
+                li 20фпс@4м(2688×1520) - 25/30к / с@2м(1920×1080) 
+                li Функция WDR(120дб), День/Ночь(ICR), технология 3dnr, автоматический баланс белого, АРУ, УБК
+                li Мониторинг нескольких сетей: веб-просмотрщик, CMS(систем DSS/PSS) и СППР
+                li Микро слот для карты SD, до 128 Гб
+                li 2.7~12mm переменным фокусным расстоянием
+                li Макс ИК-светодиодов Длина 30м
+                li Класс защиты IP67, Класс защиты IK10,PoE
+                li 1/3” Прогрессивная CMOS 4Megapixel
+                li H.264+ & H.264 двойной поток кодирование
+                li 20фпс@4м(2688×1520) - 25/30к / с@2м(1920×1080) 
+                li Функция WDR(120дб), День/Ночь(ICR), технология 3dnr, автоматический баланс белого, АРУ, УБК
+                li Мониторинг нескольких сетей: веб-просмотрщик, CMS(систем DSS/PSS) и СППР
+                li Микро слот для карты SD, до 128 Гб
+                li 2.7~12mm переменным фокусным расстоянием
+                li Макс ИК-светодиодов Длина 30м
+                li Класс защиты IP67, Класс защиты IK10,PoE
+            .tab-pane(role="tabpanel")#spec
+              table.table--spec
+                tbody
+                  tr
+                    th Экран (диагональ)
+                    td 7”
+                  tr
+                    th Тип дисплея
+                    td TFT LCD
+                  tr
+                    th Видеопоток
+                    td PAL/NTSC
+                  tr
+                    th Количество видеоканалов
+                    td 4
+                  tr
+                    th Количество аудиоканалов
+                    td 2
+                  tr
+                    th Управление замком
+                    td: svg.success: use(xlink:href="#success")
+                  tr
+                    th Регулировка громкости
+                    td: svg.success: use(xlink:href="#success")
+                  tr
+                    th Способ установки
+                    td накладной
+                  tr
+                    th Функция квадратора
+                    td: svg.danger: use(xlink:href="#danger")
+                  tr
+                    th Функция PIP
+                    td: svg.danger: use(xlink:href="#danger")
+                  tr
+                    th Встроенный блок памяти
+                    td: svg.danger: use(xlink:href="#danger")
+                  tr
+                    th Сенсорный экран
+                    td: svg.danger: use(xlink:href="#danger")
+            .tab-pane(role="tabpanel")#accessories
+              .row
+                .col.lg-4.md-6
+                  .product
+                    a(href="").product--image.sale: img(src="img/product1.jpg", alt="")
+                    a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+                    p 
+                      span.old--price 1500 леев
+                      span.new--price 1499 леев
+                    button.btn.add-to-basket
+                      span.inactive В корзину
+                      span.active
+                        svg: use(xlink:href="#success")
+                        span добавлено
+                .col.lg-4.md-6
+                  .product
+                    a(href="").product--image: img(src="img/product2.jpg", alt="")
+                    a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+                    p: span.price 1499 леев
+                    button.btn.add-to-basket
+                      span.inactive В корзину
+                      span.active
+                        svg: use(xlink:href="#success")
+                        span добавлено
+                .col.lg-4.md-6
+                  .product
+                    a(href="").product--image: img(src="img/product2.jpg", alt="")
+                    a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+                    p: span.price 1499 леев
+                    button.btn.add-to-basket
+                      span.inactive В корзину
+                      span.active
+                        svg: use(xlink:href="#success")
+                        span добавлено
+            .tab-pane(role="tabpanel")#download
+              nav.downloads: ul
+                li: a(href="")
+                  span.file-type(title="PDF"): svg: use(xlink:href="#pdf")
+                  span Технические характеристики
+                li: a(href="")
+                  span.file-type(title="EXEL"): svg: use(xlink:href="#exel")
+                  span Спецификация
+                li: a(href="")
+                  span.file-type(title="WORD"): svg: use(xlink:href="#word")
+                  span Руководство пользователя
+                li: a(href="")
+                  span.file-type(title="PDF"): svg: use(xlink:href="#pdf")
+                  span Гарантийные обязательства
+                li: a(href="")
+                  span.file-type(title="Driver"): svg: use(xlink:href="#driver")
+                  span Драйвер устройства
+
+
+
+            .tab-pane(role="tabpanel")#video
+              .video-container: iframe(width="100%" height="auto" src="https://www.youtube.com/embed/SzURg7UBK4I?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+        .item__featured
+          h2 С этим часто покупают
+          .owl-carousel
+            - for (i=1; i<=2; i++)
+              .product
+                a(href="").product--image.sale: img(src="img/product1.jpg", alt="")
+                a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+                p.product--info 1/3” Прогрессивная CMOS 4Megapixel
+                p 
+                  span.old--price 1500 леев
+                  span.new--price 1499 леев
+                button.btn.add-to-basket
+                  span.inactive В корзину
+                  span.active
+                    svg: use(xlink:href="#success")
+                    span добавлено
+              .product
+                a(href="").product--image: img(src="img/product2.jpg", alt="")
+                a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+                p.product--info 1/3” Прогрессивная CMOS 4Megapixel
+                p: span.price 1499 леев
+                button.btn.add-to-basket
+                  span.inactive В корзину
+                  span.active
+                    svg: use(xlink:href="#success")
+                    span добавлено
+              .product
+                a(href="").product--image.new: img(src="img/product1.jpg", alt="")
+                a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+                p.product--info 1/3” Прогрессивная CMOS 4Megapixel
+                p: span.price 1499 леев
+                button.btn.add-to-basket
+                  span.inactive В корзину
+                  span.active
+                    svg: use(xlink:href="#success")
+                    span добавлено
+              .product
+                a(href="").product--image.hot: img(src="img/product2.jpg", alt="")
+                a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+                p.product--info 1/3” Прогрессивная CMOS 4Megapixel
+                p: span.price 1499 леев
+                button.btn.add-to-basket
+                  span.inactive В корзину
+                  span.active
+                    svg: use(xlink:href="#success")
+                    span добавлено
+  include templates/footer

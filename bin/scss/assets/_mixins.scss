@@ -1,0 +1,72 @@
+// Media Breakpoints //
+  // Helper respond UP //
+    @mixin smallUp {
+      @media only screen and ( min-width: #{$xs-screen + 1} ) {
+        @content;
+      }
+    }
+
+    @mixin tabletUp {
+      @media only screen and (min-width: #{$sm-screen + 1}) {
+        @content;
+      }
+    }
+
+    @mixin mediumUp {
+      @media only screen and (min-width: #{$md-screen + 1}) {
+        @content;
+      }
+    }
+  // Helper respond DOWN //
+    @mixin smallDown {
+      @media only screen and ( max-width: #{$sm-screen} ) {
+        @content;
+      }
+    }
+
+    @mixin tabletDown {
+      @media only screen and (max-width: #{$md-screen}) {
+        @content;
+      }
+    }
+    
+    @mixin mediumDown {
+      @media only screen and (max-width: #{$lg-screen}) {
+        @content;
+      }
+    }
+
+  // DEFAULTS //
+    @mixin mobile {
+      @media only screen and ( max-width: #{$xs-screen} ) {
+        @content;
+      }
+    }
+
+    @mixin small {
+      @media only screen and ( min-width: #{$xs-screen + 1} ) and ( max-width: #{$sm-screen} ) {
+        @content;
+      }
+    }
+
+    @mixin tablet {
+      @media only screen and ( min-width: #{$sm-screen + 1} ) and (max-width: #{$md-screen}) {
+        @content;
+      }
+    }
+
+    @mixin medium {
+      @media only screen and ( min-width: #{$md-screen + 1} ) and (max-width: #{$lg-screen}) {
+        @content;
+      }
+    }
+
+    @mixin large {
+      @media only screen and ( min-width: #{$lg-screen + 1} ) {
+        @content;
+      }
+    }
+
+
+
+// END BreakPoints DEMO: @include [name of breakpoint] { ... styles ... } //

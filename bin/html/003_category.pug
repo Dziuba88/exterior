@@ -1,0 +1,325 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  nav.breadcrumb
+    .container: ul
+      li: a(href="") Главная
+      li: a(href="") Каталог
+      li: span IP камеры для помещений
+  .category--layout
+    .sidebar--left
+      .wraper
+        include templates/categories
+        .filter
+          h2 Фильтр
+          .filter--item
+            label Категория
+            select(data-select)
+              option(data-display="Выбрать категорию") Ничего не выбрано
+              option.level1 СИСТЕМА ВИДЕОНАБЛЮДЕНИЯ
+              option.level2 IP камеры для помещений
+              option.level2 Macroscop ПО
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level2 Уличные IP камеры
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level2 NVR Видео регистраторы
+              option.level3 NVR Видео регистраторы
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level1 ОХРАННО-ПОЖАРНАЯ СИГНАЛИЗАЦИЯ
+              option.level2 IP камеры для помещений
+              option.level2 Macroscop ПО
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level2 Уличные IP камеры
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level2 NVR Видео регистраторы
+              option.level3 NVR Видео регистраторы
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level1 СИСТЕМА КОНТРОЛЯ И УПРАВЛЕНИЯ ДОСТУПОМ
+              option.level2 IP камеры для помещений
+              option.level2 Macroscop ПО
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level2 Уличные IP камеры
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level2 NVR Видео регистраторы
+              option.level3 NVR Видео регистраторы
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level1 СИСТЕМА ОПОВЕЩЕНИЯ
+              option.level2 IP камеры для помещений
+              option.level2 Macroscop ПО
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level2 Уличные IP камеры
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level2 NVR Видео регистраторы
+              option.level3 NVR Видео регистраторы
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level1 ВИДЕОДОМОФОНЫ
+              option.level2 IP камеры для помещений
+              option.level2 Macroscop ПО
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level2 Уличные IP камеры
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level2 NVR Видео регистраторы
+              option.level3 NVR Видео регистраторы
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level1 БЛОКИ ПИТАНИЯ И АККУМУЛЯТОРЫ
+              option.level2 IP камеры для помещений
+              option.level2 Macroscop ПО
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level2 Уличные IP камеры
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level2 NVR Видео регистраторы
+              option.level3 NVR Видео регистраторы
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level1 ДОВОДЧИКИ ДВЕРИ
+              option.level2 IP камеры для помещений
+              option.level2 Macroscop ПО
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level2 Уличные IP камеры
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level2 NVR Видео регистраторы
+              option.level3 NVR Видео регистраторы
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level1 ЭЛЕКТРОМАГНИТНЫЕ И ЭЛЕКТРОМЕХАНИЧЕСКИЕ ЗАМКИ
+              option.level2 IP камеры для помещений
+              option.level2 Macroscop ПО
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level2 Уличные IP камеры
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level2 NVR Видео регистраторы
+              option.level3 NVR Видео регистраторы
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level1 КАБЕЛЬ СИЛОВОЙ И СИГНАЛЬНЫЙ
+              option.level2 IP камеры для помещений
+              option.level2 Macroscop ПО
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level2 Уличные IP камеры
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level2 NVR Видео регистраторы
+              option.level3 NVR Видео регистраторы
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level1 ПЛАСТИКОВЫЙ КАНАЛ И ГОФРА
+              option.level2 IP камеры для помещений
+              option.level2 Macroscop ПО
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+              option.level2 Уличные IP камеры
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level2 NVR Видео регистраторы
+              option.level3 NVR Видео регистраторы
+              option.level3 Macroscop ПО
+              option.level3 Уличные IP камеры
+              option.level3 NVR Видео регистраторы
+
+
+
+
+
+
+
+          .filter--item
+            label Камера
+            select(data-select)
+              option(data-display="Выбрать опцию") Ничего не выбрано
+              option 1.3 Mpx
+              option 3 Mpx
+              option 6 Mpx
+              option 8 Mpx
+              option 10 Mpx
+          .filter--item
+            label Поддержка micro SD карт
+            select(data-select)
+              option(data-display="Выбрать опцию") Ничего не выбрано
+              option до 4 ГБ
+              option до 8 ГБ
+              option до 16 ГБ
+              option до 32 ГБ
+              option до 64 ГБ
+          .filter--item.price
+            label Цена
+            .price--inputs
+              input(type="text").left#start-range
+              input(type="text").right#stop-range
+            #nouislider
+          button.btn.btn--blue Применить
+    .category--items
+      h1.category--title IP камеры для помещений
+      .category--sort
+        a(href="" data-class-toggle="active").by-price
+          span Сортировать по цене
+          svg: use(xlink:href="#sort")
+        a(href="").compare Сравнение товаров
+      .row
+        .col.md-4.sm-6
+          .product
+            a(href="").product--image.sale
+              img(src="img/product1.jpg", alt="")
+            a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+            p Протокол http; протокол https; протокол TCP
+            p 
+              span.old--price 1500 леев
+              span.new--price 1499 леев
+            .product--controls
+              .number
+                input(type='text', value='1', min='1')
+                .btn-plus: svg: use(xlink:href="#plus")
+                .btn-minus: svg: use(xlink:href="#minus")
+              button.btn.add-to-basket
+                span.inactive В корзину
+                span.active
+                  svg: use(xlink:href="#success")
+                  span добавлено
+        .col.md-4.sm-6
+          .product
+            a(href="").product--image.new
+              img(src="img/product2.jpg", alt="")
+            a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+            p Протокол http; протокол https; протокол TCP
+            p 
+              span.price 1499 леев
+            .product--controls
+              .number
+                input(type='text', value='1', min='1')
+                .btn-plus: svg: use(xlink:href="#plus")
+                .btn-minus: svg: use(xlink:href="#minus")
+              button.btn.add-to-basket
+                span.inactive В корзину
+                span.active
+                  svg: use(xlink:href="#success")
+                  span добавлено
+        .col.md-4.sm-6
+          .product
+            a(href="").product--image.hot
+              img(src="img/product1.jpg", alt="")
+            a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+            p Протокол http; протокол https; протокол TCP
+            p 
+              span.price 1499 леев
+            .product--controls
+              .number
+                input(type='text', value='1', min='1')
+                .btn-plus: svg: use(xlink:href="#plus")
+                .btn-minus: svg: use(xlink:href="#minus")
+              button.btn.add-to-basket
+                span.inactive В корзину
+                span.active
+                  svg: use(xlink:href="#success")
+                  span добавлено
+        .col.md-4.sm-6
+          .product
+            a(href="").product--image
+              img(src="img/product1.jpg", alt="")
+            a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+            p Протокол http; протокол https; протокол TCP
+            p: span.price 1499 леев
+            .product--controls
+              .number
+                input(type='text', value='1', min='1')
+                .btn-plus: svg: use(xlink:href="#plus")
+                .btn-minus: svg: use(xlink:href="#minus")
+              button.btn.add-to-basket
+                span.inactive В корзину
+                span.active
+                  svg: use(xlink:href="#success")
+                  span добавлено
+        - for (i=1; i<=8; i++)
+          .col.md-4.sm-6
+            .product
+              a(href="").product--image
+                img(src="img/product1.jpg", alt="")
+              a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+              p Протокол http; протокол https; протокол TCP
+              p: span.price 1499 леев
+              .product--controls
+                .number
+                  input(type='text', value='1', min='1')
+                  .btn-plus: svg: use(xlink:href="#plus")
+                  .btn-minus: svg: use(xlink:href="#minus")
+                button.btn.add-to-basket
+                  span.inactive В корзину
+                  span.active
+                    svg: use(xlink:href="#success")
+                    span добавлено
+      nav.pagination: ul
+        li: a(href="").active 1
+        li: a(href="") 2
+        li: a(href="") 3
+        li: a(href="") 4
+        li: a(href="") 5
+    .sidebar--right
+      .wraper
+        h3 Новинки
+        - for (i=1; i<=3; i++)
+          .product
+            a(href="").product--image.new
+              img(src="img/product2.jpg", alt="")
+            a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+            p Протокол http; протокол https; протокол TCP
+            p 
+              span.price 1499 леев
+            .product--controls
+              .number
+                input(type='text', value='1', min='1')
+                .btn-plus: svg: use(xlink:href="#plus")
+                .btn-minus: svg: use(xlink:href="#minus")
+              button.btn.add-to-basket
+                span.inactive В корзину
+                span.active
+                  svg: use(xlink:href="#success")
+                  span добавлено
+
+
+
+
+
+  include templates/footer
+
+
+

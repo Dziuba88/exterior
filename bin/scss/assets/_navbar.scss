@@ -1,0 +1,38 @@
+.navbar {
+  background-color: #f2f3f5;
+
+  &--wraper, &--nav {
+    display: flex;
+    align-items: center;
+  }
+
+  &--wraper {
+    margin: 0 ( $gutter / -2 );
+  }
+
+  &--nav {
+    margin: 0;
+    padding: 0 ( $gutter / 2 );
+    list-style: none;
+    list-style-image: none;
+    font-family: 'Open Sans Condensed', sans-serif;
+    font-weight: 600;
+    font-size: 17px;
+    text-transform: uppercase;
+
+    li {
+      a {
+        text-decoration: none;
+        display: block;
+        padding: 15px 20px;
+      }
+
+      &:first-child a {padding-left: 0;}
+
+      &:last-child a {padding-right: 0;}
+
+    }
+
+    
+  }
+}

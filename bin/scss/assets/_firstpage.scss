@@ -1,0 +1,247 @@
+// FP-SLIDER //
+  .fp--slider {
+    margin: 0;
+    padding: 0;
+
+    .owl-dots {
+      position: absolute;
+      left: 0;right: 0;bottom: 20px;
+      font-size: 0;line-height: 0;
+      text-align: center;
+
+      .owl-dot {
+        display: inline-block;
+        width: 20px;height: 20px;
+        border-radius: 6px;
+        border: 2px solid #ffffff;
+        margin: 0 2.5px;
+
+        &.active {
+          background-color: #fff;
+        }
+      }
+    }
+
+    .slide {
+      padding: 90px 0;
+      min-height: 455px;
+
+      .container {
+        transform: translateY(50px);
+        opacity: 0;
+        transition: .25s .25s ease-in-out;
+      }
+
+      &--text {
+        margin: 0 0 50px;
+        color: #fff;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 50px;
+        line-height: 1;
+        text-transform: uppercase;
+      }
+
+      .btn--outline {
+        border-radius: 6px;
+        border: 2px solid #ffffff;
+        padding: 15px 30px;
+        line-height: 20px;
+        color: #fff;
+        font-size: 16px;
+        text-transform: uppercase;
+        font-weight: 300;
+        letter-spacing: 0.01em;
+        span {
+          display: inline-block;
+          line-height: 1;
+          vertical-align: middle; 
+        }
+        img {
+          width: 20px;height: 20px;
+          display: inline-block;
+          vertical-align: middle;
+          line-height: 1;
+          margin-left: 20px;
+          margin-top: -2px;
+        }
+        &:hover {
+          background-color: #2475c7;
+        }
+      }
+    }
+
+    .active .slide .container {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+// END FP-SLIDER //
+// FP-BLOCKS //
+  .fp--blocks {
+    display: flex;
+    background-color: #2475c7;
+    border-top: 1px solid #fff;
+
+    .block--link {
+      flex: 1;
+      position: relative;
+      padding: 60px 15px;
+      text-align: center;
+      border-left: 1px solid #fff;
+      text-decoration: none;
+      color: #fff;
+
+      &:first-child {
+        border-left: none;
+      }
+
+      strong, small {
+        transform-origin: top center;
+        transition: .35s ease-in-out
+      }
+
+      img {
+        width: 60px;height: 60px;
+        transform-origin: center center;
+        transition: .35s ease-in-out
+      }
+
+      strong {
+        display: block;
+        text-align: center;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 30px;line-height: 30px;font-weight: 600;letter-spacing: .01em;
+        text-transform: uppercase;padding-top: 10px;
+
+      }
+
+      small {
+        display: block;
+        font-family: 'Open Sans', sans-serif;
+        font-size: 16px;line-height: 30px;font-weight: 400;
+      }
+
+      &:hover {
+        img {transform: scale(1.75)}
+        strong, small {transform: translateY(30px)}
+      }
+    }
+  }
+// END FP-BLOCKS //
+// FP-NEWS //
+  .fp--news {
+    padding: 0 ( $gutter / 2 );
+
+    &__item {
+      display: flex;
+      align-items: stretch;
+      padding: 0;
+      .item--image {
+        width: 255px;
+        flex: none;
+      }
+      .item--content {
+        background-image: linear-gradient(120deg, #ffffff, #f2f3f5 );
+        padding: 60px 30px;
+        &__date {
+          font-size: 14px;
+          svg {
+            width: 14px;height: 14px;fill:#050d33;
+            margin-right: .5em;
+          }
+        }
+      }
+    }
+  }
+// END FP-NEWS //
+// FP-PRODUCTS //
+  .fp--products {
+    padding: 50px 0;
+    h2 {
+      margin: 0 0 50px;
+      text-align: center;
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-size: 40px;
+      font-weight: 600;
+      line-height: 1;
+      color: #696e85;
+      text-transform: uppercase;
+    }
+    .owl-carousel {
+      width: auto;
+      margin: 0 85px; 
+
+      .owl-nav div {
+        position: absolute;
+        top: 50%;margin-top: -20px;
+        width: 40px;height: 40px;
+
+        &:hover {opacity: .5;}
+
+        svg {
+          width: 40px;
+          height: 40px;
+          fill: #696e85;
+        }
+
+        &.owl-prev {
+          left: -85px;
+        }
+
+        &.owl-next {
+          right: -85px;
+        }
+      }
+    }
+
+    .product {
+      padding: 0 ($gutter / 2);
+      text-align: center;
+
+      &--image {
+        display: block;
+        width: 140px;
+        margin: 0 auto 10px;
+      }
+
+      &--title {
+        display: block;
+        font-family: 'Open Sans Condensed', sans-serif;
+        font-size: 18px;
+        font-weight: 600;
+        text-transform: uppercase;
+        margin-bottom: 10px;
+      }
+
+      &--info {
+        font-size: 14px;
+        line-height: 20px;
+      }
+    }
+  }
+// END FP-PRODUCTS //
+// FP-BRANDS //
+  .fp--brands {
+    padding: 50px 0 100px;
+
+    .owl-stage {
+      display: flex;
+      align-items: center;
+
+      &:after {display: none;}
+    }
+
+    .owl-item {
+      float: none;
+      flex: none;
+    }
+
+    .brand--link {
+      display: block;
+      margin: 0 30px;
+
+      &:hover {opacity: .5;}
+    }
+  }
+// END FP-BRANDS //
+

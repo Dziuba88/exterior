@@ -1,0 +1,12 @@
+.dropdown {
+
+  &--menu {
+    display: none;
+  }
+
+  &.open &--menu {
+    display: block;
+  }
+
+  
+}

@@ -1,0 +1,50 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .cabinet--page
+    .container
+      h1 Личный кабинет
+      .row.bottom.cabinet--subnav
+        .col.md-8
+          nav.submenu: ul
+            li: a(href="") Заказы
+            li: a(href="").active Акции
+            li: a(href="") Сток
+            li: a(href="") Новинки
+            li: a(href="") Excoin
+            li: a(href="") В ремонте
+            li: a(href="") Профиль
+        .col.md-4
+          .cabinet--profile__informer
+            span.curs Курс USD: 21.65 MDL
+            span.balance Баланс: 
+              strong -200 MDL
+
+      .row
+        .col.md-6: .action--item
+          a(href="").action--item__image: img(src="img/action1-1.jpg", alt="")
+          .action--item__info
+            h3: a(href="") Комплект IP от Dahua
+            p Предмет деятельности, как принято считать, ментально индуцирует позитивизм, ломая рамки привычных представлений. 
+            p.action--time
+              svg: use(xlink:href="#calendar")
+              span Действие акции с 20.02.2017 по 23.02.2017
+        .col.md-6: .action--item.inactive
+          a(href="").action--item__image
+            svg: use(xlink:href="#action-end-ru")
+            img(src="img/action1-1.jpg", alt="")
+          .action--item__info
+            h3: a(href="") Комплект IP от Dahua
+            p Предмет деятельности, как принято считать, ментально индуцирует позитивизм, ломая рамки привычных представлений. 
+            p.action--time
+              svg: use(xlink:href="#calendar")
+              span Действие акции с 20.02.2017 по 23.02.2017
+      nav.pagination: ul
+        li: a(href="").active 1
+        li: a(href="") 2
+        li: a(href="") 3
+        li: a(href="") 4
+        li: a(href="") 5
+
+  include templates/footer
