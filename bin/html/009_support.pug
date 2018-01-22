@@ -1,0 +1,29 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .support--page
+    .container
+      h1 Поддержка
+      .row
+        .col.md-6: a.support--page__link(href="") 
+          svg: use(xlink:href="#text")
+          span Техническая документация
+        .col.md-6: a.support--page__link(href="") 
+          svg: use(xlink:href="#floppy")
+          span Программное обеспечение
+        .col.md-6: a.support--page__link(href="") 
+          svg: use(xlink:href="#folder")
+          span Каталоги
+        .col.md-6: a.support--page__link(href="") 
+          svg: use(xlink:href="#video")
+          span Видео уроки
+        .col.md-6: a.support--page__link(href="") 
+          svg: use(xlink:href="#file")
+          span Рекламные материалы
+        .col.md-6: a.support--page__link(href="") 
+          svg: use(xlink:href="#certificate")
+          span Сертификаты
+
+
+  include templates/footer

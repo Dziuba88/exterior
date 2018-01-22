@@ -1,0 +1,25 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .support--page
+    .container
+      h1 Видео уроки
+      .row
+        .col.md-6
+          .video-container: iframe(width="100%" height="auto" src="https://www.youtube.com/embed/SzURg7UBK4I?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+        .col.md-6
+          .video-container: iframe(width="100%" height="auto" src="https://www.youtube.com/embed/SzURg7UBK4I?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+        .col.md-6
+          .video-container: iframe(width="100%" height="auto" src="https://www.youtube.com/embed/SzURg7UBK4I?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+        .col.md-6
+          .video-container: iframe(width="100%" height="auto" src="https://www.youtube.com/embed/SzURg7UBK4I?rel=0&amp;showinfo=0" frameborder="0" allow="autoplay; encrypted-media" allowfullscreen)
+      nav.pagination: ul
+        li: a(href="").active 1
+        li: a(href="") 2
+        li: a(href="") 3
+        li: a(href="") 4
+        li: a(href="") 5
+
+
+  include templates/footer

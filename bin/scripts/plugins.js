@@ -3,4 +3,6 @@
 //@prepros-append plugins/nouislider.js
 //@prepros-append plugins/jquery.countdownTimer.js
 //@prepros-append plugins/tab.js
+//@prepros-append plugins/transition.js
+//@prepros-append plugins/collapse.js
 

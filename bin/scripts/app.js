@@ -65,7 +65,7 @@ $(document).ready(function() {
   
   $('[data-select]').niceSelect();
 
-  $.each( $(".img_to_bg"),function(){
+  $.each( $(".img_to_bg, .thumb img"),function(){
     var cssValues = {
       "background":"url(" + $(this).attr("src") + ") no-repeat center center scroll",
       "background-size":"cover"

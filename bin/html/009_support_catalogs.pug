@@ -1,0 +1,19 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .support--page
+    .container
+      h1 Видео уроки
+      .row
+        - for (i=1; i<=8; i++)
+          .col.md-3: a.catalog__link(href=""): img(src="img/catalog1.jpg", alt="")
+      nav.pagination: ul
+        li: a(href="").active 1
+        li: a(href="") 2
+        li: a(href="") 3
+        li: a(href="") 4
+        li: a(href="") 5
+
+
+  include templates/footer

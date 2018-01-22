@@ -1,0 +1,42 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .support--page
+    .container
+      h1 Сертификаты
+      .panel-group#accordion
+        .panel
+          .panel-title(data-toggle="collapse" data-parent="#accordion" data-target="#collapse-1" aria-expanded="true") Видеонаблюдение
+          #collapse-1.panel-collapse.collapse.in
+            .panel-body
+              .row
+                - for (i=1; i<=6; i++)
+                  .col.md-2
+                    a(href="img/srt"+i+".jpg").support--page__str
+                      img(src="img/srt"+i+".jpg", alt="")
+                      span Название сертификата
+        .panel
+          .panel-title(data-toggle="collapse" data-parent="#accordion" data-target="#collapse-2") Охранно-пожарные системы безопасности
+          #collapse-2.panel-collapse.collapse
+            .panel-body
+              .row
+                - for (i=1; i<=6; i++)
+                  .col.md-2
+                    a(href="img/srt"+i+".jpg").support--page__str
+                      img(src="img/srt"+i+".jpg", alt="")
+                      span Название сертификата
+        .panel
+          .panel-title(data-toggle="collapse" data-parent="#accordion" data-target="#collapse-3") Сертификаты предприятия
+          #collapse-3.panel-collapse.collapse
+            .panel-body
+              .row
+                - for (i=1; i<=6; i++)
+                  .col.md-2
+                    a(href="img/srt"+i+".jpg").support--page__str
+                      img(src="img/srt"+i+".jpg", alt="")
+                      span Название сертификата
+
+
+
+  include templates/footer
