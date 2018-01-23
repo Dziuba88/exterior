@@ -94,7 +94,7 @@ $(document).ready(function() {
       .on('initialized.owl.carousel', function () {sync2.find(".owl-item").eq(0).addClass("current");})
       .owlCarousel({
         nav: true,
-        navText: ['<svg><use xlink:href="#arrow-big-left"></use></svg>', '<svg><use xlink:href="#arrow-big-right"></use></svg>'],
+        navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>'],
         responsive : {
           0 : { items: 1 },
           480 : { items: 2 },
@@ -150,10 +150,15 @@ $(document).ready(function() {
     },
     loop: true,
     nav: true,
-    navText: ['<svg><use xlink:href="#arrow-big-left"></use></svg>', '<svg><use xlink:href="#arrow-big-right"></use></svg>']
+    navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>']
   });
 
-  $('.fp--brands .owl-carousel').owlCarousel({
+  $('.solutions--slider .owl-carousel').owlCarousel({
+    items: 1,loop: true,nav: true,animateOut: 'fadeOut',animateIn: 'fadeIn', mouseDrag: false,
+    navText: ['<svg><use xlink:href="#arrow_left"></use></svg>', '<svg><use xlink:href="#arrow_right"></use></svg>']
+  });
+
+  $('.fp--brands .owl-carousel, .partners .owl-carousel').owlCarousel({
     responsive : {
         0 : { items: 1 },
         768 : { items: 2 },
@@ -163,7 +168,7 @@ $(document).ready(function() {
 
   $('.item__featured .owl-carousel').owlCarousel({
     nav: true,
-    navText: ['<svg><use xlink:href="#arrow-big-left"></use></svg>', '<svg><use xlink:href="#arrow-big-right"></use></svg>'],
+    navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>'],
     responsive : {
         0 : { items: 1 },
         768 : { items: 2 },
@@ -270,4 +275,47 @@ $(document).ready(function() {
 
 
 
+});
+
+
+var a = 0;
+var b = 0;
+$(window).scroll(function() {
+
+  var qTop = $('.reasons').offset().top - window.innerHeight;
+  if (b == 0 && $(window).scrollTop() > qTop) {
+    $('.reasons--item').each(function() {
+      $(this).addClass('in');
+    });
+  } else {
+    b = 0;
+    $('.reasons--item').each(function() {
+      $(this).removeClass('in');
+    });
+  }
+
+
+
+
+
+  var oTop = $('.skills').offset().top - window.innerHeight;
+  if (a == 0 && $(window).scrollTop() > oTop) {
+    $('[data-count]').each(function() {
+      var $this = $(this),
+        countTo = $this.attr('data-count');
+      $({countNum: $this.text()}).animate({countNum: countTo},
+        {
+          duration: 2000,
+          easing: 'swing',
+          step: function() {$this.text(Math.floor(this.countNum));},
+          complete: function() {$this.text(this.countNum);}
+        });
+    });
+    a = 1;
+  } else {
+    a = 0;
+    $('[data-count]').each(function() {
+      $(this).text('0');
+    });
+  }
 });

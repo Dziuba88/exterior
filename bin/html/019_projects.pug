@@ -1,0 +1,319 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .projects--page
+    section.well
+      img(src="img/project-well.jpg", alt="").img_to_bg
+      .container
+        .row
+          .col.md-8.offset-md-2.md-6.offset-md-3
+            h1 Только для тех, кто ценит качество!
+            p Наш монтаж самый профессиональный! Мы не экономим на сопутствующих материалах, потому что ценим свою репутацию и вашу лояльность!
+    section.projects--form
+      .container
+        .row.middle
+          .col.md-4
+            h3 получите бесплатную оценку эксперта
+          .col.md-8
+            .row.bottom
+              .col.md-4
+                label Ваш телефон
+                input(type="tel")
+              .col.md-4
+                label Ваше имя
+                input(type="text")
+              .col.md-4: button.btn.btn--solution Отправить заявку
+    section.solutions--slider
+      h1 Решения
+      .owl-carousel
+        .solutions--items
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_1.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_1")
+              span Решения
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_2.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_2")
+              span Жилой сектор
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_3.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_3")
+              span Медицинские<br>учереждения
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_4.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_4")
+              span Парковки
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_5.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_5")
+              span Производство
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_6.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_6")
+              span Торговля
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_7.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_7")
+              span Офисы
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_8.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_8")
+              span Университетские<br>учреждения
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_9.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_9")
+              span Банки
+        .solutions--items
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_8.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_8")
+              span Университетские<br>учреждения
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_4.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_4")
+              span Парковки
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_1.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_1")
+              span Решения
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_2.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_2")
+              span Жилой сектор
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_3.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_3")
+              span Медицинские<br>учереждения
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_5.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_5")
+              span Производство
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_6.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_6")
+              span Торговля
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_7.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_7")
+              span Офисы
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_9.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_9")
+              span Банки
+        .solutions--items
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_9.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_9")
+              span Банки
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_6.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_6")
+              span Торговля
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_2.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_2")
+              span Жилой сектор
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_8.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_8")
+              span Университетские<br>учреждения
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_4.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_4")
+              span Парковки
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_1.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_1")
+              span Решения
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_3.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_3")
+              span Медицинские<br>учереждения
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_5.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_5")
+              span Производство
+          a(href="").solutions--items__link
+            span.bg: img(src="img/solution_slide-1_7.jpg", alt="").img_to_bg
+            span.content
+              svg: use(xlink:href="#solution_7")
+              span Офисы
+    section.reasons
+      .container
+        h2 5 причин заказать систему безопасности у нас
+        .row
+          .col.reasons--item: .content
+            svg: use(xlink:href="#success")
+            h4 Проекты
+            p Индивидуальный подход к каждому проекту
+          .col.reasons--item: .content
+            svg: use(xlink:href="#success")
+            h4 Монтаж
+            p Качественные и быстрые работы
+          .col.reasons--item: .content
+            svg: use(xlink:href="#success")
+            h4 Сотрудники
+            p Только высоко квалифицированные сотрудники
+          .col.reasons--item: .content
+            svg: use(xlink:href="#success")
+            h4 Производитель
+            p Оборудование напрямую от проверенных производителей
+          .col.reasons--item: .content
+            svg: use(xlink:href="#success")
+            h4 Сервисный центр
+            p Собственный сервис-центр
+    section.projects--form
+      .container
+        .row.middle
+          .col.md-4
+            h3 получите бесплатную оценку эксперта
+          .col.md-8
+            .row.bottom
+              .col.md-4
+                label Ваш телефон
+                input(type="tel")
+              .col.md-4
+                label Ваше имя
+                input(type="text")
+              .col.md-4: button.btn.btn--solution Отправить заявку
+    section.about
+      .container
+        h2 о проектном отделе
+        .row.middle
+          .col.sm-8.lg-7.offset-lg-1: p Отдел проектов — это команда профессионалов, которые предложат<br>и установят систему безопасности, наиболее подходящую вашим требованиям. Осуществляется полный цикл работ — разработка проекта,  монтаж оборудования, техническое обслуживание объектов.
+          .col.sm-4.lg-3: p.t--center: img(src="img/about.jpg", alt="")
+        p.t--center: span.btn.btn--readmore(data-toggle="collapse" data-target="#more-info") Подробнее об отделе
+        .collapse#more-info: .content
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
+          p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
+    section.skills
+      .container
+        h2
+          strong 22 года на рынке
+          small Только за последние 5 лет нами было установлено:
+        .row
+          .col.md-3.skills--item
+            h4(data-count="800") 0
+            p систем<br>видеонаблюдения
+          .col.md-3.skills--item
+            h4(data-count="200") 0
+            p систем<br>контроля доступа
+          .col.md-3.skills--item
+            h4(data-count="310") 0
+            p cистем противопожарной сигнализации
+          .col.md-3.skills--item
+            h4(data-count="420") 0
+            p систем охранной сигнализации
+    section.steps
+      .container
+        h2 5 шагов к вашей безопасности
+        .row
+          .col.md-3.steps--item
+            svg: use(xlink:href="#success")
+            svg.steps--item__next: use(xlink:href="#success")
+            h4 Заявка
+            p Бесплатный выезд специалиста на ваш объект 
+          .col.md-3.steps--item
+            svg: use(xlink:href="#success")
+            svg.steps--item__next: use(xlink:href="#success")
+            h4 Составление сметы
+          .col.md-3.steps--item
+            svg: use(xlink:href="#success")
+            svg.steps--item__next: use(xlink:href="#success")
+            h4 Заключение договора
+          .col.md-3.steps--item
+            svg: use(xlink:href="#success")
+            svg.steps--item__next: use(xlink:href="#success")
+            h4 Монтаж
+          .col.md-3.steps--item
+            svg: use(xlink:href="#success")
+            h4 Ваш объект в безопасности!
+        .steps--form
+          .container
+            .row.middle
+              .col.md-4
+                h3 получите бесплатную оценку эксперта
+              .col.md-8
+                .row.bottom
+                  .col.md-4
+                    label Ваш телефон
+                    input(type="tel")
+                  .col.md-4
+                    label Ваше имя
+                    input(type="text")
+                  .col.md-4: button.btn.btn--solution Отправить заявку
+    section.partners
+      .container
+        h2 Нам доверяют
+        .owl-carousel
+          .partners--item: img(src="img/partner1.png", alt="")
+          .partners--item: img(src="img/partner2.png", alt="")
+          .partners--item: img(src="img/partner3.png", alt="")
+          .partners--item: img(src="img/partner4.png", alt="")
+          .partners--item: img(src="img/partner5.png", alt="")
+    section.contact
+      .container
+        h2 Остались вопросы? Ответим
+        .row
+          .col.lg-10.offset-lg-1
+            form.validate--form
+              .row
+                .col.md-6
+                  .input--row
+                    label Имя *
+                    input(type="text" required)
+                  .input--row
+                    label Телефон *
+                    input(type="tel" required)
+                  .input--row
+                    label E-mail 
+                    input(type="email" required)
+                  .captcha--block
+                .col.md-6
+                  .input--row
+                    label Отдел 
+                    select(data-select)
+                      option(data-display="Выбрать Отдел") Ничего не выбрано
+                      option Отдел 1
+                      option Отдел 2
+                      option Отдел 3
+                      option Отдел 4
+                      option Отдел 5
+                  .input--row
+                    label Сообщение
+                    textarea(name="", cols="30", rows="10")
+              p.t--center: button.btn.btn--contact Отправить
+  include templates/footer
