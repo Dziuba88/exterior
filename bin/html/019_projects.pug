@@ -7,23 +7,20 @@ block content
       img(src="img/project-well.jpg", alt="").img_to_bg
       .container
         .row
-          .col.md-8.offset-md-2.md-6.offset-md-3
+          .col.md-8.offset-md-2.lg-6.offset-lg-3
             h1 Только для тех, кто ценит качество!
             p Наш монтаж самый профессиональный! Мы не экономим на сопутствующих материалах, потому что ценим свою репутацию и вашу лояльность!
-    section.projects--form
+    section.well--form
       .container
-        .row.middle
-          .col.md-4
-            h3 получите бесплатную оценку эксперта
-          .col.md-8
-            .row.bottom
-              .col.md-4
-                label Ваш телефон
-                input(type="tel")
-              .col.md-4
-                label Ваше имя
-                input(type="text")
-              .col.md-4: button.btn.btn--solution Отправить заявку
+        .row.bottom
+          .col.md-3: h3 получите бесплатную оценку эксперта
+          .col.md-3
+            label Ваш телефон
+            input(type="tel")
+          .col.md-3
+            label Ваше имя
+            input(type="text")
+          .col.md-3: button.btn.btn--submit Отправить заявку
     section.solutions--slider
       h1 Решения
       .owl-carousel
@@ -191,18 +188,19 @@ block content
             p Собственный сервис-центр
     section.projects--form
       .container
-        .row.middle
-          .col.md-4
-            h3 получите бесплатную оценку эксперта
-          .col.md-8
-            .row.bottom
-              .col.md-4
-                label Ваш телефон
-                input(type="tel")
-              .col.md-4
-                label Ваше имя
-                input(type="text")
-              .col.md-4: button.btn.btn--solution Отправить заявку
+        .wraper
+          .row.middle
+            .col.md-4
+              h3 получить бесплатную консультацию 
+            .col.md-8
+              .row.bottom
+                .col.md-4
+                  label Ваш телефон
+                  input(type="tel")
+                .col.md-4
+                  label Ваше имя
+                  input(type="text")
+                .col.md-4: button.btn.btn--solution Отправить заявку
     section.about
       .container
         h2 о проектном отделе
@@ -241,40 +239,38 @@ block content
       .container
         h2 5 шагов к вашей безопасности
         .row
-          .col.md-3.steps--item
-            svg: use(xlink:href="#success")
-            svg.steps--item__next: use(xlink:href="#success")
+          .col.steps--item
+            svg: use(xlink:href="#check")
+            svg.next: use(xlink:href="#angle-right")
             h4 Заявка
             p Бесплатный выезд специалиста на ваш объект 
-          .col.md-3.steps--item
-            svg: use(xlink:href="#success")
-            svg.steps--item__next: use(xlink:href="#success")
+          .col.steps--item
+            svg: use(xlink:href="#list")
+            svg.next: use(xlink:href="#angle-right")
             h4 Составление сметы
-          .col.md-3.steps--item
-            svg: use(xlink:href="#success")
-            svg.steps--item__next: use(xlink:href="#success")
+          .col.steps--item
+            svg: use(xlink:href="#hands")
+            svg.next: use(xlink:href="#angle-right")
             h4 Заключение договора
-          .col.md-3.steps--item
-            svg: use(xlink:href="#success")
-            svg.steps--item__next: use(xlink:href="#success")
+          .col.steps--item
+            svg: use(xlink:href="#solution_5")
+            svg.next: use(xlink:href="#angle-right")
             h4 Монтаж
-          .col.md-3.steps--item
-            svg: use(xlink:href="#success")
+          .col.steps--item
+            svg: use(xlink:href="#shield")
             h4 Ваш объект в безопасности!
         .steps--form
-          .container
-            .row.middle
-              .col.md-4
-                h3 получите бесплатную оценку эксперта
-              .col.md-8
-                .row.bottom
-                  .col.md-4
-                    label Ваш телефон
-                    input(type="tel")
-                  .col.md-4
-                    label Ваше имя
-                    input(type="text")
-                  .col.md-4: button.btn.btn--solution Отправить заявку
+          .row.middle
+            .col.md-4: h3 Сделайте первый шаг
+            .col.md-8
+              .row.bottom
+                .col.md-4
+                  label Ваш телефон
+                  input(type="tel")
+                .col.md-4
+                  label Ваше имя
+                  input(type="text")
+                .col.md-4: button.btn.btn--solution Оформить заявку
     section.partners
       .container
         h2 Нам доверяют

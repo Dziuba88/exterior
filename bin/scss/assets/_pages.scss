@@ -615,6 +615,114 @@ body {
 }
 
 .projects--page {
+// Well Section //
+  .well {
+    padding: 120px 0;
+    color: #fff;
+    font-size: 20px;
+    line-height: 30px;
+    text-align: center;
+
+    h1 {
+      text-transform: uppercase;
+      font-size: 30px;
+      margin: 0 0 15px;
+    }
+
+    p {margin: 0;}
+  }
+
+// WellForm Section //
+  .well--form {
+    color: #fff;
+    background-color: #22489b;
+    padding: 30px 0;
+
+    h3 {
+      text-transform: uppercase;
+      margin: 5px 0;
+      font-size: 20px;
+      line-height: 28px;
+    }
+
+    label, input {
+      display: block;
+      width: 100%;
+      font-size: 16px;
+    }
+
+    label {
+      margin-bottom: 4px;
+      line-height: 16px;
+    }
+
+    input {
+      color: #050d33;
+      background-color: #fff;
+      border: none; 
+      height: 40px;
+      padding: 0 15px;
+      border-radius: 6px;
+    }
+
+  }
+// ProjectsForm Section //
+  .projects--form {
+    padding: 30px 0;
+    background-color: #2475c7;
+
+    .wraper {
+      border-radius: 10px;
+      padding: 30px;
+      background-color: #22489b;
+    }
+
+    h3 {
+      margin: 0;
+      margin-right: 30px;
+      text-transform: uppercase;
+      color: #fff;
+      font-size: 20px;
+      line-height: 30px;
+      border-right: 2px solid #2475c7;
+    }
+
+    label {
+      font-size: 16px;
+      line-height: 20px;
+      display: block;
+      color: #fff;
+      margin-bottom: 5px;
+    }
+
+    input {
+      display: block;
+      width: 100%;
+      height: 40px;
+      padding: 0 15px;
+      color: #050d33;
+      font-size: 16px;
+      border-radius: 6px;
+      border: none;
+      box-shadow: none;
+    }
+
+    .btn--solution {
+      display: block;
+      font-size: 16px;
+      color: #fff;
+      background-color: #2475c7;
+      border-radius: 6px;
+      height: 40px;
+      width: 100%;
+
+      &:hover {
+        background-color: #fff;
+        color: #050d33;
+      }
+    }
+
+  }
 // Solutions Section //
   .solutions--slider {
     position: relative;
@@ -753,6 +861,7 @@ body {
       max-width:  20%;
       -ms-flex-preferred-size:  20%;
       margin-bottom: 30px;
+      transition: .2s ease-in-out;
 
       transform: scale(0);
 
@@ -760,11 +869,11 @@ body {
         transform: scale(1);
       }
 
-      &:nth-child(1) {transition: .2s ease-in-out;}
-      &:nth-child(2) {transition: .4s ease-in-out;}
-      &:nth-child(3) {transition: .6s ease-in-out;}
-      &:nth-child(4) {transition: .8s ease-in-out;}
-      &:nth-child(5) {transition: 1s ease-in-out;}
+      &:nth-child(1) {transition-delay: .25s;}
+      &:nth-child(2) {transition-delay: .5s;}
+      &:nth-child(3) {transition-delay: .75s;}
+      &:nth-child(4) {transition-delay: 1s;}
+      &:nth-child(5) {transition-delay: 1.25s;}
 
       .content {
         background-image: linear-gradient(120deg, #ffffff, #f2f3f5 );
@@ -907,6 +1016,96 @@ body {
       text-align: center;
       margin: 0 0 15px;
     }
+
+    &--item {
+      flex-basis: 20%;
+      max-width:  20%;
+      -ms-flex-preferred-size:  20%;
+      margin-bottom: 30px;
+      position: relative;
+      text-align: center;
+      padding: 30px;
+
+
+      svg {
+        fill: #fff;
+        width: 40px;height: 40px;
+        margin-bottom: 10px;
+
+        &.next {
+          position: absolute;
+          margin-right: -15px;
+          width: 30px;height: 30px;
+          right: 0;top: 30px;
+        }
+      }
+
+      h4 {
+        text-transform: uppercase;
+        font-size: 20px;
+        margin: 0 0 10px;
+      }
+      p {
+        margin: 0;
+        font-size: 16px;
+        line-height: 20px;
+      }
+      
+    }
+
+    &--form {
+      border-radius: 10px;
+      padding: 30px;
+      background-color: #22489b;
+
+      h3 {
+        display: flex;
+        align-items: center;
+        min-height: 60px;
+        margin: 0;
+        margin-right: 30px;
+        text-transform: uppercase;
+        color: #fff;
+        font-size: 20px;
+        line-height: 30px;
+        border-right: 2px solid #2475c7;
+      }
+
+      label {
+        font-size: 16px;
+        line-height: 20px;
+        display: block;
+        color: #fff;
+        margin-bottom: 5px;
+      }
+
+      input {
+        display: block;
+        width: 100%;
+        height: 40px;
+        padding: 0 15px;
+        color: #050d33;
+        font-size: 16px;
+        border-radius: 6px;
+        border: none;
+        box-shadow: none;
+      }
+
+      .btn--solution {
+        display: block;
+        font-size: 16px;
+        color: #fff;
+        background-color: #2475c7;
+        border-radius: 6px;
+        height: 40px;
+        width: 100%;
+
+        &:hover {
+          background-color: #fff;
+          color: #050d33;
+        }
+      }
+    }
   }
 // Steps Section //
 // Partners Section //
@@ -928,6 +1127,9 @@ body {
       }
     }
   }
+
+
+
 }
 
 

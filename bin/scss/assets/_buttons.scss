@@ -12,3 +12,18 @@
   text-decoration: none;
   background: transparent;
 }
+
+    .btn--submit {
+      display: block;
+      font-size: 16px;
+      color: #fff;
+      background-color: #2475c7;
+      border-radius: 6px;
+      height: 40px;
+      width: 100%;
+
+      &:hover {
+        background-color: #fff;
+        color: #050d33;
+      }
+    }
