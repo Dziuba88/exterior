@@ -5,62 +5,6 @@ $.get("img/sprite.svg", function(data) {
   document.body.insertBefore(div, document.body.childNodes[0]);
 });
 
-
-if($("#nouislider").length) {
-  var slider = document.getElementById('nouislider');
-  var input0 = document.getElementById('start-range');
-  var input1 = document.getElementById('stop-range');
-  var inputs = [input0, input1];
-
-  noUiSlider.create(slider, {
-    start: [0, 3000],
-    connect: true,
-    tooltips: false,
-    step: 100,
-    range: {
-      'min': 0,
-      'max': 10000
-    }
-  });
-
-  slider.noUiSlider.on('update', function( values, handle ) {
-    inputs[handle].value = Math.round(values[handle]);
-  });
-
-  function setSliderHandle(i, value) {
-    var r = [null,null];
-    r[i] = value;
-    slider.noUiSlider.set(r);
-  }
-  // Listen to keydown events on the input field.
-  inputs.forEach(function(input, handle) {
-    input.addEventListener('change', function(){
-      setSliderHandle(handle, this.value);
-    });
-    input.addEventListener('keydown', function( e ) {
-      var values = slider.noUiSlider.get();
-      var value = Number(values[handle]);
-      var steps = slider.noUiSlider.steps();
-      var step = steps[handle];
-      var position;
-      switch ( e.which ) {
-        case 13: 
-          setSliderHandle(handle, this.value);
-          break;
-        case 38: 
-          position = step[1];
-          if ( position === false ) {position = 1;}
-          if ( position !== null ) {setSliderHandle(handle, value + position);}
-          break;
-        case 40:
-          position = step[0];
-          if ( position === false ) {position = 1;}
-          if ( position !== null ) {setSliderHandle(handle, value - position);}
-          break;
-        }
-      });
-  });
-};
 $(document).ready(function() {
   
   $('[data-select]').niceSelect();
@@ -100,9 +44,7 @@ $(document).ready(function() {
           480 : { items: 2 },
           1000 : { items: 3 },
           1200 : { items: 5 },
-        },
-
-      
+        }
       })
       .on('changed.owl.carousel', syncPosition2);
 
@@ -139,7 +81,6 @@ $(document).ready(function() {
     });
 
   });
-
 
   $('.fp--products .owl-carousel').owlCarousel({
     responsive : {
@@ -274,48 +215,90 @@ $(document).ready(function() {
 
 
 
+  if($("#nouislider").length) {
+    var slider = document.getElementById('nouislider');
+    var input0 = document.getElementById('start-range');
+    var input1 = document.getElementById('stop-range');
+    var inputs = [input0, input1];
 
-});
-
-
-var a = 0;
-var b = 0;
-$(window).scroll(function() {
-
-  var qTop = $('.reasons').offset().top - window.innerHeight;
-  if (b == 0 && $(window).scrollTop() > qTop) {
-    $('.reasons--item').each(function() {
-      $(this).addClass('in');
+    noUiSlider.create(slider, {
+      start: [0, 3000],
+      connect: true,
+      tooltips: false,
+      step: 100,
+      range: {
+        'min': 0,
+        'max': 10000
+      }
     });
-  } else {
-    b = 0;
-    $('.reasons--item').each(function() {
-      $(this).removeClass('in');
+
+    slider.noUiSlider.on('update', function( values, handle ) {
+      inputs[handle].value = Math.round(values[handle]);
     });
-  }
 
-
-
-
-
-  var oTop = $('.skills').offset().top - window.innerHeight;
-  if (a == 0 && $(window).scrollTop() > oTop) {
-    $('[data-count]').each(function() {
-      var $this = $(this),
-        countTo = $this.attr('data-count');
-      $({countNum: $this.text()}).animate({countNum: countTo},
-        {
-          duration: 2000,
-          easing: 'swing',
-          step: function() {$this.text(Math.floor(this.countNum));},
-          complete: function() {$this.text(this.countNum);}
+    function setSliderHandle(i, value) {
+      var r = [null,null];
+      r[i] = value;
+      slider.noUiSlider.set(r);
+    }
+    // Listen to keydown events on the input field.
+    inputs.forEach(function(input, handle) {
+      input.addEventListener('change', function(){
+        setSliderHandle(handle, this.value);
+      });
+      input.addEventListener('keydown', function( e ) {
+        var values = slider.noUiSlider.get();
+        var value = Number(values[handle]);
+        var steps = slider.noUiSlider.steps();
+        var step = steps[handle];
+        var position;
+        switch ( e.which ) {
+          case 13: 
+            setSliderHandle(handle, this.value);
+            break;
+          case 38: 
+            position = step[1];
+            if ( position === false ) {position = 1;}
+            if ( position !== null ) {setSliderHandle(handle, value + position);}
+            break;
+          case 40:
+            position = step[0];
+            if ( position === false ) {position = 1;}
+            if ( position !== null ) {setSliderHandle(handle, value - position);}
+            break;
+          }
         });
     });
-    a = 1;
-  } else {
-    a = 0;
-    $('[data-count]').each(function() {
-      $(this).text('0');
+  };
+
+  if($(".projects--page").length) {
+    var a = 0;
+    var b = 0;
+    $(window).scroll(function() {
+      var qTop = $('.reasons').offset().top - window.innerHeight;
+      if (b == 0 && $(window).scrollTop() > qTop) {
+        $('.reasons--item').each(function() {$(this).addClass('in');});
+      } else {
+        b = 0;
+        $('.reasons--item').each(function() {$(this).removeClass('in');});
+      }
+      var oTop = $('.skills').offset().top - window.innerHeight;
+      if (a == 0 && $(window).scrollTop() > oTop) {
+        $('[data-count]').each(function() {
+          var $this = $(this),
+            countTo = $this.attr('data-count');
+          $({countNum: $this.text()}).animate({countNum: countTo},
+            {duration: 2000,easing: 'swing',
+              step: function() {$this.text(Math.floor(this.countNum));},
+              complete: function() {$this.text(this.countNum);}
+            });
+        });
+        a = 1;
+      } else {
+        a = 0;
+        $('[data-count]').each(function() {$(this).text('0');});
+      }
     });
-  }
+  };
 });
+

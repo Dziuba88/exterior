@@ -1,0 +1,140 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .services--page
+    section.well
+      img(src="img/services-well.jpg", alt="").img_to_bg
+      .container
+        .row.middle
+          .col.md-7.lg-6
+            img(src="img/services_logo.png", alt="").well--logo
+            h1 Починим и наладим всё!
+            p Первый авторизированный сервисный центр в Молдове. Оперативно выполняем даже те работы, от которых все остальные отказались! Только с нами Ваша система безопасности будет работать нон-стоп!
+          .col.md-5.lg-5.offset-lg-1
+            .well--form
+              h3 Проверить статус заявки
+              .row
+                .col.sm-6.md-12: input(type="text" placeholder="Номер заявки")
+                .col.sm-6.md-12: input(type="text" placeholder="Пин код")
+              button.btn.btn--submit Проверить статус
+    section.services
+      .container
+        h2 Наши услуги
+        .row
+          .col.services--item
+            img(src="img/services1.png", alt="")
+            h4 Гарантийное и постгарантийное обслуживание
+            p систем безопасности интегрированных командой профессионалов, стоящих у истоков зарождения бизнеса по системам безопасности в нашей стране
+          .col.services--item
+            img(src="img/services2.png", alt="")
+            h4 Выезд бригады быстрого реагирования,
+            p обеспеченной всем необходимым для проведения широкого спектра ремонта и диагностики в полевых условиях.
+          .col.services--item
+            img(src="img/services3.png", alt="")
+            h4 Диагностика и восстановление работоспособности систем,
+            p находившихся без должного внимания и своевременного обслуживания
+          .col.services--item
+            img(src="img/services4.png", alt="")
+            h4 Обслуживание и профилактика систем безопасности,
+            p производимые по прозрачному тарифному плану и заранее согласованному регламенту. 
+          .col.services--item
+            img(src="img/services5.png", alt="")
+            h4 Ремонт в прекрасно оснащенной лаборатории
+            p специалистами, компетентными в ремонте всех видов систем видеонаблюдения
+    section.well.style-2
+      img(src="img/services-well_2.jpg", alt="").img_to_bg
+      .container
+        .row.middle
+          .col.md-7.lg-6
+            h1 Оставить заявку
+            p При оформлении заявки на сайте получаете скидку 10% на выезд бригады!
+          .col.md-5.lg-5.offset-lg-1
+            .well--form
+              label Выберите
+              input(type="text")
+              label Телефон
+              input(type="tel")
+              label Имя
+              input(type="text")
+              button.btn.btn--submit Отправить
+    section.about
+      .container
+        h2 О сервисном центре
+        .row.middle
+          .col.md-7
+            p Ремонт в прекрасно оснащенной лаборатории ответственными инженерами-ремонтниками компонентов систем видеонаблюдения, охранной и пожарной сигнализации, контроля доступа, домофонов.
+            p Гарантийное и пост гарантийное обслуживание систем безопасности  командой профессионалов, стоящих у истоков зарождения бизнеса в сфере систем безопасности в нашей стране.
+            p Выезд бригады быстрого реагирования, обеспеченной всем необходимым для проведения широкого спектра ремонта и диагностики в полевых условиях.  Гарантия на все виды услуг. Мы в ответе за свой труд!
+            p: span.btn.btn--readmore(data-toggle="collapse" data-target="#more-info") Подробнее об отделе
+            .collapse#more-info: .content
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
+              p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
+          .col.md-5: p.t--center: img(src="img/about.jpg", alt="")
+
+
+
+    section.services.reasons
+      .container
+        h2 5 причин доверить нам свои системы и оборудование
+        .row
+          .col.services--item
+            img(src="img/reason1.png", alt="")
+            h4 Гарантийное и постгарантийное обслуживание
+            p систем безопасности интегрированных командой профессионалов, стоящих у истоков зарождения бизнеса по системам безопасности в нашей стране
+          .col.services--item
+            img(src="img/reason2.png", alt="")
+            h4 Выезд бригады быстрого реагирования,
+            p обеспеченной всем необходимым для проведения широкого спектра ремонта и диагностики в полевых условиях.
+          .col.services--item
+            img(src="img/reason3.png", alt="")
+            h4 Диагностика и восстановление работоспособности систем,
+            p находившихся без должного внимания и своевременного обслуживания
+          .col.services--item
+            img(src="img/reason4.png", alt="")
+            h4 Обслуживание и профилактика систем безопасности,
+            p производимые по прозрачному тарифному плану и заранее согласованному регламенту. 
+          .col.services--item
+            img(src="img/reason5.png", alt="")
+            h4 Ремонт в прекрасно оснащенной лаборатории
+            p специалистами, компетентными в ремонте всех видов систем видеонаблюдения
+    section.contacts
+      .container
+        .row.middle
+          .col.md-7
+            .row.middle
+              .col.sm-5: img(src="img/services_map.jpg", alt="").contacts--map
+              .col.sm-7
+                h2 Обращайтесь к нам любым удобным для вас способом
+                ul.contacts--list
+                  li
+                    span (0 22) 911-100
+                  li
+                    span service@exterior.md
+                  li
+                    span г. Кишинев, ул. М.Варлаам, 65
+          .col.md-5
+            h3 Заявки принимаются:
+            .contacts--time
+              .row
+                .col.sm-6
+                  span понедельник–пятница
+                  strong 8:30–18:00
+                .col.sm-6
+                  span суббота
+                  strong 9:00–13:00
+              p За исключением выходных и праздничных дней
+
+
+
+
+
+
+
+  include templates/footer
