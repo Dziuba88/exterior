@@ -1,0 +1,54 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .cabinet--page
+    .container
+      h1 Личный кабинет
+      .row.bottom.cabinet--subnav
+        .col.md-8
+          nav.submenu: ul
+            li: a(href="") Заказы
+            li: a(href="") Акции
+            li: a(href="") Сток
+            li: a(href="") Новинки
+            li: a(href="") Excoin
+            li: a(href="") В ремонте
+            li: a(href="").active Профиль
+        .col.md-4
+          .cabinet--profile__informer
+            span.curs Курс USD: 21.65 MDL
+            span.balance Баланс: 
+              strong -200 MDL
+
+      table.repair--table
+        thead
+          tr
+            th Название модели
+            th Заявка №
+            th Дата принятия в ремонт
+            th Стоимость ремонта
+            th Статус
+        tbody
+          tr
+            td
+              strong Название модели
+              span Серия: 00928378
+            td 00928378
+            td 12.05.2017
+            td 1345 MDL
+            td: span.label.working В ремонте
+          tr
+            td
+              strong Название модели
+              span Серия: 00928378
+            td 00928378
+            td 12.05.2017
+            td 1345 MDL
+            td
+              span.label.ready Выполнено
+              span 12.04.2017
+
+
+
+  include templates/footer

@@ -120,3 +120,24 @@ nav {
     height:100%;
   }
 }
+
+
+.label {
+  display: inline-block;
+  font-size: 18px;
+  line-height: 20px;
+  padding: 5px 10px;
+  border-radius: 6px;
+
+  &.working {
+    background-color: #f2f3f5;
+    border: 1px solid #e6e6ea;
+    color: #050d33;
+  }
+
+  &.ready {
+    background-color: #2c9e19;
+    color: #fff;
+    margin-right: 10px;
+  }
+}

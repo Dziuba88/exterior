@@ -1,0 +1,68 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .cabinet--page
+    .container
+      h1 Личный кабинет
+      .row.bottom.cabinet--subnav
+        .col.md-8
+          nav.submenu: ul
+            li: a(href="") Заказы
+            li: a(href="") Акции
+            li: a(href="") Сток
+            li: a(href="") Новинки
+            li: a(href="") Excoin
+            li: a(href="") В ремонте
+            li: a(href="").active Профиль
+        .col.md-4
+          .cabinet--profile__informer
+            span.curs Курс USD: 21.65 MDL
+            span.balance Баланс: 
+              strong -200 MDL
+
+      .profile--layout
+        .row
+          .col.md-5
+            dl.profile--info
+              dt Фирма:
+              dd Comfort SRL
+              dt ФИО:
+              dd Константин Константинопольский
+              dt Адрес:
+              dd str. Ion Creanga, 25
+              dt Тел.:
+              dd +373 6234232
+              dt E-mail:
+              dd constantin@example.com
+          .col.md-7
+            .profile--password
+              h3 Смена пароля
+              .row
+                .col.sm-6
+                  label Старый пароль
+                  input(type="password")
+                .col.sm-6 
+                .col.sm-6
+                  label Новый пароль
+                  input(type="password")
+                .col.sm-6
+                  label Повторите новый пароль
+                  input(type="password")
+                .col.sm-12
+                  button.btn.btn--submit Изменить
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  include templates/footer
