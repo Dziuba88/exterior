@@ -5,9 +5,28 @@ $.get("img/sprite.svg", function(data) {
   document.body.insertBefore(div, document.body.childNodes[0]);
 });
 
+
+var inputs = document.querySelectorAll( 'input[type=file]' );
+Array.prototype.forEach.call( inputs, function( input ) {
+  var label	 = input.nextElementSibling, labelVal = label.innerHTML;
+  input.addEventListener( 'change', function( e ) {
+    var fileName = '';
+    if( this.files && this.files.length > 1 )fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
+    else fileName = e.target.value.split( '\\' ).pop();
+    if( fileName ) label.querySelector( 'span' ).innerHTML = fileName;
+    else label.innerHTML = labelVal;
+  });
+});
+
 $(document).ready(function() {
   
   $('[data-select]').niceSelect();
+
+  $.each( $("[data-progress]"), function() {
+    var position = $(this).data('value');
+    $(this).find('.line').width(position);
+    $(this).find('.current').css( "left", position );
+  });
 
   $.each( $(".img_to_bg, .thumb img"),function(){
     var cssValues = {
@@ -18,6 +37,7 @@ $(document).ready(function() {
   });
 
   $('.fp--slider').owlCarousel({
+    thumbs: false,
     items: 1,
     autoplay: true,
     autoplayTimeout: 7000,
@@ -32,12 +52,12 @@ $(document).ready(function() {
     var syncedSecondary = false;
 
     sync1
-      .owlCarousel({loop: true,items: 1,mouseDrag: false})
+      .owlCarousel({loop: true,items: 1,mouseDrag: false,thumbs: false})
       .on('changed.owl.carousel', syncPosition);
     sync2
       .on('initialized.owl.carousel', function () {sync2.find(".owl-item").eq(0).addClass("current");})
       .owlCarousel({
-        nav: true,
+        thumbs: false,nav: true,
         navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>'],
         responsive : {
           0 : { items: 1 },
@@ -83,23 +103,18 @@ $(document).ready(function() {
   });
 
   $('.fp--products .owl-carousel').owlCarousel({
-    responsive : {
-        0 : { items: 1 },
-        480 : { items: 1 },
-        768 : { items: 2 },
-        960 : { items: 4 },
-    },
-    loop: true,
-    nav: true,
+    responsive : {0 : { items: 1 },480 : { items: 1 },768 : { items: 2 },960 : { items: 4 },},
+    thumbs: false, loop: true,nav: true,
     navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>']
   });
 
   $('.solutions--slider .owl-carousel').owlCarousel({
-    items: 1,loop: true,nav: true,animateOut: 'fadeOut',animateIn: 'fadeIn', mouseDrag: false,
+    thumbs: false,items: 1,loop: true,nav: true,animateOut: 'fadeOut',animateIn: 'fadeIn', mouseDrag: false,
     navText: ['<svg><use xlink:href="#arrow_left"></use></svg>', '<svg><use xlink:href="#arrow_right"></use></svg>']
   });
 
   $('.fp--brands .owl-carousel, .partners .owl-carousel').owlCarousel({
+    thumbs: false,
     responsive : {
         0 : { items: 1 },
         768 : { items: 2 },
@@ -108,6 +123,7 @@ $(document).ready(function() {
   });
 
   $('.item__featured .owl-carousel').owlCarousel({
+    thumbs: false,
     nav: true,
     navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>'],
     responsive : {
@@ -196,6 +212,33 @@ $(document).ready(function() {
 
 
 
+  $('.slider--partners .owl-carousel').owlCarousel({
+    thumbs: true,
+    thumbImage: true,
+    items: 1,
+    loop: false,
+    nav: true,
+    navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>']
+  });
+
+  $('.slider--clients .owl-carousel').owlCarousel({
+    thumbs: true,
+    thumbImage: true,
+    items: 1,
+    loop: false,
+    nav: true,
+    navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>']
+  });
+  $('.slider--documents .owl-carousel').owlCarousel({
+    thumbs: false,
+    nav: true,
+    navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>'],
+    responsive : {
+        0 : { items: 1 },
+        768 : { items: 5 },
+        960 : { items: 8 },
+    }
+  });
 
 
 
@@ -303,23 +346,4 @@ $(document).ready(function() {
 });
 
 
-var inputs = document.querySelectorAll( 'input[type=file]' );
-Array.prototype.forEach.call( inputs, function( input )
-{
-	var label	 = input.nextElementSibling,
-		labelVal = label.innerHTML;
 
-	input.addEventListener( 'change', function( e )
-	{
-		var fileName = '';
-		if( this.files && this.files.length > 1 )
-			fileName = ( this.getAttribute( 'data-multiple-caption' ) || '' ).replace( '{count}', this.files.length );
-		else
-			fileName = e.target.value.split( '\\' ).pop();
-
-		if( fileName )
-			label.querySelector( 'span' ).innerHTML = fileName;
-		else
-			label.innerHTML = labelVal;
-	});
-});

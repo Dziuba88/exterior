@@ -1,0 +1,50 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .cabinet--page
+    .container
+      h1 Личный кабинет
+      .row.bottom.cabinet--subnav
+        .col.md-8
+          nav.submenu: ul
+            li: a(href="") Заказы
+            li: a(href="") Акции
+            li: a(href="") Сток
+            li: a(href="") Новинки
+            li: a(href="").active Excoin
+            li: a(href="") В ремонте
+            li: a(href="") Профиль
+        .col.md-4
+          .cabinet--profile__informer
+            span.curs Курс USD: 21.65 MDL
+            span.balance Баланс: 
+              strong -200 MDL
+
+      .xcoin--status
+        h2 Мой Статус
+        .progress(data-progress data-value="37%")
+          img(src="img/excoin-bg.jpg", alt="")
+          .wraper
+            .step_25 75 Excoin
+            .step_50 195 Excoin
+            .step_75 335 Excoin
+            .line
+            .current
+              svg: use(xlink:href="#xcoin")
+              span 145
+        .xcoin--bonus: .row
+          .col.sm-5: img(src="img/excoin-bonus.jpg", alt="")
+          .col.sm-7 
+            h3 Условия:
+            h4 Что нужно делать?
+            p Покупать у нас как можно больше оборудования!))
+            h4 Что Вы за это получите? 
+            p Бонусы в виде виртуальной валюты Exterior – Eкскоинов, которые в конце года Вы сможете обменять на ценные подарки.
+            h3 Как начисляются Eкскоины?
+            p За каждую потраченную у нас 1000$, мы начислим на Ваш счёт 5 Eкскоинов. Так же Вы получите накопительную бонусную пластиковую карту, с помощью которой Вы всегда сможете проверить свой баланс в нашем шоу-руме.
+            p Накопили 100 Екскоинов? Поздравляем! Вы получаете Серебряную карту, а за каждую последующую потраченную у нас 1000$, Вы будете получать уже не 5, а 6 Eкскоинов!!!
+            p Накопили 250 Екскоинов? Вы становитесь обладателем Золотой карты и будете получать не 6, а 7 Екскоинов за каждую тысячу долларов.
+            p У вас уже 450 Екскоинов??? Поздравляем! Вы автоматически получаете Платиновую VIP-карту, на которую начисляется не 7, а уже 8 Екскоинов за каждую тысячу долларов.
+
+  include templates/footer
