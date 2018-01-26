@@ -2,6 +2,13 @@
 
   &--menu {
     display: none;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 100%;
+    margin: 0;padding: 5px 0;
+    list-style: none;list-style-image: none;
+    margin-top: 2px;
   }
 
   &.open &--menu {

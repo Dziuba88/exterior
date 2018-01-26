@@ -95,3 +95,27 @@
         color: #fff;
       }
     }
+
+    .back-call {
+      display: block;
+      font-size: 16px;
+      background-color: #22489b;
+      color: #fff;
+      border-radius: 6px;
+      height: 40px;
+      padding: 9px 15px;
+      line-height: 20px;
+      margin: 0 30px;
+
+      svg {
+        line-height: 1.5;vertical-align: middle;
+        fill: #fff;
+        width: 16px;height: 16px;
+        margin-right: 5px;margin-bottom: 3px;
+
+      }
+
+      &:hover {
+        background-color: #2475c7;
+      }
+    }

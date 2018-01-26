@@ -6,4 +6,5 @@
 //@prepros-append plugins/tab.js
 //@prepros-append plugins/transition.js
 //@prepros-append plugins/collapse.js
+//@prepros-append plugins/dropdown.js
 

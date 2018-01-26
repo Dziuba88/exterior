@@ -10,18 +10,31 @@
     <link rel="stylesheet" href="css/styles.min.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header assigned">
       <div class="container">
         <div class="header--wraper">
           <div class="header--left"><a class="header__brand" href="001_index.html"><img src="img/logo__header.png" alt=""></a></div>
           <div class="header--right"><span class="header--phone"><small>(+373 22) </small><span>911-111</span></span>
-            <div class="btn blue"><img src="ico/phone.svg" alt=""><span>Заказать звонок</span></div>
-            <div class="dropdown mod--lang"><a class="dropdown-toggle" href="#"><img src="img/ru.png" alt=""><span>ru</span></a>
+            <div class="btn back-call">
+              <svg>
+                <use xlink:href="#phone"></use>
+              </svg><span>Заказать звонок</span>
+            </div>
+            <div class="dropdown mod--lang"><a data-toggle="dropdown"><img src="img/ru.gif" alt=""><span>ru</span></a>
               <ul class="dropdown--menu">
-                <li><a href="#"> <img src="img/ru.png" alt=""><span>ru</span></a></li>
-                <li><a href="#"> <img src="img/ru.png" alt=""><span>en</span></a></li>
-                <li><a href="#"> <img src="img/ru.png" alt=""><span>md</span></a></li>
+                <li><a class="active" href="#"> <img src="img/ru.gif" alt=""><span>ru</span></a></li>
+                <li><a href="#"> <img src="img/en.gif" alt=""><span>en</span></a></li>
+                <li><a href="#"> <img src="img/ro.gif" alt=""><span>md</span></a></li>
               </ul>
+            </div>
+            <div class="mod--profile"><a class="user" href="">
+                <svg>
+                  <use xlink:href="#user-circle"></use>
+                </svg><span>Константин Константинопольский</span></a>
+              <div class="stats"><span class="balance">Баланс: <strong>-200 MDL</strong></span><span class="xcoin">
+                  <svg>
+                    <use xlink:href="#xcoin"></use>
+                  </svg><span>145</span></span></div>
             </div>
           </div>
         </div>

@@ -1,0 +1,38 @@
+header.header.assigned
+  .container
+    .header--wraper
+      .header--left
+        a(href="001_index.html").header__brand: img(src="img/logo__header.png", alt="")
+      .header--right
+        span.header--phone
+          small (+373 22) 
+          span 911-111
+        .btn.back-call
+          svg: use(xlink:href="#phone")
+          span Заказать звонок
+        .dropdown.mod--lang
+          a( data-toggle="dropdown" )
+            img(src="img/ru.gif", alt="")
+            span ru
+          ul.dropdown--menu
+            li: a(href="#").active 
+              img(src="img/ru.gif", alt="")
+              span ru
+            li: a(href="#") 
+              img(src="img/en.gif", alt="")
+              span en
+            li: a(href="#") 
+              img(src="img/ro.gif", alt="")
+              span md
+        .mod--profile
+          a.user(href="")
+            svg: use(xlink:href="#user-circle")
+            span Константин Константинопольский
+          .stats
+            span.balance Баланс: 
+              strong -200 MDL
+            span.xcoin
+              svg: use(xlink:href="#xcoin")
+              span 145
+
+
