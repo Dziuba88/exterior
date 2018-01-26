@@ -11,6 +11,10 @@
   white-space: nowrap;
   text-decoration: none;
   background: transparent;
+
+  &.block {
+    display: block !important;
+  }
 }
 
     .btn--submit {
@@ -56,4 +60,38 @@
       }
 
       &:hover {opacity: .5;}
+    }
+
+    .btn-default {
+      display: block;
+      font-size: 18px;
+      color: #fff;
+      background-color: #2475c7;
+      border-radius: 6px;
+      height: 40px;
+      width: 100%;
+      padding: 10px 15px;
+      line-height: 20px;
+
+      &:hover {
+        background-color: #22489b;
+        color: #fff;
+      }
+    }
+    .btn-outline {
+      display: block;
+      font-size: 18px;
+      background-color: #fff;
+      color: #2475c7;
+      border: 1px solid #22489b;
+      border-radius: 6px;
+      height: 40px;
+      width: 100%;
+      padding: 9px 15px;
+      line-height: 20px;
+
+      &:hover {
+        background-color: #22489b;
+        color: #fff;
+      }
     }

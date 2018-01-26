@@ -1,0 +1,78 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .cabinet--page
+    .container
+      h1 Личный кабинет
+      .row.bottom.cabinet--subnav
+        .col.md-8
+          nav.submenu: ul
+            li: a(href="").active Заказы
+            li: a(href="") Акции
+            li: a(href="") Сток
+            li: a(href="") Новинки
+            li: a(href="") Excoin
+            li: a(href="") В ремонте
+            li: a(href="") Профиль
+        .col.md-4
+          .cabinet--profile__informer
+            span.curs Курс USD: 21.65 MDL
+            span.balance Баланс: 
+              strong -200 MDL
+
+      table.cabinet--orders
+        thead
+          tr
+            th Дата
+            th Номер
+            th Кол-во товаров
+            th Сумма
+            th  
+        tbody
+          - for (i=1; i<=3; i++)
+            tr
+              td(data-header="Дата") 10.03.2017
+              td(data-header="Номер") 1424534
+              td(data-header="Кол-во товаров") 1
+              td(data-header="Сумма") 258.00 $/1500 MDL
+              td
+                button.btn
+                  svg: use(xlink:href="#edit")
+                  span Редактировать
+                button.btn
+                  svg: use(xlink:href="#driver")
+                  span Счет
+                button.btn
+                  svg: use(xlink:href="#book")
+                  span КП
+                button.btn
+                  svg: use(xlink:href="#refresh")
+                  span Обновить
+                button.btn
+                  svg: use(xlink:href="#success")
+                  span Оформить
+                button.btn
+                  svg: use(xlink:href="#danger")
+                  span Удалить
+      .row.cabinet--panels
+        .col.sm-4
+          .panel
+            .panel--header: a(href="").btn
+              svg: use(xlink:href="#driver")
+              span Счет
+            .panel--body: p В ряде недавних экспериментов хлорсульфит натрия перевозит бассейн нижнего Инда.
+        .col.sm-4
+          .panel
+            .panel--header: a(href="").btn
+              svg: use(xlink:href="#book")
+              span КП
+            .panel--body: p В ряде недавних экспериментов хлорсульфит натрия перевозит бассейн нижнего Инда.
+        .col.sm-4
+          .panel
+            .panel--header: a(href="").btn
+              svg: use(xlink:href="#refresh")
+              span Обновить цены
+            .panel--body: p В ряде недавних экспериментов хлорсульфит натрия перевозит бассейн нижнего Инда.
+
+  include templates/footer

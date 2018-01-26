@@ -21,9 +21,11 @@ h1, h2, h3, h4, h5, h6 {
 a {
   text-decoration: none;
   color: #22489b;
+  svg {fill:#22489b;}
 
   &:hover {
     color: #2475c7;
+    svg {fill:#2475c7;}
   }
 }
 nav {

@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EXTERIOR | Security System</title>
+    <link rel="icon" type="image/png" href="favicon.png">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Open+Sans+Condensed:700|Open+Sans:400,400i,700&amp;amp;subset=cyrillic">
+    <link rel="stylesheet" href="css/styles.min.css">
+  </head>
+  <body>
+    <header class="header">
+      <div class="container">
+        <div class="header--wraper">
+          <div class="header--left"><a class="header__brand" href="001_index.html"><img src="img/logo__header.png" alt=""></a></div>
+          <div class="header--right"><span class="header--phone"><small>(+373 22) </small><span>911-111</span></span>
+            <div class="btn blue"><img src="ico/phone.svg" alt=""><span>Заказать звонок</span></div>
+            <div class="dropdown mod--lang"><a class="dropdown-toggle" href="#"><img src="img/ru.png" alt=""><span>ru</span></a>
+              <ul class="dropdown--menu">
+                <li><a href="#"> <img src="img/ru.png" alt=""><span>ru</span></a></li>
+                <li><a href="#"> <img src="img/ru.png" alt=""><span>en</span></a></li>
+                <li><a href="#"> <img src="img/ru.png" alt=""><span>md</span></a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+    </header>
+    <div class="navbar">
+      <div class="container">
+        <div class="navbar--wraper">
+          <ul class="navbar--nav">
+            <li><a href="">Каталог</a></li>
+            <li><a href="">Проекты</a></li>
+            <li><a href="">Сервис</a></li>
+            <li><a href="">Скачать</a></li>
+            <li><a href="">Новости</a></li>
+            <li><a href="">О компании</a></li>
+            <li><a href="">Контакты</a></li>
+          </ul>
+        </div>
+      </div>
+    </div>
+    <div class="basket--page">
+      <div class="container">
+        <h1>Корзина</h1>
+        <table class="basket--table">
+          <thead>
+            <tr>
+              <th colspan="2">Название</th>
+              <th>Розничная цена</th>
+              <th>Цена дилера</th>
+              <th>Кол-во</th>
+              <th>Стоимость USD</th>
+              <th>Стоимость MDL</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="purchased--item" href=""><img src="img/product1.jpg" alt=""></a></td>
+              <td data-header="Название">DH-IPC-HDBW2421R-ZSVFS</td>
+              <td data-header="Розничная цена">26 USD</td>
+              <td data-header="Цена дилера">26 USD</td>
+              <td data-header="Кол-во">
+                <div class="number">
+                  <input type="text" value="1" min="1">
+                  <div class="btn-plus">
+                    <svg>
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                  </div>
+                  <div class="btn-minus">
+                    <svg>
+                      <use xlink:href="#minus"></use>
+                    </svg>
+                  </div>
+                </div>
+              </td>
+              <td data-header="Стоимость USD">26 USD</td>
+              <td data-header="Стоимость MDL">1500 MDL</td>
+            </tr>
+            <tr>
+              <td><a class="purchased--item" href=""><img src="img/product1.jpg" alt=""></a></td>
+              <td data-header="Название">DH-IPC-HDBW2421R-ZSVFS</td>
+              <td data-header="Розничная цена">26 USD</td>
+              <td data-header="Цена дилера">26 USD</td>
+              <td data-header="Кол-во">
+                <div class="number">
+                  <input type="text" value="1" min="1">
+                  <div class="btn-plus">
+                    <svg>
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                  </div>
+                  <div class="btn-minus">
+                    <svg>
+                      <use xlink:href="#minus"></use>
+                    </svg>
+                  </div>
+                </div>
+              </td>
+              <td data-header="Стоимость USD">26 USD</td>
+              <td data-header="Стоимость MDL">1500 MDL</td>
+            </tr>
+            <tr>
+              <td><a class="purchased--item" href=""><img src="img/product1.jpg" alt=""></a></td>
+              <td data-header="Название">DH-IPC-HDBW2421R-ZSVFS</td>
+              <td data-header="Розничная цена">26 USD</td>
+              <td data-header="Цена дилера">26 USD</td>
+              <td data-header="Кол-во">
+                <div class="number">
+                  <input type="text" value="1" min="1">
+                  <div class="btn-plus">
+                    <svg>
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                  </div>
+                  <div class="btn-minus">
+                    <svg>
+                      <use xlink:href="#minus"></use>
+                    </svg>
+                  </div>
+                </div>
+              </td>
+              <td data-header="Стоимость USD">26 USD</td>
+              <td data-header="Стоимость MDL">1500 MDL</td>
+            </tr>
+          </tbody>
+          <tfoot>
+            <tr>
+              <th colspan="4"></th>
+              <th colspan="3"><strong>Сумма:</strong><span>25 USD/1500 MDL</span></th>
+            </tr>
+          </tfoot>
+        </table>
+        <div class="row">
+          <div class="col md-7 basket--form">
+            <h2>
+              <svg>
+                <use xlink:href="#truck"></use>
+              </svg><span>Способ доставки</span>
+            </h2>
+            <div class="row">
+              <div class="col sm-5">
+                <input id="radio1" type="radio" name="delivery">
+                <label for="radio1"><i>
+                    <svg>
+                      <use xlink:href="#success"></use>
+                    </svg></i><span>Самовывоз</span></label>
+                <input id="radio2" type="radio" checked name="delivery">
+                <label for="radio2"><i>
+                    <svg>
+                      <use xlink:href="#success"></use>
+                    </svg></i><span>Бесплатная (1 день)</span></label>
+                <input id="radio3" type="radio" name="delivery">
+                <label for="radio3"><i>
+                    <svg>
+                      <use xlink:href="#success"></use>
+                    </svg></i><span>Срочная за час (+50 леев)</span></label>
+                <input id="radio4" type="radio" name="delivery">
+                <label for="radio4"><i>
+                    <svg>
+                      <use xlink:href="#success"></use>
+                    </svg></i><span>По регионам</span></label>
+              </div>
+              <div class="col sm-7">
+                <label>Регион</label>
+                <select data-select>
+                  <option data-display="Выбрать Регион">Ничего не выбрано</option>
+                  <option selected>Кишинев</option>
+                  <option>Кишинев</option>
+                  <option>Кишинев</option>
+                  <option>Кишинев</option>
+                  <option>Кишинев</option>
+                </select>
+                <label>Адрес</label>
+                <input type="text">
+              </div>
+            </div>
+          </div>
+          <div class="col md-4 offset-md-1 basket--summary">
+            <div class="btn btn-outline block">Продолжить покупки</div>
+          </div>
+        </div>
+      </div>
+      <div class="client--info">
+        <div class="container">
+          <h2>Оформить заказ</h2>
+          <div class="row bottom">
+            <div class="col sm-6 md-3">
+              <label>Имя </label>
+              <input type="text">
+            </div>
+            <div class="col sm-6 md-3">
+              <label>Телефон * </label>
+              <input type="tel">
+            </div>
+            <div class="col sm-6 md-3">
+              <label>E-mail  </label>
+              <input type="email">
+            </div>
+            <div class="col sm-6 md-3">
+              <button class="btn btn--submit">Заказать</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <footer class="footer">
+      <div class="container">
+        <div class="row middle">
+          <div class="col md-6">
+            <div class="footer--copyright">
+              <p>© 2017 «Exterior» S.R.L.</p>
+              <p><a class="btn btn--link" href="">
+                  <svg>
+                    <use xlink:href="#user"></use>
+                  </svg><span>Вакансии</span></a></p>
+              <p><a class="btn btn--youtube" href="">
+                  <svg>
+                    <use xlink:href="#youtube"></use>
+                  </svg><span>Мы на YouTube</span></a><a class="btn btn--facebook" href="">
+                  <svg>
+                    <use xlink:href="#facebook"></use>
+                  </svg><span>Нравится</span></a></p>
+            </div>
+          </div>
+          <div class="col md-6">
+            <div class="footer--contacts">
+              <div class="adress"><strong>Контакты:</strong><span>г. Кишинев, ул. Митрополит Варлаам 65</span><span>Тел: (0 22) 911-111</span></div>
+              <div class="times"><strong>График работы:</strong><span>Пн–пт: 9:00-18:00</span><span>Сб: 9:00-14:00</span></div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <!-- Scripts -->
+    <script src="js/jquery-3.2.1.min.js"></script>
+    <script src="js/plugins.min.js"></script>
+    <script src="js/app.js"></script>
+  </body>
+</html>

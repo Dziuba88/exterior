@@ -1,0 +1,28 @@
+extends models/default
+block content
+  include templates/header
+  include templates/navbar
+  .compare--page
+    .container
+      h1 Сравнение товаров
+      .compare
+        .compare--sidebar
+        .compare--wraper
+            .product
+              a(href="").product--image.sale: img(src="img/product1.jpg", alt="")
+              a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+              p.product--info 1/3” Прогрессивная CMOS 4Megapixel
+              p 
+                span.old--price 1500 леев
+                span.new--price 1499 леев
+              button.btn.add-to-basket
+                span.inactive В корзину
+                span.active
+                  svg: use(xlink:href="#success")
+                  span добавлено
+          
+
+
+
+
+  include templates/footer
