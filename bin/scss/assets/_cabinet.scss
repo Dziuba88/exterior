@@ -479,3 +479,64 @@
     border-bottom: 1px solid #f2f3f5;
   }
 }
+
+@include mediumDown {
+  .cabinet--subnav nav ul li a {font-size: 16px;}
+  .repair--table th {font-size: 11px;}
+  .repair--table td {font-size: 12px;line-height: 18px;}
+  .label {font-size: 11px;}
+  .cabinet--table.purchased td, .cabinet--table.purchased th {font-size: 12px;}
+}
+@include tabletDown {
+  .cabinet--profile__informer {text-align: left;}
+
+  .repair--table {
+    display: block;
+    thead {display: none;}
+    tbody, tr, td, th {margin: 0;padding: 0;display: block;width: 100%;}
+    tr {margin-bottom: 10px;padding-bottom: 10px;}
+    td {
+      text-align: left !important;
+      &:last-child {padding-top: 10px;}
+      &:before {
+        display: inline;
+        content: attr(data-header);
+      }
+    }
+  }
+
+  .cabinet--table {
+    display: block;
+    thead {display: none;}
+    tbody, tr, td, th {margin: 0;padding: 0;display: block;width: 100%;}
+    td {padding: 10px 0;border-bottom: 1px solid #f2f3f5;text-align: right;
+      &:nth-child(1), &:nth-child(2) {text-align: center !important;}
+      &:nth-child(1) {border: none;}
+    }
+    .purchased--item img {margin: 0 auto;}
+    td:before {
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-weight: 600;
+      display: inline-block;
+      float: left;
+      content: attr(data-header);
+    }
+  }
+
+
+
+}
+@include mobile {
+  .cabinet--subnav nav ul {text-align: center;}
+  .cabinet--subnav nav ul li a {
+    font-size: 13px;
+    padding: 5px 10px;
+    margin: 5px;
+  }
+  .cabinet--profile__informer {text-align: left;}
+  .profile--info dt, .profile--info dd {width: 100%;margin: 0;}
+  .profile--info dd {margin-bottom: 10px;}
+  .xcoin--status .wraper .current {width: 50px;margin-left: -25px;}
+  .xcoin--status .wraper .current svg {display: none;}
+  .xcoin--bonus {padding: 60px 0 0;}
+}

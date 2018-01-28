@@ -1,7 +1,7 @@
 extends models/default
 block content
-  include templates/header
-  include templates/navbar
+  include templates/header--user
+  include templates/navbar--user
   .cabinet--page
     .container
       h1 Личный кабинет
@@ -34,17 +34,17 @@ block content
             td
               strong Название модели
               span Серия: 00928378
-            td 00928378
-            td 12.05.2017
-            td 1345 MDL
+            td(data-header="Заявка №: ") 00928378
+            td(data-header="Дата принятия в ремонт: ") 12.05.2017
+            td(data-header="Стоимость ремонта: ") 1345 MDL
             td: span.label.working В ремонте
           tr
             td
               strong Название модели
               span Серия: 00928378
-            td 00928378
-            td 12.05.2017
-            td 1345 MDL
+            td(data-header="Заявка №: ") 00928378
+            td(data-header="Дата принятия в ремонт: ") 12.05.2017
+            td(data-header="Стоимость ремонта: ") 1345 MDL
             td
               span.label.ready Выполнено
               span 12.04.2017

@@ -1,7 +1,7 @@
 extends models/default
 block content
-  include templates/header
-  include templates/navbar
+  include templates/header--user
+  include templates/navbar--user
   .cabinet--page
     .container
       h1 Личный кабинет
@@ -23,7 +23,7 @@ block content
 
       .row
         - for (i=1; i<=4; i++)
-          .col.md-3
+          .col.md-3.sm-6
             .product
               a(href="").product--image
                 img(src="img/product1.jpg", alt="")
@@ -42,7 +42,7 @@ block content
                 span.active
                   svg: use(xlink:href="#success")
                   span добавлено
-          .col.md-3
+          .col.md-3.sm-6
             .product
               a(href="").product--image
                 img(src="img/product2.jpg", alt="")
