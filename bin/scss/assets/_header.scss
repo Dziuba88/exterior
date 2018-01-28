@@ -18,6 +18,7 @@
   &--right {
     flex: 1;
     justify-content: flex-end;
+    padding-right: 15px;
   }
 
   &__brand {
@@ -131,5 +132,51 @@
         }
       }
     }
+  }
+}
+
+@include mediumDown {
+  .header--wraper {align-items: flex-start;}
+  .header__brand img {width: 130px;}
+  .header__iso {display: none;}
+  .header--right {flex-wrap: wrap;}
+  .back-call {margin: 0 20px;}
+  .header .mod--profile {
+    margin: 0;padding: 10px 0 0;
+    width: 100%;
+    text-align: right;
+    .stats {
+      display: inline-flex;
+      padding: 0;margin-left: 20px;
+      white-space: nowrap;
+      span.balance {margin-right: 20px;}
+    }
+  }
+}
+
+@include smallDown {
+  .header {padding: 10px 0;}
+  .header__brand img {width: 100px;}
+  .header .header--phone {display: none;}
+  .back-call {padding: 7px 8px;height: 30px;
+    span {display: none;}
+    svg {margin: 0;display: block;}
+  }
+  .header--right {margin-left: -130px;}
+  .header .mod--lang {
+    [data-toggle=dropdown] {width: 65px;padding: 5px 10px;height: 30px;}
+    img {margin-right: 5px;}
+    .dropdown--menu a {padding: 5px 10px;}
+  }
+  .header .mod--profile {
+    text-align: center;
+    a.user {
+      font-size: 13px;
+      display: block;
+      margin-bottom: 10px;
+    }
+    .stats {margin-left: 0;}
+    .stats span.balance {font-size: 14px;padding: 5px 10px;margin-right: 10px;}
+    .stats span.xcoin {padding: 5px 10px;width: auto;}
   }
 }

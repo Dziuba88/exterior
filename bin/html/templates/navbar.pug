@@ -1,11 +1,42 @@
-.navbar
-  .container
-    .navbar--wraper
-      ul.navbar--nav
-        li: a(href="") Каталог
-        li: a(href="") Проекты
-        li: a(href="") Сервис
-        li: a(href="") Скачать
-        li: a(href="") Новости
-        li: a(href="") О компании
-        li: a(href="") Контакты
+.navbar--container
+  .navbar
+    .container
+      .navbar--wraper
+        .navbar--left
+          button.navbar--toggle(data-toggle="navbar")
+            svg: use(xlink:href="#bars")
+            span Меню
+          ul.navbar--nav
+            li
+              svg: use(xlink:href="#nav")
+              button(data-toggle="navbar")
+            li.dropdown
+              a(data-toggle="dropdown") Каталог
+              .dropdown--menu
+                include categories-navbar
+                a.new--products
+                  svg: use(xlink:href="#certificate")
+                  span Новые товары
+
+
+
+            li: a(href="") Проекты
+            li: a(href="") Сервис
+            li: a(href="") Скачать
+            li: a(href="") Новости
+            li: a(href="") О компании
+            li: a(href="") Контакты
+        .navbar--right
+          a.asign(href="") Вход 
+            span для дилеров
+          a.search(href="")
+            svg: use(xlink:href="#search")
+            span Поиск
+          
+
+
+
+
+
+
+

@@ -97,3 +97,17 @@
     }
   }
 }
+
+@include smallDown {
+  .footer {padding: 20px 0;}
+  .footer--copyright {
+    font-size: 14px;
+    text-align: center;
+  }
+  .footer--contacts {
+    display: block;
+    text-align: center;
+    .adress {margin-bottom: 10px;}
+    .times {text-align: center;}
+  }
+}

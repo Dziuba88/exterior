@@ -1,4 +1,4 @@
-header.header
+header.header.assigned
   .container
     .header--wraper
       .header--left
@@ -7,22 +7,20 @@ header.header
         span.header--phone
           small (+373 22) 
           span 911-111
-        .btn.blue
-          img(src="ico/phone.svg", alt="")
+        .btn.back-call
+          svg: use(xlink:href="#phone")
           span Заказать звонок
         .dropdown.mod--lang
-          a(href="#").dropdown-toggle
-            img(src="img/ru.png", alt="")
+          a( data-toggle="dropdown" )
+            img(src="img/ru.gif", alt="")
             span ru
           ul.dropdown--menu
-            li: a(href="#") 
-              img(src="img/ru.png", alt="")
+            li: a(href="#").active 
+              img(src="img/ru.gif", alt="")
               span ru
             li: a(href="#") 
-              img(src="img/ru.png", alt="")
+              img(src="img/en.gif", alt="")
               span en
             li: a(href="#") 
-              img(src="img/ru.png", alt="")
+              img(src="img/ro.gif", alt="")
               span md
-
-

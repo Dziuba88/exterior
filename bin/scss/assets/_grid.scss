@@ -5,8 +5,8 @@
   width: 100%;
   box-sizing: border-box;
 
-  @include small    {width: $xs-screen - $gutter;}
-  @include tablet   {width: $sm-screen - $gutter;}
+  //@include small    {width: $xs-screen - $gutter;}
+  //@include tablet   {width: $sm-screen - $gutter;}
   @include medium   {width: $md-screen - $gutter;}
   @include large    {width: $lg-screen - $gutter;}
 

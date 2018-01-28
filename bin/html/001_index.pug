@@ -1,6 +1,32 @@
 extends models/default
 block content
-  include templates/header
+  header.header.assigned
+    .container
+      .header--wraper
+        .header--left
+          a(href="001_index.html").header__brand: img(src="img/logo__header.png", alt="")
+          img(src="img/iso.jpg", alt="").header__iso
+        .header--right
+          span.header--phone
+            small (+373 22) 
+            span 911-111
+          .btn.back-call
+            svg: use(xlink:href="#phone")
+            span Заказать звонок
+          .dropdown.mod--lang
+            a( data-toggle="dropdown" )
+              img(src="img/ru.gif", alt="")
+              span ru
+            ul.dropdown--menu
+              li: a(href="#").active 
+                img(src="img/ru.gif", alt="")
+                span ru
+              li: a(href="#") 
+                img(src="img/en.gif", alt="")
+                span en
+              li: a(href="#") 
+                img(src="img/ro.gif", alt="")
+                span md
   include templates/navbar
   .owl-carousel.fp--slider
     .slide
@@ -9,21 +35,21 @@ block content
         .slide--text Осенние скидки<br>на системы<br>видеонаблюдения
         a(href="").btn.btn--outline
           span Подробнее об акции
-          img(src="ico/arrow-right.svg", alt="")
+          svg: use(xlink:href="#nav")
     .slide
       img(src="img/slide2.jpg", alt="").img_to_bg
       .container
         .slide--text Осенние скидки<br>на системы<br>видеонаблюдения
         a(href="").btn.btn--outline
           span Подробнее об акции
-          img(src="ico/arrow-right.svg", alt="")
+          svg: use(xlink:href="#nav")
     .slide
       img(src="img/slide3.jpg", alt="").img_to_bg
       .container
         .slide--text Осенние скидки<br>на системы<br>видеонаблюдения
         a(href="").btn.btn--outline
           span Подробнее об акции
-          img(src="ico/arrow-right.svg", alt="")
+          svg: use(xlink:href="#nav")
   .fp--blocks
     a.block--link(href="")
       img(src="ico/category.svg", alt="")
@@ -42,34 +68,34 @@ block content
       .col.md-6.fp--news__item
         a.item--image(href=""): img(src="img/news1.jpg", alt="").img_to_bg
         .item--content
-          h4 Системы безопасности «Bolid»
+          h4: a(href="") Системы безопасности «Bolid»
           p Предмет деятельности, как принято считать, ментально индуцирует позитивизм, ломая рамки привычных представлений. Структурализм может быть получен из опыта.
           .item--content__date
-            svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 14"): path(d="M10,2V0H9V2H4V0H3V2H0V14H13V2Zm2,11H1V6H12ZM1,5V3H3V4H4V3H9V4h1V3h2V5Z")
+            svg: use(xlink:href="#calendar")
             span Сегодня в 16:35
       .col.md-6.fp--news__item
         a.item--image(href=""): img(src="img/news2.jpg", alt="").img_to_bg
         .item--content
-          h4 Приложение «Dahua Partner APP»
+          h4: a(href="") Приложение «Dahua Partner APP»
           p Предмет деятельности, как принято считать, ментально индуцирует позитивизм, ломая рамки привычных представлений. Структурализм может быть получен из опыта. 
           .item--content__date
-            svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 14"): path(d="M10,2V0H9V2H4V0H3V2H0V14H13V2Zm2,11H1V6H12ZM1,5V3H3V4H4V3H9V4h1V3h2V5Z")
+            svg: use(xlink:href="#calendar")
             span Вчера в 09:23
       .col.md-6.fp--news__item
         a.item--image(href=""): img(src="img/news3.jpg", alt="").img_to_bg
         .item--content
-          h4 Специальное предложение Dahua
+          h4: a(href="") Специальное предложение Dahua
           p Предмет деятельности, как принято считать, ментально индуцирует позитивизм, ломая рамки привычных представлений. Структурализм может быть получен из опыта. 
           .item--content__date
-            svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 14"): path(d="M10,2V0H9V2H4V0H3V2H0V14H13V2Zm2,11H1V6H12ZM1,5V3H3V4H4V3H9V4h1V3h2V5Z")
+            svg: use(xlink:href="#calendar")
             span 24 апреля 2017
       .col.md-6.fp--news__item
         a.item--image(href=""): img(src="img/news4.jpg", alt="").img_to_bg
         .item--content
-          h4 Приложение «Dahua Partner APP»
+          h4: a(href="") Приложение «Dahua Partner APP»
           p Предмет деятельности, как принято считать, ментально индуцирует позитивизм, ломая рамки привычных представлений. Структурализм может быть получен из опыта. 
           .item--content__date
-            svg(xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 14"): path(d="M10,2V0H9V2H4V0H3V2H0V14H13V2Zm2,11H1V6H12ZM1,5V3H3V4H4V3H9V4h1V3h2V5Z")
+            svg: use(xlink:href="#calendar")
             span 24 апреля 2017
   .fp--products
     .container

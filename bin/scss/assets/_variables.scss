@@ -1,36 +1,8 @@
 // Media Query Ranges //
-  $xs-screen: 480px !default;  //Small Screen:		481x768;
-  $sm-screen: 768px !default;  //Tablet Screen:		769x960;
-  $md-screen: 960px !default;  //Medium Screen:		961x1240;
-  $lg-screen: 1200px !default;  //Large Screen:		1241x ~ ;
-
-// Media Breakpoints //
-  $mobile-screen: "only screen and (max-width : #{$sm-screen - 1})" !default;
-  $tablet-screen: "only screen and (min-width : #{$sm-screen}) and (max-width : #{$md-screen - 1})" !default;
-  $normal-screen: "only screen and (min-width : #{$md-screen}) and (max-width : #{$lg-screen - 1})" !default;
-  $large-screen: "only screen and (min-width : #{$lg-screen})" !default;
-
-  $tablet-up: "only screen and (min-width : #{$sm-screen})" !default;
-  $normal-up: "only screen and (min-width : #{$md-screen})" !default;
-
-  $tablet-down: "only screen and (max-width : #{$md-screen - 1})" !default;
-  $normal-down: "only screen and (max-width : #{$lg-screen - 1})" !default;
-
+  $xs-screen: 480px !default;
+  $sm-screen: 800px !default;
+  $md-screen: 960px !default;
+  $lg-screen: 1200px !default;
 // Grid //
   $num-cols: 12 !default;
   $gutter: 30px !default;
-
-// Typography //
-  // 1.067 — Minor Second, 
-  // 1.125 — Major Second, 
-  // 1.200 — Minor Third, 
-  // 1.250 — Major Third, 
-  // 1.333 — Perfect Fourth, 
-  // 1.414 — Augmented Fourth, 
-  // 1.500 — Perfect Fifth, 
-  // 1.618 — Golden Ratio
-  $fontFamily: 'Source Sans Pro', sans-serif !default;
-  $ratio: 1.20 !default;
-// Color Theme //
-  $primary: #805078;
-  $base: #332030;

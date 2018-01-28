@@ -10,52 +10,264 @@
     <link rel="stylesheet" href="css/styles.min.css">
   </head>
   <body>
-    <header class="header">
+    <header class="header assigned">
       <div class="container">
         <div class="header--wraper">
-          <div class="header--left"><a class="header__brand" href="001_index.html"><img src="img/logo__header.png" alt=""></a></div>
+          <div class="header--left"><a class="header__brand" href="001_index.html"><img src="img/logo__header.png" alt=""></a><img class="header__iso" src="img/iso.jpg" alt=""></div>
           <div class="header--right"><span class="header--phone"><small>(+373 22) </small><span>911-111</span></span>
-            <div class="btn blue"><img src="ico/phone.svg" alt=""><span>Заказать звонок</span></div>
-            <div class="dropdown mod--lang"><a class="dropdown-toggle" href="#"><img src="img/ru.png" alt=""><span>ru</span></a>
+            <div class="btn back-call">
+              <svg>
+                <use xlink:href="#phone"></use>
+              </svg><span>Заказать звонок</span>
+            </div>
+            <div class="dropdown mod--lang"><a data-toggle="dropdown"><img src="img/ru.gif" alt=""><span>ru</span></a>
               <ul class="dropdown--menu">
-                <li><a href="#"> <img src="img/ru.png" alt=""><span>ru</span></a></li>
-                <li><a href="#"> <img src="img/ru.png" alt=""><span>en</span></a></li>
-                <li><a href="#"> <img src="img/ru.png" alt=""><span>md</span></a></li>
+                <li><a class="active" href="#"> <img src="img/ru.gif" alt=""><span>ru</span></a></li>
+                <li><a href="#"> <img src="img/en.gif" alt=""><span>en</span></a></li>
+                <li><a href="#"> <img src="img/ro.gif" alt=""><span>md</span></a></li>
               </ul>
             </div>
           </div>
         </div>
       </div>
     </header>
-    <div class="navbar">
-      <div class="container">
-        <div class="navbar--wraper">
-          <ul class="navbar--nav">
-            <li><a href="">Каталог</a></li>
-            <li><a href="">Проекты</a></li>
-            <li><a href="">Сервис</a></li>
-            <li><a href="">Скачать</a></li>
-            <li><a href="">Новости</a></li>
-            <li><a href="">О компании</a></li>
-            <li><a href="">Контакты</a></li>
-          </ul>
+    <div class="navbar--container">
+      <div class="navbar">
+        <div class="container">
+          <div class="navbar--wraper">
+            <div class="navbar--left">
+              <button class="navbar--toggle" data-toggle="navbar">
+                <svg>
+                  <use xlink:href="#bars"></use>
+                </svg><span>Меню</span>
+              </button>
+              <ul class="navbar--nav">
+                <li>
+                  <svg>
+                    <use xlink:href="#nav"></use>
+                  </svg>
+                  <button data-toggle="navbar"></button>
+                </li>
+                <li class="dropdown"><a data-toggle="dropdown">Каталог</a>
+                  <div class="dropdown--menu">
+                    <nav class="categories">
+                      <ul>
+                        <li class="parent--1"><a class="level--1" href="">Система видеонаблюдения</a>
+                          <ul class="child--1">
+                            <li><a href="">IP камеры для помещений</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a class="active" href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                          </ul>
+                        </li>
+                        <li class="parent--1"><a class="level--1" href="">Охранно-пожарная сигнализация</a>
+                          <ul class="child--1">
+                            <li><a href="">IP камеры для помещений</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                          </ul>
+                        </li>
+                        <li class="parent--1"><a class="level--1" href="">Система контроля и управления доступом </a>
+                          <ul class="child--1">
+                            <li><a href="">IP камеры для помещений</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                          </ul>
+                        </li>
+                        <li class="parent--1"><a class="level--1" href="">Система оповещения</a>
+                          <ul class="child--1">
+                            <li><a href="">IP камеры для помещений</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                          </ul>
+                        </li>
+                        <li class="parent--1"><a class="level--1" href="">Видеодомофоны</a>
+                          <ul class="child--1">
+                            <li><a href="">IP камеры для помещений</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                          </ul>
+                        </li>
+                        <li class="parent--1"><a class="level--1" href="">Блоки питания и аккумуляторы</a>
+                          <ul class="child--1">
+                            <li><a href="">IP камеры для помещений</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                          </ul>
+                        </li>
+                        <li class="parent--1"><a class="level--1" href="">Доводчики двери</a>
+                          <ul class="child--1">
+                            <li><a href="">IP камеры для помещений</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                          </ul>
+                        </li>
+                        <li class="parent--1"><a class="level--1" href="">Электромагнитные и электромеханические замки</a>
+                          <ul class="child--1">
+                            <li><a href="">IP камеры для помещений</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                          </ul>
+                        </li>
+                        <li class="parent--1"><a class="level--1" href="">Кабель силовой и сигнальный</a>
+                          <ul class="child--1">
+                            <li><a href="">IP камеры для помещений</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                          </ul>
+                        </li>
+                        <li class="parent--1"><a class="level--1" href="">Пластиковый канал и гофра</a>
+                          <ul class="child--1">
+                            <li><a href="">IP камеры для помещений</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                            <li><a href="">Macroscop ПО</a></li>
+                            <li><a href="">Уличные IP камеры</a></li>
+                            <li><a href="">NVR Видео регистраторы</a></li>
+                          </ul>
+                        </li>
+                      </ul>
+                    </nav><a class="new--products">
+                      <svg>
+                        <use xlink:href="#certificate"></use>
+                      </svg><span>Новые товары</span></a>
+                  </div>
+                </li>
+                <li><a href="">Проекты</a></li>
+                <li><a href="">Сервис</a></li>
+                <li><a href="">Скачать</a></li>
+                <li><a href="">Новости</a></li>
+                <li><a href="">О компании</a></li>
+                <li><a href="">Контакты</a></li>
+              </ul>
+            </div>
+            <div class="navbar--right"><a class="asign" href="">Вход <span>для дилеров</span></a><a class="search" href="">
+                <svg>
+                  <use xlink:href="#search"></use>
+                </svg><span>Поиск</span></a></div>
+          </div>
         </div>
       </div>
     </div>
     <div class="owl-carousel fp--slider">
       <div class="slide"><img class="img_to_bg" src="img/slide1.jpg" alt="">
         <div class="container">
-          <div class="slide--text">Осенние скидки<br>на системы<br>видеонаблюдения</div><a class="btn btn--outline" href=""><span>Подробнее об акции</span><img src="ico/arrow-right.svg" alt=""></a>
+          <div class="slide--text">Осенние скидки<br>на системы<br>видеонаблюдения</div><a class="btn btn--outline" href=""><span>Подробнее об акции</span>
+            <svg>
+              <use xlink:href="#nav"></use>
+            </svg></a>
         </div>
       </div>
       <div class="slide"><img class="img_to_bg" src="img/slide2.jpg" alt="">
         <div class="container">
-          <div class="slide--text">Осенние скидки<br>на системы<br>видеонаблюдения</div><a class="btn btn--outline" href=""><span>Подробнее об акции</span><img src="ico/arrow-right.svg" alt=""></a>
+          <div class="slide--text">Осенние скидки<br>на системы<br>видеонаблюдения</div><a class="btn btn--outline" href=""><span>Подробнее об акции</span>
+            <svg>
+              <use xlink:href="#nav"></use>
+            </svg></a>
         </div>
       </div>
       <div class="slide"><img class="img_to_bg" src="img/slide3.jpg" alt="">
         <div class="container">
-          <div class="slide--text">Осенние скидки<br>на системы<br>видеонаблюдения</div><a class="btn btn--outline" href=""><span>Подробнее об акции</span><img src="ico/arrow-right.svg" alt=""></a>
+          <div class="slide--text">Осенние скидки<br>на системы<br>видеонаблюдения</div><a class="btn btn--outline" href=""><span>Подробнее об акции</span>
+            <svg>
+              <use xlink:href="#nav"></use>
+            </svg></a>
         </div>
       </div>
     </div>
@@ -64,44 +276,44 @@
       <div class="row">
         <div class="col md-6 fp--news__item"><a class="item--image" href=""><img class="img_to_bg" src="img/news1.jpg" alt=""></a>
           <div class="item--content">
-            <h4>Системы безопасности «Bolid»</h4>
+            <h4><a href="">Системы безопасности «Bolid»</a></h4>
             <p>Предмет деятельности, как принято считать, ментально индуцирует позитивизм, ломая рамки привычных представлений. Структурализм может быть получен из опыта.</p>
             <div class="item--content__date">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 14">
-                <path d="M10,2V0H9V2H4V0H3V2H0V14H13V2Zm2,11H1V6H12ZM1,5V3H3V4H4V3H9V4h1V3h2V5Z"></path>
+              <svg>
+                <use xlink:href="#calendar"></use>
               </svg><span>Сегодня в 16:35</span>
             </div>
           </div>
         </div>
         <div class="col md-6 fp--news__item"><a class="item--image" href=""><img class="img_to_bg" src="img/news2.jpg" alt=""></a>
           <div class="item--content">
-            <h4>Приложение «Dahua Partner APP»</h4>
+            <h4><a href="">Приложение «Dahua Partner APP»</a></h4>
             <p>Предмет деятельности, как принято считать, ментально индуцирует позитивизм, ломая рамки привычных представлений. Структурализм может быть получен из опыта. </p>
             <div class="item--content__date">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 14">
-                <path d="M10,2V0H9V2H4V0H3V2H0V14H13V2Zm2,11H1V6H12ZM1,5V3H3V4H4V3H9V4h1V3h2V5Z"></path>
+              <svg>
+                <use xlink:href="#calendar"></use>
               </svg><span>Вчера в 09:23</span>
             </div>
           </div>
         </div>
         <div class="col md-6 fp--news__item"><a class="item--image" href=""><img class="img_to_bg" src="img/news3.jpg" alt=""></a>
           <div class="item--content">
-            <h4>Специальное предложение Dahua</h4>
+            <h4><a href="">Специальное предложение Dahua</a></h4>
             <p>Предмет деятельности, как принято считать, ментально индуцирует позитивизм, ломая рамки привычных представлений. Структурализм может быть получен из опыта. </p>
             <div class="item--content__date">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 14">
-                <path d="M10,2V0H9V2H4V0H3V2H0V14H13V2Zm2,11H1V6H12ZM1,5V3H3V4H4V3H9V4h1V3h2V5Z"></path>
+              <svg>
+                <use xlink:href="#calendar"></use>
               </svg><span>24 апреля 2017</span>
             </div>
           </div>
         </div>
         <div class="col md-6 fp--news__item"><a class="item--image" href=""><img class="img_to_bg" src="img/news4.jpg" alt=""></a>
           <div class="item--content">
-            <h4>Приложение «Dahua Partner APP»</h4>
+            <h4><a href="">Приложение «Dahua Partner APP»</a></h4>
             <p>Предмет деятельности, как принято считать, ментально индуцирует позитивизм, ломая рамки привычных представлений. Структурализм может быть получен из опыта. </p>
             <div class="item--content__date">
-              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 13 14">
-                <path d="M10,2V0H9V2H4V0H3V2H0V14H13V2Zm2,11H1V6H12ZM1,5V3H3V4H4V3H9V4h1V3h2V5Z"></path>
+              <svg>
+                <use xlink:href="#calendar"></use>
               </svg><span>24 апреля 2017</span>
             </div>
           </div>
