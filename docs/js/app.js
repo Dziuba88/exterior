@@ -72,24 +72,16 @@ $(document).ready(function() {
   });
 
   $(function(){
+
     var sync1 = $("#actionsync-1");
     var sync2 = $("#actionsync-2");
-    var syncedSecondary = false;
+    var slidesPerPage = 5;
+    var syncedSecondary = true;
 
-    sync1
-      .owlCarousel({loop: true,items: 1,mouseDrag: false,thumbs: false})
-      .on('changed.owl.carousel', syncPosition);
-    sync2
-      .on('initialized.owl.carousel', function () {sync2.find(".owl-item").eq(0).addClass("current");})
-      .owlCarousel({
-        thumbs: false,nav: true,
-        navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>'],
-        responsive : {
-          0 : { items: 1 },
-          480 : { items: 2 },
-          1000 : { items: 3 },
-          1200 : { items: 5 },
-        }
+    sync1.owlCarousel({mouseDrag: false,thumbs: false,items : 1,autoplay: true,loop: true,}).on('changed.owl.carousel', syncPosition);
+    sync2.on('initialized.owl.carousel', function () {sync2.find(".owl-item").eq(0).addClass("current");})
+      .owlCarousel({mouseDrag: false,thumbs: false,items : slidesPerPage,nav: true,slideBy: slidesPerPage,
+        navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>']
       })
       .on('changed.owl.carousel', syncPosition2);
 
@@ -98,7 +90,6 @@ $(document).ready(function() {
       var current = Math.round(el.item.index - (el.item.count/2) - .5);
       if(current < 0) {current = count;}
       if(current > count) {current = 0;}
-
       sync2
         .find(".owl-item")
         .removeClass("current")
@@ -111,18 +102,11 @@ $(document).ready(function() {
       if (current > end) {sync2.data('owl.carousel').to(current, 100, true);}
       if (current < start) {sync2.data('owl.carousel').to(current - onscreen, 100, true);}
     }
-
     function syncPosition2(el) {
-      if(syncedSecondary) {
-        var number = el.item.index;
-        sync1.data('owl.carousel').to(number, 100, true);
-      }
-    };
-
+      if(syncedSecondary) {var number = el.item.index;sync1.data('owl.carousel').to(number, 100, true);}
+    }
     sync2.on("click", ".owl-item", function(e){
-      e.preventDefault();
-      var number = $(this).index();
-      sync1.data('owl.carousel').to(number, 300, true);
+      e.preventDefault();var number = $(this).index();sync1.data('owl.carousel').to(number, 300, true);
     });
 
   });

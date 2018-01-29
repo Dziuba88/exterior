@@ -330,7 +330,10 @@ body {
 
   }
 }
-
+@include mobile {
+  .action--page .action--info .action--time {font-size: 12px;}
+  .action--page .action--form input {margin-bottom: 20px;}
+}
 .purchase {
   &--page {
     flex: 1;
