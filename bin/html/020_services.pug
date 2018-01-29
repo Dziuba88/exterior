@@ -17,7 +17,39 @@ block content
               .row
                 .col.sm-6.md-12: input(type="text" placeholder="Номер заявки")
                 .col.sm-6.md-12: input(type="text" placeholder="Пин код")
-              button.btn.btn--submit Проверить статус
+              button.btn.btn--submit(data-mfp-src="#view-status") Проверить статус
+            #view-status.popup--default.md.mfp-hide
+              .popup__header Статус ремонта вашего оборудования
+              .popup__body
+                .repare--item
+                  .item--col
+                    strong Название модели
+                    span Серия: 00928378
+                  .item--col
+                    .item--col__title Заявка №
+                    span 00928378
+                  .item--col
+                    .item--col__title Цена ремонта
+                    span 1345 MDL
+                  .item--col
+                    .item--col__title Статус
+                    span.label.working В ремонте
+                .repare--item
+                  .item--col
+                    strong Название модели
+                    span Серия: 00928378
+                  .item--col
+                    .item--col__title Заявка №
+                    span 00928378
+                  .item--col
+                    .item--col__title Цена ремонта
+                    span 1345 MDL
+                  .item--col
+                    .item--col__title Статус
+                    span.label.ready Выполнено
+                    span 12.04.2017
+
+
     section.services
       .container
         h2 Наши услуги
@@ -57,16 +89,16 @@ block content
               input(type="tel")
               label Имя
               input(type="text")
-              button.btn.btn--submit Отправить
+              button.btn.btn--submit(data-mfp-src="#thanks") Отправить
     section.about
       .container
         h2 О сервисном центре
-        .row.middle
+        .row
           .col.md-7
-            p Ремонт в прекрасно оснащенной лаборатории ответственными инженерами-ремонтниками компонентов систем видеонаблюдения, охранной и пожарной сигнализации, контроля доступа, домофонов.
+            p Ремонт в прекрасно оснащенной лаборатории ответственными инженерами-ремонтниками компонентов систем видеонаблюдения, охранной и пожарной сигнализации, контроля доступа, домофонов.
             p Гарантийное и пост гарантийное обслуживание систем безопасности  командой профессионалов, стоящих у истоков зарождения бизнеса в сфере систем безопасности в нашей стране.
-            p Выезд бригады быстрого реагирования, обеспеченной всем необходимым для проведения широкого спектра ремонта и диагностики в полевых условиях.  Гарантия на все виды услуг. Мы в ответе за свой труд!
-            p: span.btn.btn--readmore(data-toggle="collapse" data-target="#more-info") Подробнее об отделе
+            p Выезд бригады быстрого реагирования, обеспеченной всем необходимым для проведения широкого спектра ремонта и диагностики в полевых условиях.  Гарантия на все виды услуг. Мы в ответе за свой труд!
+            p: span.btn.btn--readmore(data-toggle="collapse" data-target="#more-info") Читать далее
             .collapse#more-info: .content
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
@@ -114,10 +146,13 @@ block content
                 h2 Обращайтесь к нам любым удобным для вас способом
                 ul.contacts--list
                   li
+                    svg: use(xlink:href="#tel")
                     span (0 22) 911-100
                   li
+                    svg: use(xlink:href="#mail")
                     span service@exterior.md
                   li
+                    svg: use(xlink:href="#marker")
                     span г. Кишинев, ул. М.Варлаам, 65
           .col.md-5
             h3 Заявки принимаются:
@@ -131,10 +166,14 @@ block content
                   strong 9:00–13:00
               p За исключением выходных и праздничных дней
 
+    #thanks.popup--default.sm.mfp-hide
+      .popup__header Спасибо, ваша заявки принята
+      .popup__body: p Менеджер с вами свяжется  в рабочее время<br>с 9:00 до 18:00 с пн–пт
 
 
 
 
 
-
+  
+  
   include templates/footer

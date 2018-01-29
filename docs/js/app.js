@@ -265,7 +265,7 @@ $(document).ready(function() {
     }
   });
 
-
+  $('[data-mfp-src]').magnificPopup({type: 'inline',callbacks: {open: function() {$('html').css('margin-right', 0);}}});
 
 
 

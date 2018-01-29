@@ -264,7 +264,36 @@
                     <input type="text" placeholder="Пин код">
                   </div>
                 </div>
-                <button class="btn btn--submit">Проверить статус</button>
+                <button class="btn btn--submit" data-mfp-src="#view-status">Проверить статус</button>
+              </div>
+              <div class="popup--default md mfp-hide" id="view-status">
+                <div class="popup__header">Статус ремонта вашего оборудования</div>
+                <div class="popup__body">
+                  <div class="repare--item">
+                    <div class="item--col"><strong>Название модели</strong><span>Серия: 00928378</span></div>
+                    <div class="item--col">
+                      <div class="item--col__title">Заявка №</div><span>00928378</span>
+                    </div>
+                    <div class="item--col">
+                      <div class="item--col__title">Цена ремонта</div><span>1345 MDL</span>
+                    </div>
+                    <div class="item--col">
+                      <div class="item--col__title">Статус</div><span class="label working">В ремонте</span>
+                    </div>
+                  </div>
+                  <div class="repare--item">
+                    <div class="item--col"><strong>Название модели</strong><span>Серия: 00928378</span></div>
+                    <div class="item--col">
+                      <div class="item--col__title">Заявка №</div><span>00928378</span>
+                    </div>
+                    <div class="item--col">
+                      <div class="item--col__title">Цена ремонта</div><span>1345 MDL</span>
+                    </div>
+                    <div class="item--col">
+                      <div class="item--col__title">Статус</div><span class="label ready">Выполнено</span><span>12.04.2017</span>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -312,7 +341,7 @@
                 <input type="tel">
                 <label>Имя</label>
                 <input type="text">
-                <button class="btn btn--submit">Отправить</button>
+                <button class="btn btn--submit" data-mfp-src="#thanks">Отправить</button>
               </div>
             </div>
           </div>
@@ -321,12 +350,12 @@
       <section class="about">
         <div class="container">
           <h2>О сервисном центре</h2>
-          <div class="row middle">
+          <div class="row">
             <div class="col md-7">
-              <p>Ремонт в прекрасно оснащенной лаборатории ответственными инженерами-ремонтниками компонентов систем видеонаблюдения, охранной и пожарной сигнализации, контроля доступа, домофонов.</p>
+              <p>Ремонт в прекрасно оснащенной лаборатории ответственными инженерами-ремонтниками компонентов систем видеонаблюдения, охранной и пожарной сигнализации, контроля доступа, домофонов.</p>
               <p>Гарантийное и пост гарантийное обслуживание систем безопасности  командой профессионалов, стоящих у истоков зарождения бизнеса в сфере систем безопасности в нашей стране.</p>
-              <p>Выезд бригады быстрого реагирования, обеспеченной всем необходимым для проведения широкого спектра ремонта и диагностики в полевых условиях.  Гарантия на все виды услуг. Мы в ответе за свой труд!</p>
-              <p><span class="btn btn--readmore" data-toggle="collapse" data-target="#more-info">Подробнее об отделе</span></p>
+              <p>Выезд бригады быстрого реагирования, обеспеченной всем необходимым для проведения широкого спектра ремонта и диагностики в полевых условиях.  Гарантия на все виды услуг. Мы в ответе за свой труд!</p>
+              <p><span class="btn btn--readmore" data-toggle="collapse" data-target="#more-info">Читать далее</span></p>
               <div class="collapse" id="more-info">
                 <div class="content">
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.</p>
@@ -382,9 +411,21 @@
                 <div class="col sm-7">
                   <h2>Обращайтесь к нам любым удобным для вас способом</h2>
                   <ul class="contacts--list">
-                    <li><span>(0 22) 911-100</span></li>
-                    <li><span>service@exterior.md</span></li>
-                    <li><span>г. Кишинев, ул. М.Варлаам, 65</span></li>
+                    <li>
+                      <svg>
+                        <use xlink:href="#tel"></use>
+                      </svg><span>(0 22) 911-100</span>
+                    </li>
+                    <li>
+                      <svg>
+                        <use xlink:href="#mail"></use>
+                      </svg><span>service@exterior.md</span>
+                    </li>
+                    <li>
+                      <svg>
+                        <use xlink:href="#marker"></use>
+                      </svg><span>г. Кишинев, ул. М.Варлаам, 65</span>
+                    </li>
                   </ul>
                 </div>
               </div>
@@ -402,6 +443,12 @@
           </div>
         </div>
       </section>
+      <div class="popup--default sm mfp-hide" id="thanks">
+        <div class="popup__header">Спасибо, ваша заявки принята</div>
+        <div class="popup__body">
+          <p>Менеджер с вами свяжется  в рабочее время<br>с 9:00 до 18:00 с пн–пт</p>
+        </div>
+      </div>
     </div>
     <footer class="footer">
       <div class="container">
