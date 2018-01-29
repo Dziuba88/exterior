@@ -271,7 +271,7 @@
               <input type="text">
             </div>
             <div class="col md-3">
-              <button class="btn btn--submit">Отправить заявку</button>
+              <button class="btn btn--submit" data-mfp-src="#thanks">Отправить заявку</button>
             </div>
           </div>
         </div>
@@ -435,7 +435,7 @@
                     <input type="text">
                   </div>
                   <div class="col md-4">
-                    <button class="btn btn--solution">Отправить заявку</button>
+                    <button class="btn btn--solution" data-mfp-src="#thanks">Отправить заявку</button>
                   </div>
                 </div>
               </div>
@@ -556,7 +556,7 @@
                     <input type="text">
                   </div>
                   <div class="col md-4">
-                    <button class="btn btn--solution">Оформить заявку</button>
+                    <button class="btn btn--solution" data-mfp-src="#thanks">Оформить заявку</button>
                   </div>
                 </div>
               </div>
@@ -578,25 +578,28 @@
       </section>
       <section class="contact">
         <div class="container">
-          <h2>Остались вопросы? Ответим</h2>
           <div class="row">
             <div class="col lg-10 offset-lg-1">
               <form class="validate--form">
+                <h2>Остались вопросы? Ответим</h2>
                 <div class="row">
                   <div class="col md-6">
                     <div class="input--row">
-                      <label>Имя *</label>
-                      <input type="text" required>
+                      <label>Имя <i>*</i></label>
+                      <input type="text" required name="name">
                     </div>
                     <div class="input--row">
-                      <label>Телефон *</label>
-                      <input type="tel" required>
+                      <label>Телефон <i>*</i></label>
+                      <input type="tel" required name="phone">
                     </div>
                     <div class="input--row">
-                      <label>E-mail </label>
-                      <input type="email" required>
+                      <label>E-mail <i>*</i></label>
+                      <input type="email" required name="email">
                     </div>
-                    <div class="captcha--block"></div>
+                    <div class="captcha--block">
+                      <div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></div>
+                      <script src="https://www.google.com/recaptcha/api.js"></script>
+                    </div>
                   </div>
                   <div class="col md-6">
                     <div class="input--row">
@@ -612,18 +615,22 @@
                     </div>
                     <div class="input--row">
                       <label>Сообщение</label>
-                      <textarea name="" cols="30" rows="10"></textarea>
+                      <textarea cols="30" rows="10" required name="message"></textarea>
                     </div>
                   </div>
                 </div>
-                <p class="t--center">
-                  <button class="btn btn--contact">Отправить</button>
-                </p>
+                <button class="btn btn-default" type="submit">Отправить</button>
               </form>
             </div>
           </div>
         </div>
       </section>
+      <div class="popup--default sm mfp-hide" id="thanks">
+        <div class="popup__header">Спасибо, ваша заявки принята</div>
+        <div class="popup__body">
+          <p>Менеджер с вами свяжется  в рабочее время<br>с 9:00 до 18:00 с пн–пт</p>
+        </div>
+      </div>
     </div>
     <footer class="footer">
       <div class="container">

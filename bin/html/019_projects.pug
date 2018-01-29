@@ -20,7 +20,7 @@ block content
           .col.md-3
             label Ваше имя
             input(type="text")
-          .col.md-3: button.btn.btn--submit Отправить заявку
+          .col.md-3: button.btn.btn--submit(data-mfp-src="#thanks") Отправить заявку
     section.solutions--slider
       h1 Решения
       .owl-carousel
@@ -200,7 +200,7 @@ block content
                 .col.md-4
                   label Ваше имя
                   input(type="text")
-                .col.md-4: button.btn.btn--solution Отправить заявку
+                .col.md-4: button.btn.btn--solution(data-mfp-src="#thanks") Отправить заявку
     section.about
       .container
         h2 о проектном отделе
@@ -270,7 +270,7 @@ block content
                 .col.md-4
                   label Ваше имя
                   input(type="text")
-                .col.md-4: button.btn.btn--solution Оформить заявку
+                .col.md-4: button.btn.btn--solution(data-mfp-src="#thanks") Оформить заявку
     section.partners
       .container
         h2 Нам доверяют
@@ -282,22 +282,24 @@ block content
           .partners--item: img(src="img/partner5.png", alt="")
     section.contact
       .container
-        h2 Остались вопросы? Ответим
         .row
           .col.lg-10.offset-lg-1
             form.validate--form
+              h2 Остались вопросы? Ответим
               .row
                 .col.md-6
                   .input--row
-                    label Имя *
-                    input(type="text" required)
+                    label Имя <i>*</i>
+                    input(type="text" required name="name")
                   .input--row
-                    label Телефон *
-                    input(type="tel" required)
+                    label Телефон <i>*</i>
+                    input(type="tel" required name="phone")
                   .input--row
-                    label E-mail 
-                    input(type="email" required)
+                    label E-mail <i>*</i>
+                    input(type="email" required name="email")
                   .captcha--block
+                    .g-recaptcha(data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW")
+                    script(src='https://www.google.com/recaptcha/api.js')
                 .col.md-6
                   .input--row
                     label Отдел 
@@ -310,6 +312,9 @@ block content
                       option Отдел 5
                   .input--row
                     label Сообщение
-                    textarea(name="", cols="30", rows="10")
-              p.t--center: button.btn.btn--contact Отправить
+                    textarea(cols="30", rows="10", required, name="message")
+              button.btn.btn-default(type="submit") Отправить
+    #thanks.popup--default.sm.mfp-hide
+      .popup__header Спасибо, ваша заявки принята
+      .popup__body: p Менеджер с вами свяжется  в рабочее время<br>с 9:00 до 18:00 с пн–пт
   include templates/footer

@@ -138,11 +138,19 @@ $(document).ready(function() {
     navText: ['<svg><use xlink:href="#arrow_left"></use></svg>', '<svg><use xlink:href="#arrow_right"></use></svg>']
   });
 
-  $('.fp--brands .owl-carousel, .partners .owl-carousel').owlCarousel({
+  $('.fp--brands .owl-carousel').owlCarousel({
     thumbs: false,
     responsive : {
         0 : { items: 1 },
         768 : { items: 2 },
+        960 : { items: 5 },
+    }
+  });
+  $('.partners .owl-carousel').owlCarousel({
+    thumbs: false,
+    responsive : {
+        0 : { items: 2 },
+        768 : { items: 3 },
         960 : { items: 5 },
     }
   });
@@ -266,6 +274,21 @@ $(document).ready(function() {
   });
 
   $('[data-mfp-src]').magnificPopup({type: 'inline',callbacks: {open: function() {$('html').css('margin-right', 0);}}});
+  
+  if($("form.validate--form").length) {
+    $.validator.messages.required = 'Заполните правильно поле';
+    $('form.validate--form').each(function() {
+      $(this).validate({
+        focusInvalid: false,
+        errorElement: "span",
+        errorPlacement: function(error, element) {{
+          $( element ).parent().find('label').addClass("error");
+          $( element ).addClass("error");
+          error.insertAfter( element );
+        }}
+      });
+    });
+  };
 
 
 
