@@ -113,6 +113,12 @@ body {
         font-size: 24px;
         text-transform: uppercase;
         color: #050d33;
+
+        svg, span {
+          display: inline-block;
+          line-height: 1;
+          vertical-align: middle;
+        }
       }
 
       svg {
@@ -141,7 +147,7 @@ body {
       }
 
       p {
-        margin: 0 0 50px;
+        margin: 0 0 60px;
       } 
     }
 
@@ -157,6 +163,12 @@ body {
         text-transform: uppercase;
         color: #050d33;
         margin: 0 0 30px;
+
+        svg, span {
+          display: inline-block;
+          line-height: 1;
+          vertical-align: middle;
+        }
       }
 
       svg {
@@ -221,7 +233,24 @@ body {
 
   }
 }
-
+@include tabletDown {
+  .solutions--page .solution--2 .system--item {min-height: 0}
+  .solutions--page .solution--3 .pluses--item {text-align: center;max-width: 520px; margin: 0 auto 30px;}
+  .solutions--page .solution--3 .pluses--item h3 {margin-bottom: 10px;}
+  .solutions--page .solution--form h3 {border: none;margin-bottom: 10px;}
+  .solutions--page .solution--form input {margin-bottom: 20px;}
+}
+@include mobile {
+  .solutions--page .solution--1 {font-size: 16px;line-height: 24px;}
+  .solutions--page .solution--1 h1 {font-size: 30px;margin-bottom: 30px;}
+  .solutions--page .solution--1 p {margin-bottom: 20px;}
+  .solutions--page .solution--1 img {margin-top: 30px;}
+  .solutions--page .solution--2 .t--center h2, .solutions--page .solution--3 .t--center h2 {font-size: 20px;}
+  .solutions--page .solution--2 .t--center,.solutions--page .solution--3 .t--center {font-size: 16px;line-height: 24px;}
+  .solutions--page .solution--2 .system--item h3, .solutions--page .solution--3 .pluses--item h3 {font-size: 16px;}
+  .solutions--page .solution--2 .system--item .wraper {padding: 0 20px;}
+  .solutions--page .solution--2 .system--item, .solutions--page .solution--3 .pluses--item {font-size: 14px;line-height: 20px;}
+}
 .action--page {
   flex: 1;
   padding: 60px 0;
