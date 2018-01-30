@@ -24,3 +24,30 @@ header.header.assigned
             li: a(href="#") 
               img(src="img/ro.gif", alt="")
               span md
+  .basket
+    button.basket--icon(data-toggle="basket")
+      svg: use(xlink:href="#basket")
+      span 23
+    .basket--wraper
+      button.basket--line(data-toggle="basket"): svg: use(xlink:href="#basket")
+      h3 Покупки
+      .basket--list
+        - for (i=1; i<=23; i++)
+          .basket--item
+            a.basket--item__image: img(src="img/product1.jpg", alt="")
+            .basket--item__info
+              a.item__delete: svg: use(xlink:href="#danger")
+              a.item__title DH-IPC-HDBW2421R-ZSVFS
+              .number
+                input(type='text', value='1', min='1')
+                .btn-plus: svg: use(xlink:href="#plus")
+                .btn-minus: svg: use(xlink:href="#minus")
+              span.item__price Цена: 1500 MDL
+      .basket--controls
+        .total
+          span Всего:
+          .info
+            span 23 товаров
+            span 1080 леев
+        a.btn.btn-default Оформить
+

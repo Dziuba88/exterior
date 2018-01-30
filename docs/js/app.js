@@ -23,7 +23,7 @@ function createSticky(sticky) {
     var pos = sticky.offset().top,  win = $(window);
     win.on("scroll", function() {
       win.scrollTop() >= pos ? sticky.addClass("sticky") : sticky.removeClass("sticky");
-      win.scrollTop() >= (pos + 60) ? sticky.addClass("in") : sticky.removeClass("in");
+      win.scrollTop() >= (pos + 20) ? sticky.addClass("in") : sticky.removeClass("in");
     });
   }
 };
@@ -38,6 +38,10 @@ $(document).ready(function() {
     $(this).toggleClass('active');
     $('.navbar').toggleClass('show-menu');
     $('html').delay(250).toggleClass('noscroll');
+  })
+
+  $('[data-toggle=basket]').click(function (event) {
+    $('.basket').toggleClass('show');
   })
 
   $('[data-toggle=filters]').click(function (event) {
@@ -61,15 +65,7 @@ $(document).ready(function() {
     $(this).parent().css(cssValues)
   });
 
-  $('.fp--slider').owlCarousel({
-    thumbs: false,
-    items: 1,
-    autoplay: true,
-    autoplayTimeout: 7000,
-    autoplayHoverPause: false,
-    loop: true,
-    mouseDrag: false
-  });
+  $('.fp--slider').owlCarousel({thumbs: false,items: 1,autoplay: true,autoplayTimeout: 7000,autoplayHoverPause: false,loop: true,mouseDrag: false});
 
   $(function(){
 
@@ -125,17 +121,17 @@ $(document).ready(function() {
   $('.fp--brands .owl-carousel').owlCarousel({
     thumbs: false,
     responsive : {
-        0 : { items: 1 },
-        768 : { items: 2 },
-        960 : { items: 5 },
+      0 : { items: 1 },
+      768 : { items: 2 },
+      960 : { items: 5 },
     }
   });
   $('.partners .owl-carousel').owlCarousel({
     thumbs: false,
     responsive : {
-        0 : { items: 2 },
-        768 : { items: 3 },
-        960 : { items: 5 },
+      0 : { items: 2 },
+      768 : { items: 3 },
+      960 : { items: 5 },
     }
   });
 
@@ -144,9 +140,20 @@ $(document).ready(function() {
     nav: true,
     navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>'],
     responsive : {
-        0 : { items: 1 },
-        768 : { items: 2 },
-        960 : { items: 3 },
+      0 : { items: 1 },
+      768 : { items: 2 },
+      960 : { items: 3 },
+    }
+  });
+
+  $('.compare--slider').owlCarousel({
+    thumbs: false,nav: true,mouseDrag: true,
+    navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>'],
+    responsive : {
+      0 : { items: 1 },
+      768 : { items: 2 },
+      960 : { items: 3 },
+      1200 : { items: 4 },
     }
   });
 
@@ -195,8 +202,8 @@ $(document).ready(function() {
 
   $('.add-to-basket').on('click', function (event) {
     $(this).addClass('in');
-    $(this).find('.active').show(300);
-    $(this).find('.inactive').hide(300);
+    $(this).find('.active').show(50);
+    $(this).find('.inactive').hide(50);
   });
 
   $('[data-link]').click(function () {
