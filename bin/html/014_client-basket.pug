@@ -18,7 +18,7 @@ block content
           - for (i=1; i<=3; i++)
             tr
               td: a(href="").purchased--item: img(src="img/product1.jpg", alt="")
-              td(data-header="Название") DH-IPC-HDBW2421R-ZSVFS
+              td DH-IPC-HDBW2421R-ZSVFS
               td(data-header="Розничная цена") 26 USD
               td(data-header="Цена дилера") 26 USD
               td(data-header="Кол-во")
@@ -30,7 +30,7 @@ block content
               td(data-header="Стоимость MDL") 1500 MDL
         tfoot
           tr
-            th(colspan="4")
+            th(colspan="4").hide--tablet
             th(colspan="3")
               strong Сумма:
               span 25 USD/1500 MDL
@@ -40,7 +40,7 @@ block content
             svg: use(xlink:href="#truck")
             span Способ доставки
           .row
-            .col.sm-5
+            .col.md-5
               input(id="radio1" type="radio" name="delivery")
               label(for='radio1')
                 i: svg: use(xlink:href="#success")
@@ -57,7 +57,7 @@ block content
               label(for='radio4')
                 i: svg: use(xlink:href="#success")
                 span По регионам
-            .col.sm-7
+            .col.md-7
               label Регион
               select(data-select)
                 option(data-display="Выбрать Регион") Ничего не выбрано

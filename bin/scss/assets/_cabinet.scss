@@ -487,6 +487,9 @@
   .label {font-size: 11px;}
   .cabinet--table.purchased td, .cabinet--table.purchased th {font-size: 12px;}
 }
+@include mediumDown {
+  .basket--form {margin-bottom: 40px;}
+}
 @include tabletDown {
   .cabinet--profile__informer {text-align: left;}
 
@@ -504,7 +507,6 @@
       }
     }
   }
-
   .cabinet--table {
     display: block;
     thead {display: none;}
@@ -523,20 +525,61 @@
     }
   }
 
+  .cabinet--orders {
+    display: block;
+    thead {display: none;}
+    tbody, tr, td, th {margin: 0;padding: 0;display: block;width: 100%;}
+    td {padding: 10px 0;border-bottom: 1px solid #f2f3f5;text-align: right !important;}
+    td:before {
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-weight: 600;
+      display: inline-block;
+      float: left;
+      content: attr(data-header);
+    }
+  }
+  .cabinet--orders .btn {font-size: 12px;}
 
+  .basket--table {
+    display: block;
+    thead {display: none;}
+    tbody, tr, td, th {margin: 0;padding: 0;display: block;width: 100%;
+      &.hide--tablet {display: none;}
+    }
+    td {padding: 10px 0;border-bottom: 1px solid #f2f3f5;text-align: right !important;
+      &:nth-child(1), &:nth-child(2) {text-align: center !important;}
+      &:first-child {border: none;}
+      a.purchased--item {margin: 0 auto;width: 60px;}
+    }
+    td:before {
+      font-family: 'Open Sans Condensed', sans-serif;
+      font-weight: 600;
+      display: inline-block;
+      float: left;
+      content: attr(data-header);
+    }
+
+    tfoot {display: block;
+      th {text-align: center !important;}
+    }
+
+    .number {display: inline-block;width: 100px;}
+  }
+
+  .basket--page .client--info .col {margin-bottom: 20px;}
 
 }
 @include mobile {
   .cabinet--subnav nav ul {text-align: center;}
-  .cabinet--subnav nav ul li a {
-    font-size: 13px;
-    padding: 5px 10px;
-    margin: 5px;
-  }
+  .cabinet--subnav nav ul li a {font-size: 13px;padding: 5px 10px;margin: 5px;}
   .cabinet--profile__informer {text-align: left;}
   .profile--info dt, .profile--info dd {width: 100%;margin: 0;}
   .profile--info dd {margin-bottom: 10px;}
   .xcoin--status .wraper .current {width: 50px;margin-left: -25px;}
   .xcoin--status .wraper .current svg {display: none;}
   .xcoin--bonus {padding: 60px 0 0;}
+
+  .basket--table tfoot tr th .btn--submit {width: 100%;}
+  .basket--summary h2 {margin-bottom: 10px;}
+  .basket--summary table {font-size: 16px;line-height: 24px;}
 }
