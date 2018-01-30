@@ -238,3 +238,22 @@
     }
   }
 }
+
+@include tabletDown {
+  .about--page .info--text {padding: 0;}
+  .about--page .owl-carousel {margin: 0 40px;}
+  .about--page .owl-thumbs {display: none;}
+  .about--page .owl-nav div.owl-next {right: -40px;}
+  .about--page .owl-nav div.owl-prev {left: -40px;}
+  .about--page .slider--partners .partner--info {margin-top: 20px;}
+  .about--page .slider--clients .client--image {border-radius: 6px 6px 0 0}
+  .about--page .slider--clients .client--info {border-radius: 0 0 6px 6px}
+}
+@include mobile {
+  .about--page .owl-carousel {margin: 0 0px;}
+  .about--page .owl-nav div.owl-next {right: 0px;}
+  .about--page .owl-nav div.owl-prev {left: 0px;}
+  .about--page .slider--partners .partner--info, .about--page .slider--clients .client--info {padding: 15px;font-size: 14px;}
+  .about--page .slider--clients .client--info p small {font-size: 11px;}
+  .about--page .musthave {font-size: 16px;line-height: 24px;}
+}

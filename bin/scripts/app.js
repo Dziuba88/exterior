@@ -237,25 +237,17 @@ $(document).ready(function() {
 
 
   $('.slider--partners .owl-carousel').owlCarousel({
-    thumbs: true,
-    thumbImage: true,
-    items: 1,
-    loop: false,
-    nav: true,
+    thumbs: true,thumbImage: true,items: 1,loop: false,nav: true,
     navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>']
   });
 
   $('.slider--clients .owl-carousel').owlCarousel({
-    thumbs: true,
-    thumbImage: true,
-    items: 1,
-    loop: false,
-    nav: true,
+    thumbs: true,thumbImage: true,items: 1,loop: false,nav: true,
     navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>']
   });
+
   $('.slider--documents .owl-carousel').owlCarousel({
-    thumbs: false,
-    nav: true,
+    thumbs: false, nav: true,
     navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>'],
     responsive : {
         0 : { items: 1 },
@@ -281,9 +273,34 @@ $(document).ready(function() {
     });
   };
 
+  $('[data-gallery]').each(function() {
+    $(this).magnificPopup({
+      delegate: 'a',
+      type: 'image',
+      tLoading: 'Loading image #%curr%...',
+      mainClass: 'mfp-img-mobile',
+      gallery: {
+        enabled: true,
+        navigateByImgClick: true,
+        preload: [0,1] // Will preload 0 - before current, and 1 after the current image
+      },
+      image: {
+        tError: '<a href="%url%">The image #%curr%</a> could not be loaded.',
+        titleSrc: ''
+      },
+      callbacks: {open: function() {$('html').css('margin-right', 0);}}
+    });
+  });
 
+  $('.btn--video').magnificPopup({
+      disableOn: 700,
+      type: 'iframe',
+      mainClass: 'mfp-fade',
+      removalDelay: 160,
+      preloader: false,
 
-
+      fixedContentPos: false
+    });
 
 
 

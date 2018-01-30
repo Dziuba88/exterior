@@ -10,9 +10,9 @@ block content
           .panel-title(data-toggle="collapse" data-parent="#accordion" data-target="#collapse-1" aria-expanded="true") Видеонаблюдение
           #collapse-1.panel-collapse.collapse.in
             .panel-body
-              .row
+              .row(data-gallery="1")
                 - for (i=1; i<=6; i++)
-                  .col.md-2
+                  .col.md-2.sm-4.xs-6
                     a(href="img/srt"+i+".jpg").support--page__str
                       img(src="img/srt"+i+".jpg", alt="")
                       span Название сертификата
@@ -20,9 +20,9 @@ block content
           .panel-title(data-toggle="collapse" data-parent="#accordion" data-target="#collapse-2") Охранно-пожарные системы безопасности
           #collapse-2.panel-collapse.collapse
             .panel-body
-              .row
+              .row(data-gallery="2")
                 - for (i=1; i<=6; i++)
-                  .col.md-2
+                  .col.md-2.sm-4.xs-6
                     a(href="img/srt"+i+".jpg").support--page__str
                       img(src="img/srt"+i+".jpg", alt="")
                       span Название сертификата
@@ -30,9 +30,9 @@ block content
           .panel-title(data-toggle="collapse" data-parent="#accordion" data-target="#collapse-3") Сертификаты предприятия
           #collapse-3.panel-collapse.collapse
             .panel-body
-              .row
+              .row(data-gallery="3")
                 - for (i=1; i<=6; i++)
-                  .col.md-2
+                  .col.md-2.sm-4.xs-6
                     a(href="img/srt"+i+".jpg").support--page__str
                       img(src="img/srt"+i+".jpg", alt="")
                       span Название сертификата
