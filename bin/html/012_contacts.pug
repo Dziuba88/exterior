@@ -5,7 +5,24 @@ block content
   .contacts--page
     .container
       h1 Контакты
-      .contacts--map Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt perferendis, praesentium pariatur commodi. Nobis excepturi quas cupiditate nam, vitae consequuntur unde dolore. Magnam voluptatem dolor repellat suscipit, doloremque, quasi eligendi.
+      .contacts--map
+        .contacts--map__info
+          .row
+            .col.md-6
+              h4.contacts__title
+                svg: use(xlink:href="#contact_adress")
+                span Exterior SRL
+              p.contacts__adress MD-2012, г. Кишинев, ул. Митрополит Варлаам 65
+              p.contacts__fax Факс: (022) 911-149
+            .col.md-6
+              p.contacts__time
+                svg: use(xlink:href="#contact_time")
+                strong График работы:
+                span Пн-Пт: 9:00–17:30<i></i>Сб: 9:00–14:00
+              p.contacts__phone
+                svg: use(xlink:href="#contact_phone")
+                span <small>(022)</small> 911-111
+        img(src="img/map.jpg", alt="")
       .contacts--branch
         .row
           .col.sm-6.md-3
@@ -47,6 +64,40 @@ block content
           .col.sm-6.md-3
             h4 Горячая линия IT
             p: span Тел: +373 691 19  111
+    section.contact--form
+      .container
+        .row
+          .col.lg-10.offset-lg-1
+            form.validate--form
+              h2 Свяжитесь с нами
+              .row
+                .col.md-6
+                  .input--row
+                    label E-mail <i>*</i>
+                    input(type="email" required name="email")
+                  .input--row
+                    label Телефон <i>*</i>
+                    input(type="tel" required name="phone")
+                  .input--row
+                    label Имя <i>*</i>
+                    input(type="text" required name="name")
+                  .input--row
+                    label Компания <i>*</i>
+                    input(type="text" required name="company")
+                .col.md-6
+                  .input--row
+                    label Отдел 
+                    select(data-select)
+                      option(data-display="Выбрать Отдел") Ничего не выбрано
+                      option Отдел 1
+                      option Отдел 2
+                      option Отдел 3
+                      option Отдел 4
+                      option Отдел 5
+                  .input--row
+                    label Сообщение
+                    textarea(cols="30", rows="10", required, name="message")
+              button.btn.btn-default(type="submit") Отправить
 
 
 

@@ -1,3 +1,4 @@
+//@prepros-append plugins/jquery.maskedinput.js
 //@prepros-append plugins/jquery.validate.js
 //@prepros-append plugins/jquery.magnific-popup.js
 //@prepros-append plugins/owl.carousel.js

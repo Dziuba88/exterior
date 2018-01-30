@@ -30,9 +30,10 @@ function createSticky(sticky) {
 
 
 $(document).on('click.bs.dropdown.data-api', '.navbar--nav .dropdown--menu', function (e) { e.stopPropagation() });
-$(document).ready(function() {
 
-    createSticky($(".navbar"));
+$(document).ready(function() {
+  createSticky($(".navbar"));
+  if($("[type=tel]").length) {$("[type=tel]").mask("+(373) 99-999-999", {placeholder:"+(373) __-___-___"})};
 
   $('[data-toggle=navbar]').click(function (event) {
     $(this).toggleClass('active');

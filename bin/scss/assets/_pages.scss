@@ -775,7 +775,64 @@ body {
     width: 100%;border-radius: 6px;
   }
 }
-  .collapse {
+.collapse {
+  overflow: hidden;
+  height: 0;
+  transition: .25s ease-in-out;
+  opacity: 0;
+  &.in {
+    opacity: 1;
+    height: auto;
+  }
+}
+.panel {
+  margin-bottom: 1px;
+
+  &-title {
+    font-size: 24px;
+    line-height: 30px;
+    padding: 15px;
+    color: #22489b;
+    background-color: #f2f3f5;
+    cursor: pointer;
+    user-select: none;
+
+    &:before {
+      flex:none;
+      content: '';
+      display: inline-block;
+      vertical-align: middle;
+      line-height: 1.5;
+      width: 10px;height: 10px;
+      margin: -5px 25px 0 10px;
+      border-right: 1px solid #22489b;
+      border-bottom: 1px solid #22489b;
+      transform: rotate(-45deg);
+      transition: .25s ease-in-out;
+      @include mobile {
+        margin: -5px 10px 0 -5px;
+      }
+    }
+
+    &:hover {
+      color: #2475c7;
+    }
+
+    &[aria-expanded=true] {
+      color: #696e85;
+      &:before {
+        transform: rotate(45deg);
+      }
+    }
+
+    @include tabletDown {
+      font-size: 18px;line-height: 20px;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  &-collapse {
     overflow: hidden;
     height: 0;
     transition: .25s ease-in-out;
@@ -785,70 +842,11 @@ body {
       height: auto;
     }
   }
-  .panel {
-    margin-bottom: 1px;
 
-    &-title {
-      font-size: 24px;
-      line-height: 30px;
-      padding: 15px;
-      color: #22489b;
-      background-color: #f2f3f5;
-      cursor: pointer;
-      user-select: none;
-
-      &:before {
-        flex:none;
-        content: '';
-        display: inline-block;
-        vertical-align: middle;
-        line-height: 1.5;
-        width: 10px;height: 10px;
-        margin: -5px 25px 0 10px;
-        border-right: 1px solid #22489b;
-        border-bottom: 1px solid #22489b;
-        transform: rotate(-45deg);
-        transition: .25s ease-in-out;
-        @include mobile {
-          margin: -5px 10px 0 -5px;
-        }
-      }
-
-      &:hover {
-        color: #2475c7;
-      }
-
-      &[aria-expanded=true] {
-        color: #696e85;
-        &:before {
-          transform: rotate(45deg);
-        }
-      }
-
-      @include tabletDown {
-        font-size: 18px;line-height: 20px;
-        display: flex;
-        align-items: center;
-      }
-    }
-
-    &-collapse {
-      overflow: hidden;
-      height: 0;
-      transition: .25s ease-in-out;
-      opacity: 0;
-      &.in {
-        opacity: 1;
-        height: auto;
-      }
-    }
-
-    &-body {
-      padding: 15px 15px 0;
-    }
+  &-body {
+    padding: 15px 15px 0;
   }
-
-
+}
 .compare {
   &--sidebar {
     padding-top: 281px;
@@ -1326,7 +1324,16 @@ body {
       color: #050d33;
       font-size: 30px;
     }
+
+    .contact--form  {
+      padding: 60px 0;
+      background-color: #f2f3f5;
+
+
+      .validate--form textarea {height: 230px;}
+    }
   }
+
 
   &--branch {
     .col {margin-bottom: 30px;}
@@ -1344,4 +1351,73 @@ body {
       span {display: block;}
     }
   }
+
+  &--map {
+    img {display: block;width: 100%;margin-bottom: 40px;}
+    &__info {
+      border-radius: 10px 10px 0 0;
+      background-color: #2475c7;
+      color: #fff;
+      font-size: 16px;
+      line-height: 24px;
+      padding: 30px 30px 20px;
+
+      svg {
+        fill: #fff;
+        width: 15px;height: 15px;
+        display: block;
+        position: absolute;
+        left: 0;
+      }
+
+      h4, p {
+        padding-left: 30px;
+        position: relative;
+      }
+
+      h4 {
+        font-size: 18px;
+        text-transform: uppercase;
+        margin: 0 0 20px;
+
+        svg {
+          width: 20px;height: 20px;
+        }
+      }
+
+      p {margin: 0 0 10px;
+
+        &.contacts__time {
+          i {display: inline-block;width: 30px;}
+          svg {top: 5px;}
+          strong {font-family: 'Open Sans Condensed', sans-serif;font-size: 18px;}
+          strong, span {
+            display: block;
+          }
+        }
+        &.contacts__phone {
+          font-weight: 600;
+          font-size: 24px;
+          line-height: 1;
+
+          small {
+            font-size: 16px;
+            font-weight: 400;
+          }
+
+          svg {
+            top: 8px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@include mediumDown {
+  .contacts--map__info {padding: 30px 20px 20px;font-size: 14px;}
+}
+
+@include mobile {
+  .contacts--map__info p.contacts__time i {display: block;}
 }

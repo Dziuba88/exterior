@@ -729,7 +729,33 @@
     <div class="contacts--page">
       <div class="container">
         <h1>Контакты</h1>
-        <div class="contacts--map">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Nesciunt perferendis, praesentium pariatur commodi. Nobis excepturi quas cupiditate nam, vitae consequuntur unde dolore. Magnam voluptatem dolor repellat suscipit, doloremque, quasi eligendi.</div>
+        <div class="contacts--map">
+          <div class="contacts--map__info">
+            <div class="row">
+              <div class="col md-6">
+                <h4 class="contacts__title">
+                  <svg>
+                    <use xlink:href="#contact_adress"></use>
+                  </svg><span>Exterior SRL</span>
+                </h4>
+                <p class="contacts__adress">MD-2012, г. Кишинев, ул. Митрополит Варлаам 65</p>
+                <p class="contacts__fax">Факс: (022) 911-149</p>
+              </div>
+              <div class="col md-6">
+                <p class="contacts__time">
+                  <svg>
+                    <use xlink:href="#contact_time"></use>
+                  </svg><strong>График работы:</strong><span>Пн-Пт: 9:00–17:30<i></i>Сб: 9:00–14:00</span>
+                </p>
+                <p class="contacts__phone">
+                  <svg>
+                    <use xlink:href="#contact_phone"></use>
+                  </svg><span><small>(022)</small> 911-111</span>
+                </p>
+              </div>
+            </div>
+          </div><img src="img/map.jpg" alt="">
+        </div>
         <div class="contacts--branch">
           <div class="row">
             <div class="col sm-6 md-3">
@@ -767,6 +793,55 @@
           </div>
         </div>
       </div>
+      <section class="contact--form">
+        <div class="container">
+          <div class="row">
+            <div class="col lg-10 offset-lg-1">
+              <form class="validate--form">
+                <h2>Свяжитесь с нами</h2>
+                <div class="row">
+                  <div class="col md-6">
+                    <div class="input--row">
+                      <label>E-mail <i>*</i></label>
+                      <input type="email" required name="email">
+                    </div>
+                    <div class="input--row">
+                      <label>Телефон <i>*</i></label>
+                      <input type="tel" required name="phone">
+                    </div>
+                    <div class="input--row">
+                      <label>Имя <i>*</i></label>
+                      <input type="text" required name="name">
+                    </div>
+                    <div class="input--row">
+                      <label>Компания <i>*</i></label>
+                      <input type="text" required name="company">
+                    </div>
+                  </div>
+                  <div class="col md-6">
+                    <div class="input--row">
+                      <label>Отдел </label>
+                      <select data-select>
+                        <option data-display="Выбрать Отдел">Ничего не выбрано</option>
+                        <option>Отдел 1</option>
+                        <option>Отдел 2</option>
+                        <option>Отдел 3</option>
+                        <option>Отдел 4</option>
+                        <option>Отдел 5</option>
+                      </select>
+                    </div>
+                    <div class="input--row">
+                      <label>Сообщение</label>
+                      <textarea cols="30" rows="10" required name="message"></textarea>
+                    </div>
+                  </div>
+                </div>
+                <button class="btn btn-default" type="submit">Отправить</button>
+              </form>
+            </div>
+          </div>
+        </div>
+      </section>
     </div>
     <footer class="footer">
       <div class="container">
