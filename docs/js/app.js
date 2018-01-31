@@ -120,42 +120,23 @@ $(document).ready(function() {
   });
 
   $('.fp--brands .owl-carousel').owlCarousel({
-    thumbs: false,
-    responsive : {
-      0 : { items: 1 },
-      768 : { items: 2 },
-      960 : { items: 5 },
-    }
+    thumbs: false, autoplay: true,autoplayTimeout: 7000,autoplayHoverPause: false,loop: true,
+    responsive : {0 : { items: 1 },768 : { items: 2 },960 : { items: 5 },}
   });
   $('.partners .owl-carousel').owlCarousel({
-    thumbs: false,
-    responsive : {
-      0 : { items: 2 },
-      768 : { items: 3 },
-      960 : { items: 5 },
-    }
+    thumbs: false,responsive : {0 : { items: 2 },768 : { items: 3 },960 : { items: 5 },}
   });
 
   $('.item__featured .owl-carousel').owlCarousel({
-    thumbs: false,
-    nav: true,
+    thumbs: false,nav: true,
     navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>'],
-    responsive : {
-      0 : { items: 1 },
-      768 : { items: 2 },
-      960 : { items: 3 },
-    }
+    responsive : {0 : { items: 1 },768 : { items: 2 },960 : { items: 3 },}
   });
 
   $('.compare--slider').owlCarousel({
     thumbs: false,nav: true,mouseDrag: true,
     navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>'],
-    responsive : {
-      0 : { items: 1 },
-      768 : { items: 2 },
-      960 : { items: 3 },
-      1200 : { items: 4 },
-    }
+    responsive : {0 : { items: 1 },768 : { items: 2 },960 : { items: 3 },1200 : { items: 4 },}
   });
 
   $('nav.categories .level--1').on('click', function (event) {

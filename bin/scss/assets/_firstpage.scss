@@ -169,10 +169,20 @@
   .fp--news {
     padding: 0 ( $gutter / 2 );
 
+    h2 {
+      margin: 50px 0 30px;
+      text-align: center;
+      font-size: 40px;
+      text-transform: uppercase;
+      letter-spacing: .1em;
+      color: #696e85;
+    }
+
     &__item {
       display: flex;
       align-items: stretch;
       padding: 0;
+
       .item--image {
         width: 255px;
         flex: none;
@@ -181,9 +191,14 @@
       }
       .item--content {
         background-image: linear-gradient(120deg, #ffffff, #f2f3f5 );
-        padding: 60px 30px;
+        padding: 50px 30px;
+        font-size: 14px;
+        line-height: 20px;
+        h4 {font-size: 24px;}
         &__date {
           font-size: 14px;
+          text-transform: uppercase;
+          color: #050d33;
           svg {
             width: 14px;height: 14px;fill:#050d33;
             margin-right: .5em;
@@ -212,6 +227,8 @@
       line-height: 1;
       color: #696e85;
       text-transform: uppercase;
+      letter-spacing: .1em;
+
     }
     .owl-carousel {
       width: auto;

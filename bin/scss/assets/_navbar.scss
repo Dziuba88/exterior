@@ -63,16 +63,15 @@
   &--right {
     flex: 1;
     justify-content: space-between;
-    padding-left: 70px;
+    padding-left: 40px;
     padding-right: 15px;
     a.search {
       display: block;
       margin: 0;
       border: 1px solid #22489b;
-      padding: 10px 15px;
+      padding: 8px 20px;
       border-radius: 6px;
-      font-size: 16px;
-      line-height: 20px;
+      font-size: 16px;line-height: 20px;
 
       svg {
         width: 17px;height: 17px;margin-bottom: 2px;
@@ -109,7 +108,7 @@
       a {
         text-decoration: none;
         display: block;
-        padding: 15px 20px;
+        padding: 15px 19px 15px;
       }
 
       &:first-child {
