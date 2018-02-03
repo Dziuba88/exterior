@@ -32,6 +32,22 @@ function createSticky(sticky) {
 $(document).on('click.bs.dropdown.data-api', '.navbar--nav .dropdown--menu', function (e) { e.stopPropagation() });
 
 $(document).ready(function() {
+  if ($('#banned').length) {
+    setTimeout(function() {
+      $.magnificPopup.open({
+        items: {src: '#banned' },
+        type: 'inline',
+        //closeOnBgClick: false,
+        //showCloseBtn: false,
+        //enableEscapeKey: false,
+        callbacks: {open: function() {
+          $('html, body').css('overflow', 'hidden');
+        }}
+      });
+    }, 500);
+  }
+
+
   createSticky($(".navbar"));
   if($("[type=tel]").length) {$("[type=tel]").mask("+(373) 99-999-999", {placeholder:"+(373) __-___-___"})};
 

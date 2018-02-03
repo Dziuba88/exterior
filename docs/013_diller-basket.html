@@ -15,7 +15,7 @@
         <div class="header--wraper">
           <div class="header--left"><a class="header__brand" href="001_index.html"><img src="img/logo__header.png" alt=""></a></div>
           <div class="header--right"><span class="header--phone"><small>(+373 22) </small><span>911-111</span></span>
-            <div class="btn back-call">
+            <div class="btn back-call" data-mfp-src="#backcall">
               <svg>
                 <use xlink:href="#phone"></use>
               </svg><span>Заказать звонок</span>
@@ -718,7 +718,7 @@
                 <li><a href="">Контакты</a></li>
               </ul>
             </div>
-            <div class="navbar--right"><a class="asign" href="">Вход <span>для дилеров</span></a><a class="search" href="">
+            <div class="navbar--right"><a class="asign" data-mfp-src="#login">Вход <span>для дилеров</span></a><a class="search" href="">
                 <svg>
                   <use xlink:href="#search"></use>
                 </svg><span>Поиск</span></a></div>
@@ -911,6 +911,40 @@
         </div>
       </div>
     </footer>
+    <div class="popup--default login mfp-hide" id="login">
+      <div class="left-side">
+        <h3>Добро пожаловать в личный кабинет дилера!</h3>
+        <p>Зарегистрируйтесь и получите дополнительные возможности:</p>
+        <ul>
+          <li>оформление заказа он-лайн</li>
+          <li>информация о наличии оборудования на складе </li>
+          <li>просмотр дебиторки</li>
+          <li>просмотр количества накопленных екскойнов</li>
+          <li>заказ доставки</li>
+          <li>оповещение об актуальных акциях и распродаже</li>
+        </ul>
+        <p>И другие полезные функции</p>
+      </div>
+      <div class="right-side">
+        <h2>Авторизация</h2>
+        <label>E-mail</label>
+        <input type="email">
+        <label>Пароль</label>
+        <input type="password">
+        <button class="btn btn-default">Войти</button>
+        <p><a href="">Забыли пароль?</a></p>
+      </div>
+    </div>
+    <div class="popup--default xs mfp-hide" id="backcall">
+      <div class="popup__header">ОСТАВЬТЕ ЗАЯВКУ<small>Мы перезвоним в ближайшее время</small></div>
+      <div class="popup__body">
+        <label>Ваш телефон</label>
+        <input type="tel">
+        <label>Ваше имя</label>
+        <input type="text">
+        <button class="btn btn--submit">Отправить заявку</button>
+      </div>
+    </div>
     <!-- Scripts -->
     <script src="js/jquery-3.2.1.min.js"></script>
     <script src="js/plugins.min.js"></script>
