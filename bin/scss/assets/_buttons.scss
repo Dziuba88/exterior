@@ -121,7 +121,7 @@
     }
     
     .btn--support {
-      position: fixed;top: 50%;right: -95px;
+      position: fixed;top: 50%;right: -95px;z-index: 99;
       display: block;font-size: 14px;line-height: 20px;
       text-transform: uppercase;height: 40px;width: 230px;
       background-color: #22489b;color: #fff;

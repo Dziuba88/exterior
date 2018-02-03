@@ -21,7 +21,7 @@ block content
             span.balance Баланс: 
               strong -200 MDL
 
-      .row
+      .row.stocks--list
         - for (i=1; i<=4; i++)
           .col.md-3.sm-6
             .product
@@ -62,7 +62,7 @@ block content
                   svg: use(xlink:href="#success")
                   span добавлено
 
-      nav.pagination: ul
+      nav.pagination: ul.mrg-small
         li: a(href="").active 1
         li: a(href="") 2
         li: a(href="") 3

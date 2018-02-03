@@ -26,13 +26,12 @@
           line-height: 1;vertical-align: middle;
           fill: #22489b;
         }
-        &.active, &:hover {
+        &.active {
           background-color: #f2f3f5;
         }
       }
     }
   }
-
 
 
   .sidebar {
@@ -42,6 +41,17 @@
       padding: 0 15px;
 
       h1, .category--sort {display: none;}
+
+      nav.categories a {
+        padding: 5px 20px;
+        display: inline-block;  
+
+        &.active, &:hover {
+          border-radius: 6px;
+          background-color: #f2f3f5;
+          color: #050d33;
+        }
+      }
 
     }
     &--right {
@@ -189,6 +199,7 @@
     margin: 0 .25em;
     font-size: 18px;
     color: #050d33;
+    font-weight: 600;
   }
 
   &--controls {
@@ -237,8 +248,8 @@
   }
 }
 
-
-
+.stocks--list .product--image {margin-bottom: 20px;}
+.stocks--list .add-to-basket {height: 30px;padding: 0;font-size: 14px;min-width: 110px;}
 
 
 
@@ -252,6 +263,10 @@ nav.categories {
     display: block;
     padding: 2px 20px;
     margin-bottom: 5px;
+
+    &:hover {
+      color: #050d33;
+    }
   }
   
   .child--1, .child--2 {
@@ -323,6 +338,10 @@ nav.categories {
 
 .categories {
   padding: 40px 0 20px;
+
+  &--page {
+    padding: 60px 0;
+  }
 
   h1 {
     color: #050d33;

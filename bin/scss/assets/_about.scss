@@ -42,7 +42,7 @@
         &.right {
           float: right;
           margin-left: 30px;
-          width: 40%;
+          width: 200px;
         }
         &.left {
           float: left;
@@ -55,11 +55,11 @@
   }
 // company section //
   .company {
-    padding: 60px 0 30px;
+    padding: 40px 0 20px;
     background-color: #f2f3f5;
 
     h2 {
-      margin: 0 0 60px;
+      margin: 0 0 40px;
       font-size: 30px;
       color: #050d33;
       font-family: 'Open Sans', sans-serif;
@@ -69,7 +69,8 @@
     p {
       display: flex;
       align-items: center;
-      margin: 0 0 30px;
+      margin: 0 0 20px;
+      color: #050d33;
 
       img {
         display: block;
@@ -85,25 +86,29 @@
     background-color: #f2f3f5;
     font-size: 18px;
     line-height: 27px;
+    color: #050d33;
 
     h2 {
-      margin: 0 0 60px;
+      margin: 0 0 30px;
       font-size: 30px;
       color: #fff;
       background-color: #2475c7;
       text-align: center;
       padding: 50px 15px;
     }
+    p {margin: 0;}
   }
 // partners section //
   .slider--partners {
-    padding: 60px 0;
+    padding: 60px 0 10px;
 
     h2 {
       text-align: center;
-      margin: 0 0 30px;
+      margin: 0;
       font-size: 30px;
       color: #696e85;
+      text-transform: uppercase;
+      letter-spacing: .05em;
     }
 
     .partner {
@@ -116,25 +121,27 @@
       &--info {
         background-color: #f2f3f5;
         border-radius: 10px;
-        padding: 30px;
+        padding: 40px;
         font-size: 16px;
         line-height: 24px;
         color: #050d33;
 
-        p {margin: 0;}
+        p {margin: 0;color: #050d33;}
       }
     }
   }
 // clients section //
   .slider--clients {
-    padding: 60px 0;
+    padding: 60px 0 10px;
     background-color: #f2f3f5;
 
     h2 {
       text-align: center;
-      margin: 0 0 30px;
+      margin: 0;
       font-size: 30px;
       color: #696e85;
+      text-transform: uppercase;
+      letter-spacing: .05em;
     }
 
     .client {
@@ -143,15 +150,20 @@
       &--image {
         display: block;
         border-radius: 6px;
+        margin-right: 40px;
+        width: auto;
       }
 
       &--info {
         background-color: #fff;
         border-radius: 10px;
-        padding: 30px;
+        padding: 40px;
         font-size: 16px;
         line-height: 24px;
         color: #050d33;
+        min-height: 100%;
+        display: flex;
+        align-items: center;
 
         p {
           margin: 0;
@@ -161,6 +173,7 @@
             text-align: right;
             color: #696e85;
             font-size: 14px;
+            padding-top: 10px;
           }
         
         }
@@ -176,17 +189,21 @@
       margin: 0 0 30px;
       font-size: 30px;
       color: #696e85;
+      text-transform: uppercase;
+      letter-spacing: .05em;
     }
 
     .slide {
-      padding: 0 15px;
+      padding: 0 10px;
+
+      a {display: block;}
     }
   }
 
 // slider options //
   .owl {
     &-carousel {
-      margin: 0 100px;
+      margin: 0 60px;
       width: auto;
     }
 
@@ -208,15 +225,15 @@
 
         &.disabled {display: none;}
 
-        &.owl-prev {left: -100px;}
-        &.owl-next {right: -100px;}
+        &.owl-prev {left: -60px;}
+        &.owl-next {right: -60px;}
       }
     }
 
     &-thumbs {
       display: flex;
       flex-wrap: wrap;
-      margin: 0 -25px;
+      margin: 0 ;
       padding: 30px 0;
 
       .owl-thumb-item {
@@ -239,6 +256,10 @@
   }
 }
 
+@include mediumDown {
+  .about--page .slider--clients .client--info {padding: 30px;}
+
+}
 @include tabletDown {
   .about--page .info--text {padding: 0;}
   .about--page .owl-carousel {margin: 0 40px;}
@@ -246,7 +267,7 @@
   .about--page .owl-nav div.owl-next {right: -40px;}
   .about--page .owl-nav div.owl-prev {left: -40px;}
   .about--page .slider--partners .partner--info {margin-top: 20px;}
-  .about--page .slider--clients .client--image {border-radius: 6px 6px 0 0}
+  .about--page .slider--clients .client--image {border-radius: 6px 6px 0 0;margin: 0;width: 100%;}
   .about--page .slider--clients .client--info {border-radius: 0 0 6px 6px}
 }
 @include mobile {

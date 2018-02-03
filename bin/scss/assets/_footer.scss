@@ -1,20 +1,22 @@
 .footer {
   background-color: #22489b;
   color: #fff;
-  padding: 50px 0;
+  padding: 40px 0;
   font-size: 14px;
   line-height: 18px;
 
   &--contacts {
     display: flex;
     align-items: center;
+    padding-left: 60px;
+
 
     strong, span {
       display: block;
+      margin-bottom: 10px;
     }
 
     strong {
-      margin-bottom: 10px;
       font-size: 16px;
     }
 
@@ -98,6 +100,11 @@
   }
 }
 
+@include tabletDown {
+  .footer--contacts {
+    padding-left: 0;
+  }
+}
 @include smallDown {
   .footer {padding: 20px 0;}
   .footer--copyright {
@@ -107,6 +114,7 @@
   .footer--contacts {
     display: block;
     text-align: center;
+    padding-left: 0;
     .adress {margin-bottom: 10px;}
     .times {text-align: center;}
   }

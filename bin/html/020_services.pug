@@ -84,7 +84,13 @@ block content
           .col.md-5.lg-5.offset-lg-1
             .well--form
               label Выберите
-              input(type="text")
+              select(data-select)
+                option(data-display=" ") Ничего не выбрано
+                option Отдел 1
+                option Отдел 2
+                option Отдел 3
+                option Отдел 4
+                option Отдел 5
               label Телефон
               input(type="tel")
               label Имя
@@ -109,7 +115,20 @@ block content
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
               p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.
           .col.md-5: p.t--center: img(src="img/about.jpg", alt="")
-
+    section.projects--form
+      .container
+        .wraper
+          .row.bottom
+            .col.md-3
+              h3 Оставьте заявку
+                small Мы перезвоним в ближайшее время
+            .col.md-3
+              label Ваш телефон
+              input(type="tel")
+            .col.md-3
+              label Ваше имя
+              input(type="text")
+            .col.md-3: button.btn.btn--submit(data-mfp-src="#thanks") Отправить заявку
 
 
     section.services.reasons
@@ -165,6 +184,25 @@ block content
                   span суббота
                   strong 9:00–13:00
               p За исключением выходных и праздничных дней
+    .container
+      section.contacts--form
+        .row.middle
+          .col.md-4
+            h3 Оставьте заявку
+              small Мы перезвоним в ближайшее время
+          .col.md-8
+            .row.bottom
+              .col.sm-6
+                label Ваш телефон
+                input(type="tel")
+              .col.sm-6
+                label Ваше имя
+                input(type="text")
+              .col.md-8
+                label Выразить своё мнение
+                input(type="text")
+              .col.md-4: button.btn.btn--submit(data-mfp-src="#thanks") Отправить заявку
+
 
     #thanks.popup--default.sm.mfp-hide
       .popup__header Спасибо, ваша заявки принята

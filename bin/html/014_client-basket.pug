@@ -5,12 +5,11 @@ block content
   .basket--page
     .container
       h1 Корзина
-      table.basket--table
+      table.basket--table.client
         thead
           tr
             th(colspan="2") Название
-            th Розничная цена
-            th Цена дилера
+            th Цена
             th Кол-во
             th Стоимость USD
             th Стоимость MDL
@@ -19,8 +18,7 @@ block content
             tr
               td: a(href="").purchased--item: img(src="img/product1.jpg", alt="")
               td DH-IPC-HDBW2421R-ZSVFS
-              td(data-header="Розничная цена") 26 USD
-              td(data-header="Цена дилера") 26 USD
+              td(data-header="Цена") 26 USD
               td(data-header="Кол-во")
                 .number
                   input(type='text', value='1', min='1')

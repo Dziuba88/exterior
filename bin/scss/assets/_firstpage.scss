@@ -208,6 +208,7 @@
     }
   }
   @include mediumDown {
+    .fp--news__item h2 {font-size: 32px;letter-spacing: normal;}
     .fp--news__item .item--content {padding: 30px;}
     .fp--news__item .item--image {width: 180px;}
   }
@@ -283,7 +284,7 @@
     }
   }
   @include smallDown {
-    .fp--products h2 {font-size: 32px;}
+    .fp--products h2 {font-size: 32px;letter-spacing: normal;}
     .fp--products .product {margin-bottom: 0;}
     .fp--products .owl-carousel {margin: 0 60px;}
     .fp--products .owl-carousel .owl-nav div {margin-top: -15px;width: 30px;height: 30px;}

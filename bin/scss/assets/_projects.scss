@@ -1,7 +1,7 @@
 .projects--page {
 // Well Section //
   .well {
-    padding: 120px 0;
+    padding: 130px 0;
     color: #fff;
     font-size: 20px;
     line-height: 30px;
@@ -10,7 +10,7 @@
     h1 {
       text-transform: uppercase;
       font-size: 30px;
-      margin: 0 0 15px;
+      margin: 0 0 20px;
     }
 
     p {margin: 0;}
@@ -163,7 +163,7 @@
           padding: 20px;
           border-radius: 6px;
           background-color: rgba(#050d33, .5);
-          opacity: .5;
+          opacity: 1;
 
           &:hover {opacity: 1;}
           svg {display: block;width: 20px;height: 20px;fill: #fff;}
@@ -178,6 +178,7 @@
       padding-left: 40%;
       display: flex;
       flex-wrap: wrap;
+      text-transform: uppercase;
 
       &__link {
         display: block;
@@ -231,13 +232,14 @@
   }
 // Reasons Section //
   .reasons {
-    padding: 60px 0;
+    padding: 60px 0 30px;
     text-align: center;
 
     h2 {
       color: #050d33;
       text-transform: uppercase;
       font-size: 30px;
+      letter-spacing: .05em;
     }
 
     &--item {
@@ -268,7 +270,7 @@
         svg {
           fill: #2475c7;
           display: block;
-          margin: 0 auto 10px;
+          margin: 0 auto 30px;
           width: 40px;height: 40px;
         }
 
@@ -276,19 +278,20 @@
           color: #050d33;
           text-transform: uppercase;
           font-size: 20px;
-          margin: 0 0 10px;
+          margin: 0 0 15px;
         }
 
         p {
           margin: 0;
           font-size: 16px;
+          line-height: 20px;
         }
       }
     }
   }
 // About Section //
   .about {
-    padding: 60px 0;
+    padding: 50px 0 40px ;
     font-size: 16px;
     line-height: 24px;
 
@@ -297,12 +300,18 @@
       .content {padding: 40px 0 0;}
     }
 
+    img {
+      display: block;
+      width: 205px;
+      margin: 0 auto;
+    }
+
     h2 {
       color: #050d33;
       text-transform: uppercase;
       font-size: 30px;
       text-align: center;
-      margin: 0 0 15px;
+      margin: 0 0 30px;
     }
 
     p {
@@ -327,15 +336,16 @@
   }
 // Skills Section //
   .skills {
-    padding: 40px 0;
+    padding: 40px 0 20px;
     background-color: #f2f3f5;
     text-align: center;
+    color: #050d33;
 
     &--item {
       position: relative;
-      padding-top: 15px;
-      padding-bottom: 15px;
-      margin-bottom: 30px;
+      padding-top: 10px;
+      padding-bottom: 10px;
+      margin-bottom: 20px;
 
       &:after {
         content: '';
@@ -359,10 +369,11 @@
 
       strong {
         display: inline-block;
-        padding: 10px 15px;
+        padding: 5px 15px;
         text-transform: uppercase;
         background-color: #2475c7;
         color: #fff;
+        letter-spacing: .05em;
       }
 
       small {
@@ -371,7 +382,7 @@
         color: #696e85;
         font-size: 18px;
         font-weight: 400;
-        padding: 10px 0 40px;
+        padding: 10px 0 10px;
       }
     }
 
@@ -383,14 +394,14 @@
 
     p {
       font-size: 18px;
-      line-height: 24px;
+      line-height: 20px;
       margin: 0 0 10px;
     }
   }
 // Steps Section //
   .steps {
     background-color: #2475c7;
-    padding: 60px 0;
+    padding: 60px 0 30px;
     color: #fff;
 
     h2 {
@@ -493,14 +504,14 @@
   }
 // Partners Section //
   .partners {
-    padding: 60px 0;
+    padding: 80px 0;
 
     h2 {
       color: #050d33;
       text-transform: uppercase;
       font-size: 30px;
       text-align: center;
-      margin: 0 0 30px;
+      margin: 0 0 60px;
     }
 
     &--item {
@@ -590,10 +601,9 @@
     text-transform: uppercase;
     text-align: center;
     font-size: 30px;
-    margin: 0 0 60px;
+    margin: 0 0 30px;
   }
 }
-
 @include mediumDown {
   .projects--page .reasons--item {
     flex-basis: 100%;
@@ -601,7 +611,6 @@
     -ms-flex-preferred-size: 100%;
   }
 }
-
 @include tabletDown {
   .projects--page .well {padding: 60px;}
   .projects--page .well--form input {margin-bottom: 20px;}
