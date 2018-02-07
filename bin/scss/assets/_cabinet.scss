@@ -286,8 +286,8 @@
 
       .step_25 {
         position: absolute;
-        top: 7px;left: 25%;
-        width: 40px;margin-left: -20px;
+        top: 7px;left: 25%;font-size: 18px;
+        width: 100px;margin-left: -50px;
         text-align: center;padding-top: 30px;
         &:before {
           display: block;content: '';position: absolute;
@@ -298,8 +298,8 @@
 
       .step_50 {
         position: absolute;
-        top: 7px;left: 50%;
-        width: 40px;margin-left: -20px;
+        top: 7px;left: 50%;font-size: 18px;
+        width: 100px;margin-left: -50px;
         text-align: center;padding-top: 30px;
         &:before {
           display: block;content: '';position: absolute;
@@ -310,8 +310,8 @@
 
       .step_75 {
         position: absolute;
-        top: 7px;left: 75%;
-        width: 40px;margin-left: -20px;
+        top: 7px;left: 75%;font-size: 18px;
+        width: 100px;margin-left: -50px;
         text-align: center;padding-top: 30px;
         &:before {
           display: block;content: '';position: absolute;
@@ -344,10 +344,11 @@
   }
 
   &--bonus {
-    padding: 120px 0 0;
+    padding: 100px 0 0;
     font-size: 16px;
     line-height: 24px;
     color: #050d33;
+    margin-bottom: -30px;
 
     h3 {
       margin: 0 0 15px;
@@ -458,7 +459,7 @@
         display: block;
       }
 
-      strong {font-size: 16px;}
+      strong {font-size: 16px;margin-bottom: 5px;}
     }
 
     &:nth-child(2) {text-align: right;}
