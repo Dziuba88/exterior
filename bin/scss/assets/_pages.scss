@@ -764,7 +764,7 @@ body {
         font-size: 18px;
 
         &:hover {
-          background-color: #050d33;
+          background-color: #2475c7;
           color: #fff;
         }
       }
@@ -937,16 +937,16 @@ body {
   }
   &--slider {
     width: auto;
-    margin: 0 30px;
+    margin: 0 40px;
 
     .owl-nav .owl-next, .owl-nav .owl-prev {
-      width: 24px;height: 24px;position: absolute;top: 70px;opacity: .5;margin-top: -12px;
+      width: 40px;height: 40px;position: absolute;top: 60px;opacity: .5;
       &:hover {opacity: 1;}
       &.disabled {display: none;}
-      svg {fill: #050d33;width: 24px;height: 24px;}
+      svg {fill: #050d33;width: 40px;height: 40px;}
     }
-    .owl-nav .owl-next {right: -30px;}
-    .owl-nav .owl-prev {left: -30px;}
+    .owl-nav .owl-next {right: -40px;}
+    .owl-nav .owl-prev {left: -40px;}
 
     .slide {
       position: relative;
@@ -1468,4 +1468,6 @@ body {
 
 @include mobile {
   .contacts--map__info p.contacts__time i {display: block;}
+  .compare--slider .owl-nav .owl-prev {left: -20px;}
+  .compare--slider .owl-nav .owl-next {right: -20px;}
 }

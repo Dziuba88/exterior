@@ -57,7 +57,7 @@
     &--right {
       flex: none;
       width: 320px;
-      padding: 15px;
+      padding: 23px 15px 15px;
 
       .wraper {
         box-shadow: 0 5px 10px rgba(black, .3);
@@ -340,7 +340,7 @@ nav.categories {
   padding: 40px 0 20px;
 
   &--page {
-    padding: 60px 0;
+    padding: 0 0 60px 0;
   }
 
   h1 {

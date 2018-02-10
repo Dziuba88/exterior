@@ -104,13 +104,13 @@
 
       strong, small {
         transform-origin: top center;
-        transition: .35s ease-in-out
+        transition: .15s ease-in-out
       }
 
       img {
         width: 60px;height: 60px;
         transform-origin: center center;
-        transition: .35s ease-in-out
+        transition: .15s ease-in-out
       }
 
       strong {
@@ -296,6 +296,32 @@
   .fp--brands {
     padding: 50px 0 100px;
 
+    .owl-carousel {
+      width: auto;
+      margin-left: 40px;margin-right: 40px;
+    }
+
+      .owl-nav div {
+        position: absolute;
+        top: 50%;margin-top: -20px;
+        width: 40px;height: 40px;
+
+        &:hover {opacity: .5;}
+
+        svg {
+          width: 40px;
+          height: 40px;
+          fill: #696e85;
+        }
+
+        &.owl-prev {
+          left: -40px;
+        }
+
+        &.owl-next {
+          right: -40px;
+        }
+      }
     .owl-stage {
       display: flex;
       align-items: center;

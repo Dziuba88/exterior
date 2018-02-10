@@ -23,7 +23,7 @@ function createSticky(sticky) {
     var pos = sticky.offset().top,  win = $(window);
     win.on("scroll", function() {
       win.scrollTop() >= pos ? sticky.addClass("sticky") : sticky.removeClass("sticky");
-      win.scrollTop() >= (pos + 20) ? sticky.addClass("in") : sticky.removeClass("in");
+      win.scrollTop() >= pos ? sticky.addClass("in") : sticky.removeClass("in");
     });
   }
 };
@@ -32,14 +32,12 @@ function createSticky(sticky) {
 $(document).on('click.bs.dropdown.data-api', '.navbar--nav .dropdown--menu', function (e) { e.stopPropagation() });
 
 $(document).ready(function() {
+
   if ($('#banned').length) {
     setTimeout(function() {
       $.magnificPopup.open({
         items: {src: '#banned' },
         type: 'inline',
-        //closeOnBgClick: false,
-        //showCloseBtn: false,
-        //enableEscapeKey: false,
         callbacks: {open: function() {
           $('html, body').css('overflow', 'hidden');
         }}
@@ -55,6 +53,10 @@ $(document).ready(function() {
     $(this).toggleClass('active');
     $('.navbar').toggleClass('show-menu');
     $('html').delay(250).toggleClass('noscroll');
+  })
+  $('[data-toggle=search]').click(function () {
+    $(this).toggleClass('active');
+    $('.navbar--search').toggleClass('show');
   })
 
   $('[data-toggle=basket]').click(function (event) {
@@ -82,7 +84,15 @@ $(document).ready(function() {
     $(this).parent().css(cssValues)
   });
 
-  $('.fp--slider').owlCarousel({thumbs: false,items: 1,autoplay: true,autoplayTimeout: 7000,autoplayHoverPause: false,loop: true,mouseDrag: false});
+  $('.fp--slider').owlCarousel({
+    thumbs: false,
+    items: 1,
+    autoplay: true,
+    autoplayTimeout: 7000,
+    autoplayHoverPause: false,
+    loop: true,
+    mouseDrag: false
+  });
 
   $(function(){
 
@@ -126,7 +136,7 @@ $(document).ready(function() {
 
   $('.fp--products .owl-carousel').owlCarousel({
     responsive : {0 : { items: 1 },480 : { items: 1 },768 : { items: 2 },960 : { items: 4 },},
-    thumbs: false, loop: true,nav: true,
+    thumbs: false, loop: true,nav: true, autoplay: true,
     navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>']
   });
 
@@ -136,15 +146,21 @@ $(document).ready(function() {
   });
 
   $('.fp--brands .owl-carousel').owlCarousel({
-    thumbs: false, autoplay: true,autoplayTimeout: 7000,autoplayHoverPause: false,loop: true,
-    responsive : {0 : { items: 1 },768 : { items: 2 },960 : { items: 5 },}
+    navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>'],
+    autoplay: true,autoplayTimeout: 7000,autoplayHoverPause: false,thumbs: false,center:true,loop: true,nav: true,
+    responsive : {
+      0   : {items: 1},
+      768 : {items: 2},
+      960 : {items: 5}
+    }
   });
+
   $('.partners .owl-carousel').owlCarousel({
     thumbs: false,responsive : {0 : { items: 2 },768 : { items: 3 },960 : { items: 5 },}
   });
 
   $('.item__featured .owl-carousel').owlCarousel({
-    thumbs: false,nav: true,
+    thumbs: false,nav: true,autoplay: true,autoplayTimeout: 7000,autoplayHoverPause: false,loop: true,
     navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>'],
     responsive : {0 : { items: 1 },768 : { items: 2 },960 : { items: 3 },}
   });

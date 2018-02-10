@@ -28,10 +28,12 @@
             li: a(href="") Контакты
         .navbar--right
           a.asign(href="") Выход 
-          a.search(href="")
+          a.search(data-toggle="search")
             svg: use(xlink:href="#search")
             span Поиск
-          
+      .navbar--search
+        input(type="search" placeholder="Поиск ...")
+        button: svg: use(xlink:href="#search")
 
 
 

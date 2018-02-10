@@ -574,7 +574,7 @@
 
 }
 @include mobile {
-  .cabinet--subnav nav ul {text-align: center;}
+  .cabinet--subnav nav ul {text-align: left;}
   .cabinet--subnav nav ul li a {font-size: 13px;padding: 5px 10px;margin: 5px;}
   .cabinet--profile__informer {text-align: left;}
   .profile--info dt, .profile--info dd {width: 100%;margin: 0;}

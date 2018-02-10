@@ -2,6 +2,11 @@ extends models/default
 block content
   include templates/header
   include templates/navbar
+  nav.breadcrumb
+    .container: ul
+      li: a(href="") Главная
+      li: a(href="") Каталог
+      li: span IP камеры для помещений
   .container
     .product--page
       .product--page__sidebar

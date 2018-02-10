@@ -20,7 +20,7 @@
 
 
 
-            li: a(href="") Проекты
+            li: a(href="").active Проекты
             li: a(href="") Сервис
             li: a(href="") Скачать
             li: a(href="") Новости
@@ -29,10 +29,12 @@
         .navbar--right
           a.asign(data-mfp-src="#login") Вход 
             span для дилеров
-          a.search(href="")
+          a.search(data-toggle="search")
             svg: use(xlink:href="#search")
             span Поиск
-          
+      .navbar--search
+        input(type="search" placeholder="Поиск ...")
+        button: svg: use(xlink:href="#search")
 
 
 
