@@ -747,7 +747,7 @@
                   </svg><span>Exterior SRL</span>
                 </h4>
                 <p class="contacts__adress">MD-2012, г. Кишинев, ул. Митрополит Варлаам 65</p>
-                <p class="contacts__fax">Факс: (022) 911-149</p>
+                <p class="contacts__fax">Факс: <a href="tel:022911149">(022) 911-149</a></p>
               </div>
               <div class="col md-6">
                 <p class="contacts__time">
@@ -758,11 +758,11 @@
                 <p class="contacts__phone">
                   <svg>
                     <use xlink:href="#contact_phone"></use>
-                  </svg><span><small>(022)</small> 911-111</span>
+                  </svg><span><a href="tel:022911111"> <small>(022)</small> 911-111</a></span>
                 </p>
               </div>
             </div>
-          </div><img src="img/map.jpg" alt="">
+          </div><a href="https://point.md/ru/map/street/47.02060189439402/28.84229779243469/17/476496011?q=%D0%9C%D0%B8%D1%82%D1%80%D0%BE%D0%BF%D0%BE%D0%BB%D0%B8%D1%82%20%D0%92%D0%B0%D1%80%D0%BB%D0%B0%D0%B0%D0%BC%2065&amp;number=65" target="_blank"><img src="img/map.jpg" alt=""></a>
         </div>
         <div class="contacts--branch">
           <div class="row">
@@ -898,25 +898,44 @@
         </ul>
         <p>И другие полезные функции</p>
       </div>
-      <div class="right-side">
+      <form class="right-side" data-validate>
         <h2>Авторизация</h2>
-        <label>E-mail</label>
-        <input type="email">
-        <label>Пароль</label>
-        <input type="password">
+        <div class="input--row">
+          <label for="s_mail">E-mail</label>
+          <input type="email" name="signin-email" required id="s_mail">
+        </div>
+        <div class="input--row">
+          <label for="s_pass">Пароль</label>
+          <input type="password" name="signin-password" required id="s_pass">
+        </div>
         <button class="btn btn-default">Войти</button>
         <p><a href="">Забыли пароль?</a></p>
-      </div>
+      </form>
     </div>
     <div class="popup--default xs mfp-hide" id="backcall">
       <div class="popup__header">ОСТАВЬТЕ ЗАЯВКУ<small>Мы перезвоним в ближайшее время</small></div>
-      <div class="popup__body">
-        <label>Ваш телефон</label>
-        <input type="tel">
-        <label>Ваше имя</label>
-        <input type="text">
+      <form class="popup__body" data-validate>
+        <div class="input--row">
+          <label>Ваш телефон</label>
+          <input type="tel" name="backcall-tel" required>
+        </div>
+        <div class="input--row">
+          <label>Ваше имя</label>
+          <input type="text" name="backcall-name" required>
+        </div>
+        <div class="input--row">
+          <label>Отдел</label>
+          <select data-select>
+            <option data-display=" ">Ничего не выбрано</option>
+            <option>Отдел 1</option>
+            <option>Отдел 2</option>
+            <option>Отдел 3</option>
+            <option>Отдел 4</option>
+            <option>Отдел 5</option>
+          </select>
+        </div>
         <button class="btn btn-default">Отправить заявку</button>
-      </div>
+      </form>
     </div>
     <!-- Scripts -->
     <script src="js/jquery-3.2.1.min.js"></script>

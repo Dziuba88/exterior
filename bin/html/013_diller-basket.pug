@@ -23,7 +23,7 @@ block content
               td(data-header="Цена дилера") 26 USD
               td(data-header="Кол-во")
                 .number
-                  input(type='text', value='1', min='1')
+                  input(type='number', value='1', min='1')
                   .btn-plus: svg: use(xlink:href="#plus")
                   .btn-minus: svg: use(xlink:href="#minus")
               td(data-header="Стоимость USD") 26 USD
@@ -79,7 +79,37 @@ block content
               td 1600 MDL
           .btn.btn-default.block Отправить заявку
           .btn.btn-outline.block Продолжить покупки
-
-
-
+  #outofstock.popup--default.sm.mfp-hide
+      .popup__header Внимание!
+        small На складе недостаточно товаров:
+      .popup__body
+        table.popup--table
+          thead
+            tr
+              th(colspan="2") Название
+              th(colspan="2") Осталось
+          tbody
+            - for (i=0; i<=2; i++)
+              tr
+                td: a(href="").preview: img(src="img/product1.jpg", alt="")
+                td DH-IPC-HDBW2421R-ZSVFS
+                td(data-header="Кол-во")
+                  .number
+                    input(type='number', value='1', min='1')
+                    .btn-plus: svg: use(xlink:href="#plus")
+                    .btn-minus: svg: use(xlink:href="#minus")
+                td: a.delete: svg: use(xlink:href="#close")
+        h3 Совместимые товары
+        .popup__slider.owl-carousel
+          - for (i=1; i<=2; i++)
+            .product
+              a(href="").product--image: img(src="img/product1.jpg", alt="")
+              a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+              p 
+                span.old--price 1500 леев
+                span.new--price 1499 леев
+            .product
+              a(href="").product--image: img(src="img/product2.jpg", alt="")
+              a(href="").product--title DH-IPC-HDBW2421R-ZSVFS
+              p: span.price 1499 леев
   include templates/footer

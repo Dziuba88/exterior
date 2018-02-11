@@ -756,7 +756,7 @@
               <td data-header="Цена дилера">26 USD</td>
               <td data-header="Кол-во">
                 <div class="number">
-                  <input type="text" value="1" min="1">
+                  <input type="number" value="1" min="1">
                   <div class="btn-plus">
                     <svg>
                       <use xlink:href="#plus"></use>
@@ -779,7 +779,7 @@
               <td data-header="Цена дилера">26 USD</td>
               <td data-header="Кол-во">
                 <div class="number">
-                  <input type="text" value="1" min="1">
+                  <input type="number" value="1" min="1">
                   <div class="btn-plus">
                     <svg>
                       <use xlink:href="#plus"></use>
@@ -802,7 +802,7 @@
               <td data-header="Цена дилера">26 USD</td>
               <td data-header="Кол-во">
                 <div class="number">
-                  <input type="text" value="1" min="1">
+                  <input type="number" value="1" min="1">
                   <div class="btn-plus">
                     <svg>
                       <use xlink:href="#plus"></use>
@@ -891,6 +891,105 @@
         </div>
       </div>
     </div>
+    <div class="popup--default sm mfp-hide" id="outofstock">
+      <div class="popup__header">Внимание!<small>На складе недостаточно товаров:</small></div>
+      <div class="popup__body">
+        <table class="popup--table">
+          <thead>
+            <tr>
+              <th colspan="2">Название</th>
+              <th colspan="2">Осталось</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><a class="preview" href=""><img src="img/product1.jpg" alt=""></a></td>
+              <td>DH-IPC-HDBW2421R-ZSVFS</td>
+              <td data-header="Кол-во">
+                <div class="number">
+                  <input type="number" value="1" min="1">
+                  <div class="btn-plus">
+                    <svg>
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                  </div>
+                  <div class="btn-minus">
+                    <svg>
+                      <use xlink:href="#minus"></use>
+                    </svg>
+                  </div>
+                </div>
+              </td>
+              <td><a class="delete">
+                  <svg>
+                    <use xlink:href="#close"></use>
+                  </svg></a></td>
+            </tr>
+            <tr>
+              <td><a class="preview" href=""><img src="img/product1.jpg" alt=""></a></td>
+              <td>DH-IPC-HDBW2421R-ZSVFS</td>
+              <td data-header="Кол-во">
+                <div class="number">
+                  <input type="number" value="1" min="1">
+                  <div class="btn-plus">
+                    <svg>
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                  </div>
+                  <div class="btn-minus">
+                    <svg>
+                      <use xlink:href="#minus"></use>
+                    </svg>
+                  </div>
+                </div>
+              </td>
+              <td><a class="delete">
+                  <svg>
+                    <use xlink:href="#close"></use>
+                  </svg></a></td>
+            </tr>
+            <tr>
+              <td><a class="preview" href=""><img src="img/product1.jpg" alt=""></a></td>
+              <td>DH-IPC-HDBW2421R-ZSVFS</td>
+              <td data-header="Кол-во">
+                <div class="number">
+                  <input type="number" value="1" min="1">
+                  <div class="btn-plus">
+                    <svg>
+                      <use xlink:href="#plus"></use>
+                    </svg>
+                  </div>
+                  <div class="btn-minus">
+                    <svg>
+                      <use xlink:href="#minus"></use>
+                    </svg>
+                  </div>
+                </div>
+              </td>
+              <td><a class="delete">
+                  <svg>
+                    <use xlink:href="#close"></use>
+                  </svg></a></td>
+            </tr>
+          </tbody>
+        </table>
+        <h3>Совместимые товары</h3>
+        <div class="popup__slider owl-carousel">
+          <div class="product"><a class="product--image" href=""><img src="img/product1.jpg" alt=""></a><a class="product--title" href="">DH-IPC-HDBW2421R-ZSVFS</a>
+            <p> <span class="old--price">1500 леев</span><span class="new--price">1499 леев</span></p>
+          </div>
+          <div class="product"><a class="product--image" href=""><img src="img/product2.jpg" alt=""></a><a class="product--title" href="">DH-IPC-HDBW2421R-ZSVFS</a>
+            <p><span class="price">1499 леев</span></p>
+          </div>
+          <div class="product"><a class="product--image" href=""><img src="img/product1.jpg" alt=""></a><a class="product--title" href="">DH-IPC-HDBW2421R-ZSVFS</a>
+            <p> <span class="old--price">1500 леев</span><span class="new--price">1499 леев</span></p>
+          </div>
+          <div class="product"><a class="product--image" href=""><img src="img/product2.jpg" alt=""></a><a class="product--title" href="">DH-IPC-HDBW2421R-ZSVFS</a>
+            <p><span class="price">1499 леев</span></p>
+          </div>
+        </div>
+      </div>
+    </div>
     <footer class="footer">
       <div class="container">
         <div class="row middle">
@@ -938,25 +1037,44 @@
         </ul>
         <p>И другие полезные функции</p>
       </div>
-      <div class="right-side">
+      <form class="right-side" data-validate>
         <h2>Авторизация</h2>
-        <label>E-mail</label>
-        <input type="email">
-        <label>Пароль</label>
-        <input type="password">
+        <div class="input--row">
+          <label for="s_mail">E-mail</label>
+          <input type="email" name="signin-email" required id="s_mail">
+        </div>
+        <div class="input--row">
+          <label for="s_pass">Пароль</label>
+          <input type="password" name="signin-password" required id="s_pass">
+        </div>
         <button class="btn btn-default">Войти</button>
         <p><a href="">Забыли пароль?</a></p>
-      </div>
+      </form>
     </div>
     <div class="popup--default xs mfp-hide" id="backcall">
       <div class="popup__header">ОСТАВЬТЕ ЗАЯВКУ<small>Мы перезвоним в ближайшее время</small></div>
-      <div class="popup__body">
-        <label>Ваш телефон</label>
-        <input type="tel">
-        <label>Ваше имя</label>
-        <input type="text">
+      <form class="popup__body" data-validate>
+        <div class="input--row">
+          <label>Ваш телефон</label>
+          <input type="tel" name="backcall-tel" required>
+        </div>
+        <div class="input--row">
+          <label>Ваше имя</label>
+          <input type="text" name="backcall-name" required>
+        </div>
+        <div class="input--row">
+          <label>Отдел</label>
+          <select data-select>
+            <option data-display=" ">Ничего не выбрано</option>
+            <option>Отдел 1</option>
+            <option>Отдел 2</option>
+            <option>Отдел 3</option>
+            <option>Отдел 4</option>
+            <option>Отдел 5</option>
+          </select>
+        </div>
         <button class="btn btn-default">Отправить заявку</button>
-      </div>
+      </form>
     </div>
     <!-- Scripts -->
     <script src="js/jquery-3.2.1.min.js"></script>

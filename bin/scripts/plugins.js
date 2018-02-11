@@ -10,4 +10,6 @@
 //@prepros-append plugins/collapse.js
 //@prepros-append plugins/dropdown.js
 //@prepros-append plugins/nouislider.js
+//@prepros-append plugins/aos.js
+//@prepros-append plugins/jquery.countTo.js
 

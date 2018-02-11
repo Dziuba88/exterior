@@ -160,13 +160,13 @@
           position: absolute;
           z-index: 999;
           top: 50%;margin-top: -30px;
-          padding: 20px;
+          padding: 15px;
           border-radius: 6px;
           background-color: rgba(#050d33, .5);
           opacity: 1;
 
           &:hover {opacity: 1;}
-          svg {display: block;width: 20px;height: 20px;fill: #fff;}
+          svg {display: block;width: 30px;height: 30px;fill: #fff;}
         }
 
         &-prev {left: 15px;}
@@ -248,18 +248,6 @@
       -ms-flex-preferred-size:  20%;
       margin-bottom: 30px;
       transition: .2s ease-in-out;
-
-      transform: scale(0);
-
-      &.in {
-        transform: scale(1);
-      }
-
-      &:nth-child(1) {transition-delay: .25s;}
-      &:nth-child(2) {transition-delay: .5s;}
-      &:nth-child(3) {transition-delay: .75s;}
-      &:nth-child(4) {transition-delay: 1s;}
-      &:nth-child(5) {transition-delay: 1.25s;}
 
       .content {
         background-image: linear-gradient(120deg, #ffffff, #f2f3f5 );
@@ -369,7 +357,7 @@
 
       strong {
         display: inline-block;
-        padding: 5px 15px;
+        padding: 10px 20px;
         text-transform: uppercase;
         background-color: #2475c7;
         color: #fff;
@@ -517,7 +505,33 @@
     &--item {
       text-align: center;
       img {
-        width: 150px;
+        display: block;
+        margin: 0 auto;
+        max-width: 150px;
+      }
+    }
+
+    .owl-carousel {
+      width: auto;
+      margin: 0 40px;
+      .owl-nav {
+        div {
+          position: absolute;
+          width: 40px;height: 40px;
+          opacity: .5;
+          top: 50%;margin-top: -20px;
+
+          svg {
+            fill: #050d33;
+            width: 40px;height: 40px;
+            display: block;
+          }
+
+          &.owl-prev {left: -40px;}
+          &.owl-next {right: -40px;}
+
+          &:hover {opacity: 1;}
+        }
       }
     }
   }

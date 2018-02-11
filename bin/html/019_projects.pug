@@ -166,23 +166,23 @@ block content
       .container
         h2 5 причин заказать систему безопасности у нас
         .row
-          .col.reasons--item: .content
+          .col.reasons--item( data-aos="zoom-in" data-aos-delay="100"): .content
             svg: use(xlink:href="#reason1")
             h4 Проекты
             p Индивидуальный подход к каждому проекту
-          .col.reasons--item: .content
+          .col.reasons--item( data-aos="zoom-in" data-aos-delay="600"): .content
             svg: use(xlink:href="#reason2")
             h4 Монтаж
             p Качественные и быстрые работы
-          .col.reasons--item: .content
+          .col.reasons--item( data-aos="zoom-in" data-aos-delay="1200"): .content
             svg: use(xlink:href="#reason3")
             h4 Сотрудники
             p Только высоко квалифицированные сотрудники
-          .col.reasons--item: .content
+          .col.reasons--item( data-aos="zoom-in" data-aos-delay="1800"): .content
             svg: use(xlink:href="#reason4")
             h4 Производитель
             p Оборудование напрямую от проверенных производителей
-          .col.reasons--item: .content
+          .col.reasons--item( data-aos="zoom-in" data-aos-delay="2400"): .content
             svg: use(xlink:href="#reason5")
             h4 Сервисный центр
             p Собственный сервис-центр
@@ -224,39 +224,39 @@ block content
           small Только за последние 5 лет нами было установлено:
         .row
           .col.md-3.skills--item
-            h4(data-count="800") 0
+            h4(data-max="800").skills--counter 800
             p систем<br>видеонаблюдения
           .col.md-3.skills--item
-            h4(data-count="200") 0
+            h4(data-max="200").skills--counter 200
             p систем<br>контроля доступа
           .col.md-3.skills--item
-            h4(data-count="310") 0
+            h4(data-max="310").skills--counter 310
             p cистем противопожарной сигнализации
           .col.md-3.skills--item
-            h4(data-count="420") 0
+            h4(data-max="420").skills--counter 420
             p систем охранной сигнализации
     section.steps
       .container
         h2 5 шагов к вашей безопасности
         .row
-          .col.steps--item
+          .col.steps--item( data-aos="zoom-in-up" data-aos-delay="300")
             svg: use(xlink:href="#check")
             svg.next: use(xlink:href="#angle-right")
             h4 Заявка
             p Бесплатный выезд специалиста на ваш объект 
-          .col.steps--item
+          .col.steps--item( data-aos="zoom-in-up" data-aos-delay="600")
             svg: use(xlink:href="#list")
             svg.next: use(xlink:href="#angle-right")
             h4 Составление сметы
-          .col.steps--item
+          .col.steps--item( data-aos="zoom-in-up" data-aos-delay="900")
             svg: use(xlink:href="#hands")
             svg.next: use(xlink:href="#angle-right")
             h4 Заключение договора
-          .col.steps--item
+          .col.steps--item( data-aos="zoom-in-up" data-aos-delay="1200")
             svg: use(xlink:href="#solution_5")
             svg.next: use(xlink:href="#angle-right")
             h4 Монтаж
-          .col.steps--item
+          .col.steps--item( data-aos="zoom-in-up" data-aos-delay="1500")
             svg: use(xlink:href="#shield")
             h4 Ваш объект в безопасности!
         .steps--form
@@ -275,6 +275,11 @@ block content
       .container
         h2 Нам доверяют
         .owl-carousel
+          .partners--item: img(src="img/partner1.png", alt="")
+          .partners--item: img(src="img/partner2.png", alt="")
+          .partners--item: img(src="img/partner3.png", alt="")
+          .partners--item: img(src="img/partner4.png", alt="")
+          .partners--item: img(src="img/partner5.png", alt="")
           .partners--item: img(src="img/partner1.png", alt="")
           .partners--item: img(src="img/partner2.png", alt="")
           .partners--item: img(src="img/partner3.png", alt="")

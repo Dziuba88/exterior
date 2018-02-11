@@ -818,25 +818,44 @@
         </ul>
         <p>И другие полезные функции</p>
       </div>
-      <div class="right-side">
+      <form class="right-side" data-validate>
         <h2>Авторизация</h2>
-        <label>E-mail</label>
-        <input type="email">
-        <label>Пароль</label>
-        <input type="password">
+        <div class="input--row">
+          <label for="s_mail">E-mail</label>
+          <input type="email" name="signin-email" required id="s_mail">
+        </div>
+        <div class="input--row">
+          <label for="s_pass">Пароль</label>
+          <input type="password" name="signin-password" required id="s_pass">
+        </div>
         <button class="btn btn-default">Войти</button>
         <p><a href="">Забыли пароль?</a></p>
-      </div>
+      </form>
     </div>
     <div class="popup--default xs mfp-hide" id="backcall">
       <div class="popup__header">ОСТАВЬТЕ ЗАЯВКУ<small>Мы перезвоним в ближайшее время</small></div>
-      <div class="popup__body">
-        <label>Ваш телефон</label>
-        <input type="tel">
-        <label>Ваше имя</label>
-        <input type="text">
+      <form class="popup__body" data-validate>
+        <div class="input--row">
+          <label>Ваш телефон</label>
+          <input type="tel" name="backcall-tel" required>
+        </div>
+        <div class="input--row">
+          <label>Ваше имя</label>
+          <input type="text" name="backcall-name" required>
+        </div>
+        <div class="input--row">
+          <label>Отдел</label>
+          <select data-select>
+            <option data-display=" ">Ничего не выбрано</option>
+            <option>Отдел 1</option>
+            <option>Отдел 2</option>
+            <option>Отдел 3</option>
+            <option>Отдел 4</option>
+            <option>Отдел 5</option>
+          </select>
+        </div>
         <button class="btn btn-default">Отправить заявку</button>
-      </div>
+      </form>
     </div>
     <!-- Scripts -->
     <script src="js/jquery-3.2.1.min.js"></script>

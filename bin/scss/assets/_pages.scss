@@ -261,6 +261,15 @@ body {
   flex: 1;
   padding: 60px 0;
 
+  [data-mfp-gallery] {
+    display: block;
+    position: relative;
+    &:after {
+      display: block;
+      content: ''
+    }
+  }
+  #actionsync-1 {margin-bottom: 20px;}
   #actionsync-2 {
     width: auto;
     margin: 0 30px 50px;
@@ -358,7 +367,7 @@ body {
       width: 100%;
 
       &:hover {
-        background-color: #050d33;
+        background-color: #22489b;
         color: #fff;
       }
     }
@@ -540,25 +549,18 @@ body {
       &.thumb {
         padding: 40px;
         flex: none;
+        background-color: #22489b;
         
         svg {
           flex: none;
           fill: #fff;
           display: block;
           width: 60px;height: 60px;
-          opacity: 0;
         }
 
         img {
           display: none;
         }
-      }
-    }
-
-    &:hover span.thumb {
-      background: #22489b !important;
-      svg {
-        opacity: 1;
       }
     }
   }
@@ -764,7 +766,7 @@ body {
         font-size: 18px;
 
         &:hover {
-          background-color: #2475c7;
+          background-color: #4267b2;
           color: #fff;
         }
       }
@@ -799,16 +801,20 @@ body {
     width: 100%;border-radius: 6px;
   }
 }
-.collapse {
+.collapse{
   overflow: hidden;
   height: 0;
-  transition: .25s ease-in-out;
-  opacity: 0;
-  &.in {
-    opacity: 1;
-    height: auto;
-  }
+  transition: all .25s ease-in-out;
+  &.in {height: auto;}
 }
+
+.fade {
+  opacity: 0;
+  height: 0;
+  transition: all .3s ease-in-out;
+  &.in {opacity: 1;height: auto;}
+}
+
 .panel {
   margin-bottom: 1px;
 
@@ -1410,6 +1416,8 @@ body {
       line-height: 24px;
       padding: 30px 30px 20px;
 
+      a {color: #fff !important;}
+
       svg {
         fill: #fff;
         width: 15px;height: 15px;
@@ -1470,4 +1478,59 @@ body {
   .contacts--map__info p.contacts__time i {display: block;}
   .compare--slider .owl-nav .owl-prev {left: -20px;}
   .compare--slider .owl-nav .owl-next {right: -20px;}
+}
+
+
+.popup--slider {
+  width: 100%;
+  max-width: 1200px;
+  margin: 40px auto;
+  padding: 0 100px;
+
+  @include tabletDown {padding: 0;}
+
+  .owl-nav {
+    div {
+      position: absolute;
+      width: 40px;height: 40px;
+      opacity: .5;
+      top: 50%;
+
+      svg {
+        fill: #fff;
+        width: 40px;height: 40px;
+        display: block;
+      }
+
+      &.owl-prev {left: -100px;}
+      &.owl-next {right: -100px;}
+
+      &:hover {opacity: 1;}
+
+      @include tabletDown {
+      &.owl-prev {left: 10px;}
+      &.owl-next {right: 10px;}
+      }
+    }
+  }
+  .owl-thumbs {
+    padding-top: 20px;
+
+    @include tabletDown {display: none;}
+  }
+  .owl-thumb-item {
+    margin: 0;padding: 0 10px 10px 0;
+    border: none;background-color: transparent;
+    width: 90px;opacity: .5;cursor: pointer;
+    &.active, &:hover {opacity: 1;}
+    img {display: block;}
+  }
+
+  button.mfp-close {
+    width: 24px;height: 24px;
+    position: fixed;
+    top: 10px;right: 10px;
+
+    svg {display: block;width: 16px;height: 16px;fill: #fff;}
+  }
 }

@@ -266,6 +266,16 @@
       width: 100%;
       margin-bottom: 30px;
     }
+    .preview {
+      margin-bottom: 30px;
+      display: flex;
+      align-items: stretch;
+
+      .step {
+        flex: 1;
+        padding-top: 18%;
+      }
+    }
     .wraper {
       position: relative;
       height: 7px;

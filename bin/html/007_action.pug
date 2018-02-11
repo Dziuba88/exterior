@@ -7,14 +7,14 @@ block content
       .row
         .col.md-6
           .owl-carousel#actionsync-1
-            .item: img(src="img/action1.jpg", alt="")
-            .item: img(src="img/action2.jpg", alt="")
-            .item: img(src="img/action3.jpg", alt="")
-            .item: img(src="img/action4.jpg", alt="")
-            .item: img(src="img/action1.jpg", alt="")
-            .item: img(src="img/action2.jpg", alt="")
-            .item: img(src="img/action3.jpg", alt="")
-            .item: img(src="img/action4.jpg", alt="")
+            .item: a(data-mfp-gallery="0"): img(src="img/action1.jpg", alt="")
+            .item: a(data-mfp-gallery="1"): img(src="img/action2.jpg", alt="")
+            .item: a(data-mfp-gallery="2"): img(src="img/action3.jpg", alt="")
+            .item: a(data-mfp-gallery="3"): img(src="img/action4.jpg", alt="")
+            .item: a(data-mfp-gallery="4"): img(src="img/action1.jpg", alt="")
+            .item: a(data-mfp-gallery="5"): img(src="img/action2.jpg", alt="")
+            .item: a(data-mfp-gallery="6"): img(src="img/action3.jpg", alt="")
+            .item: a(data-mfp-gallery="7"): img(src="img/action4.jpg", alt="")
           .owl-carousel#actionsync-2
             .item: img(src="img/action1.jpg", alt="")
             .item: img(src="img/action2.jpg", alt="")
@@ -39,6 +39,14 @@ block content
             label Телефон
             input(type="tel")
           .col.md-6.lg-4: button.btn.btn--action Заказать обратную связь
-
-
+  #action.popup--slider.mfp-hide
+    .owl-carousel
+      .item: img(src="img/action1.jpg", alt="")
+      .item: img(src="img/action2.jpg", alt="")
+      .item: img(src="img/action3.jpg", alt="")
+      .item: img(src="img/action4.jpg", alt="")
+      .item: img(src="img/action1.jpg", alt="")
+      .item: img(src="img/action2.jpg", alt="")
+      .item: img(src="img/action3.jpg", alt="")
+      .item: img(src="img/action4.jpg", alt="")
   include templates/footer

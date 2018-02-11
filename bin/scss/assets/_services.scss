@@ -88,6 +88,8 @@
 
     &.reasons {
       background-color: #f2f3f5;
+
+      .services--item:hover img {transform: none;}
     }
 
     h2 {
@@ -106,7 +108,12 @@
 
       img {
         margin-bottom: 20px;
+        transition: .15s ease-in-out;
       }
+
+      &:hover img {transform: scale(1.25)}
+
+
 
       h4 {
         font-size: 18px;
@@ -333,12 +340,6 @@
     font-size: 14px;
     padding-right: 30px;
 
-    .label.working {
-      color: #fff;
-      background-color: #e21d1d;
-      border: none;
-    }
-
     &:first-child {flex:1;}
 
     &:last-child {
@@ -385,6 +386,7 @@
   .services--page .contacts--form h3 {
     padding: 0;margin: 0 0 20px;border: none;
   }
+  .projects--form input {margin-bottom: 20px;}
 }
 @include smallDown {
   .repare--item {

@@ -738,7 +738,7 @@
       <section class="well"><img class="img_to_bg" src="img/services-well.jpg" alt="">
         <div class="container">
           <div class="row middle">
-            <div class="col md-7 lg-6"><img class="well--logo" src="img/services_logo.png" alt="">
+            <div class="col md-7 lg-6"><a href="tel:022911100"><img class="well--logo" src="img/services_logo.png" alt=""></a>
               <h1>Починим и наладим всё!</h1>
               <p>Первый авторизированный сервисный центр в Молдове. Оперативно выполняем даже те работы, от которых все остальные отказались! Только с нами Ваша система безопасности будет работать нон-стоп!</p>
             </div>
@@ -851,8 +851,7 @@
               <p>Ремонт в прекрасно оснащенной лаборатории ответственными инженерами-ремонтниками компонентов систем видеонаблюдения, охранной и пожарной сигнализации, контроля доступа, домофонов.</p>
               <p>Гарантийное и пост гарантийное обслуживание систем безопасности  командой профессионалов, стоящих у истоков зарождения бизнеса в сфере систем безопасности в нашей стране.</p>
               <p>Выезд бригады быстрого реагирования, обеспеченной всем необходимым для проведения широкого спектра ремонта и диагностики в полевых условиях.  Гарантия на все виды услуг. Мы в ответе за свой труд!</p>
-              <p><span class="btn btn--readmore" data-toggle="collapse" data-target="#more-info">Читать далее</span></p>
-              <div class="collapse" id="more-info">
+              <div class="collapse fade" id="more-info">
                 <div class="content">
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.</p>
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.</p>
@@ -864,6 +863,7 @@
                   <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Asperiores soluta provident, ipsam minus dignissimos quasi velit assumenda aut quisquam harum quo debitis nisi sunt beatae sequi quibusdam. Deleniti, illo, blanditiis.</p>
                 </div>
               </div>
+              <p><span class="btn btn--readmore" data-toggle="collapse" data-target="#more-info">Читать далее</span></p>
             </div>
             <div class="col md-5">
               <p class="t--center"><img src="img/about.jpg" alt=""></p>
@@ -897,23 +897,23 @@
         <div class="container">
           <h2>5 причин доверить нам свои системы и оборудование</h2>
           <div class="row">
-            <div class="col services--item"><img src="img/reason1.png" alt="">
+            <div class="col services--item" data-aos="zoom-in-up" data-aos-delay="300"><img src="img/reason1.png" alt="">
               <h4>Гарантийное и постгарантийное обслуживание</h4>
               <p>систем безопасности интегрированных командой профессионалов, стоящих у истоков зарождения бизнеса по системам безопасности в нашей стране</p>
             </div>
-            <div class="col services--item"><img src="img/reason2.png" alt="">
+            <div class="col services--item" data-aos="zoom-in-up" data-aos-delay="600"><img src="img/reason2.png" alt="">
               <h4>Выезд бригады быстрого реагирования,</h4>
               <p>обеспеченной всем необходимым для проведения широкого спектра ремонта и диагностики в полевых условиях.</p>
             </div>
-            <div class="col services--item"><img src="img/reason3.png" alt="">
+            <div class="col services--item" data-aos="zoom-in-up" data-aos-delay="900"><img src="img/reason3.png" alt="">
               <h4>Диагностика и восстановление работоспособности систем,</h4>
               <p>находившихся без должного внимания и своевременного обслуживания</p>
             </div>
-            <div class="col services--item"><img src="img/reason4.png" alt="">
+            <div class="col services--item" data-aos="zoom-in-up" data-aos-delay="1200"><img src="img/reason4.png" alt="">
               <h4>Обслуживание и профилактика систем безопасности,</h4>
               <p>производимые по прозрачному тарифному плану и заранее согласованному регламенту. </p>
             </div>
-            <div class="col services--item"><img src="img/reason5.png" alt="">
+            <div class="col services--item" data-aos="zoom-in-up" data-aos-delay="1500"><img src="img/reason5.png" alt="">
               <h4>Ремонт в прекрасно оснащенной лаборатории</h4>
               <p>специалистами, компетентными в ремонте всех видов систем видеонаблюдения</p>
             </div>
@@ -1043,25 +1043,44 @@
         </ul>
         <p>И другие полезные функции</p>
       </div>
-      <div class="right-side">
+      <form class="right-side" data-validate>
         <h2>Авторизация</h2>
-        <label>E-mail</label>
-        <input type="email">
-        <label>Пароль</label>
-        <input type="password">
+        <div class="input--row">
+          <label for="s_mail">E-mail</label>
+          <input type="email" name="signin-email" required id="s_mail">
+        </div>
+        <div class="input--row">
+          <label for="s_pass">Пароль</label>
+          <input type="password" name="signin-password" required id="s_pass">
+        </div>
         <button class="btn btn-default">Войти</button>
         <p><a href="">Забыли пароль?</a></p>
-      </div>
+      </form>
     </div>
     <div class="popup--default xs mfp-hide" id="backcall">
       <div class="popup__header">ОСТАВЬТЕ ЗАЯВКУ<small>Мы перезвоним в ближайшее время</small></div>
-      <div class="popup__body">
-        <label>Ваш телефон</label>
-        <input type="tel">
-        <label>Ваше имя</label>
-        <input type="text">
+      <form class="popup__body" data-validate>
+        <div class="input--row">
+          <label>Ваш телефон</label>
+          <input type="tel" name="backcall-tel" required>
+        </div>
+        <div class="input--row">
+          <label>Ваше имя</label>
+          <input type="text" name="backcall-name" required>
+        </div>
+        <div class="input--row">
+          <label>Отдел</label>
+          <select data-select>
+            <option data-display=" ">Ничего не выбрано</option>
+            <option>Отдел 1</option>
+            <option>Отдел 2</option>
+            <option>Отдел 3</option>
+            <option>Отдел 4</option>
+            <option>Отдел 5</option>
+          </select>
+        </div>
         <button class="btn btn-default">Отправить заявку</button>
-      </div>
+      </form>
     </div>
     <!-- Scripts -->
     <script src="js/jquery-3.2.1.min.js"></script>

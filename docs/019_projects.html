@@ -858,7 +858,7 @@
         <div class="container">
           <h2>5 причин заказать систему безопасности у нас</h2>
           <div class="row">
-            <div class="col reasons--item">
+            <div class="col reasons--item" data-aos="zoom-in" data-aos-delay="100">
               <div class="content">
                 <svg>
                   <use xlink:href="#reason1"></use>
@@ -867,7 +867,7 @@
                 <p>Индивидуальный подход к каждому проекту</p>
               </div>
             </div>
-            <div class="col reasons--item">
+            <div class="col reasons--item" data-aos="zoom-in" data-aos-delay="600">
               <div class="content">
                 <svg>
                   <use xlink:href="#reason2"></use>
@@ -876,7 +876,7 @@
                 <p>Качественные и быстрые работы</p>
               </div>
             </div>
-            <div class="col reasons--item">
+            <div class="col reasons--item" data-aos="zoom-in" data-aos-delay="1200">
               <div class="content">
                 <svg>
                   <use xlink:href="#reason3"></use>
@@ -885,7 +885,7 @@
                 <p>Только высоко квалифицированные сотрудники</p>
               </div>
             </div>
-            <div class="col reasons--item">
+            <div class="col reasons--item" data-aos="zoom-in" data-aos-delay="1800">
               <div class="content">
                 <svg>
                   <use xlink:href="#reason4"></use>
@@ -894,7 +894,7 @@
                 <p>Оборудование напрямую от проверенных производителей</p>
               </div>
             </div>
-            <div class="col reasons--item">
+            <div class="col reasons--item" data-aos="zoom-in" data-aos-delay="2400">
               <div class="content">
                 <svg>
                   <use xlink:href="#reason5"></use>
@@ -963,19 +963,19 @@
           <h2><strong>22 года на рынке</strong><small>Только за последние 5 лет нами было установлено:</small></h2>
           <div class="row">
             <div class="col md-3 skills--item">
-              <h4 data-count="800">0</h4>
+              <h4 class="skills--counter" data-max="800">800</h4>
               <p>систем<br>видеонаблюдения</p>
             </div>
             <div class="col md-3 skills--item">
-              <h4 data-count="200">0</h4>
+              <h4 class="skills--counter" data-max="200">200</h4>
               <p>систем<br>контроля доступа</p>
             </div>
             <div class="col md-3 skills--item">
-              <h4 data-count="310">0</h4>
+              <h4 class="skills--counter" data-max="310">310</h4>
               <p>cистем противопожарной сигнализации</p>
             </div>
             <div class="col md-3 skills--item">
-              <h4 data-count="420">0</h4>
+              <h4 class="skills--counter" data-max="420">420</h4>
               <p>систем охранной сигнализации</p>
             </div>
           </div>
@@ -985,7 +985,7 @@
         <div class="container">
           <h2>5 шагов к вашей безопасности</h2>
           <div class="row">
-            <div class="col steps--item">
+            <div class="col steps--item" data-aos="zoom-in-up" data-aos-delay="300">
               <svg>
                 <use xlink:href="#check"></use>
               </svg>
@@ -995,7 +995,7 @@
               <h4>Заявка</h4>
               <p>Бесплатный выезд специалиста на ваш объект </p>
             </div>
-            <div class="col steps--item">
+            <div class="col steps--item" data-aos="zoom-in-up" data-aos-delay="600">
               <svg>
                 <use xlink:href="#list"></use>
               </svg>
@@ -1004,7 +1004,7 @@
               </svg>
               <h4>Составление сметы</h4>
             </div>
-            <div class="col steps--item">
+            <div class="col steps--item" data-aos="zoom-in-up" data-aos-delay="900">
               <svg>
                 <use xlink:href="#hands"></use>
               </svg>
@@ -1013,7 +1013,7 @@
               </svg>
               <h4>Заключение договора</h4>
             </div>
-            <div class="col steps--item">
+            <div class="col steps--item" data-aos="zoom-in-up" data-aos-delay="1200">
               <svg>
                 <use xlink:href="#solution_5"></use>
               </svg>
@@ -1022,7 +1022,7 @@
               </svg>
               <h4>Монтаж</h4>
             </div>
-            <div class="col steps--item">
+            <div class="col steps--item" data-aos="zoom-in-up" data-aos-delay="1500">
               <svg>
                 <use xlink:href="#shield"></use>
               </svg>
@@ -1057,6 +1057,11 @@
         <div class="container">
           <h2>Нам доверяют</h2>
           <div class="owl-carousel">
+            <div class="partners--item"><img src="img/partner1.png" alt=""></div>
+            <div class="partners--item"><img src="img/partner2.png" alt=""></div>
+            <div class="partners--item"><img src="img/partner3.png" alt=""></div>
+            <div class="partners--item"><img src="img/partner4.png" alt=""></div>
+            <div class="partners--item"><img src="img/partner5.png" alt=""></div>
             <div class="partners--item"><img src="img/partner1.png" alt=""></div>
             <div class="partners--item"><img src="img/partner2.png" alt=""></div>
             <div class="partners--item"><img src="img/partner3.png" alt=""></div>
@@ -1168,25 +1173,44 @@
         </ul>
         <p>И другие полезные функции</p>
       </div>
-      <div class="right-side">
+      <form class="right-side" data-validate>
         <h2>Авторизация</h2>
-        <label>E-mail</label>
-        <input type="email">
-        <label>Пароль</label>
-        <input type="password">
+        <div class="input--row">
+          <label for="s_mail">E-mail</label>
+          <input type="email" name="signin-email" required id="s_mail">
+        </div>
+        <div class="input--row">
+          <label for="s_pass">Пароль</label>
+          <input type="password" name="signin-password" required id="s_pass">
+        </div>
         <button class="btn btn-default">Войти</button>
         <p><a href="">Забыли пароль?</a></p>
-      </div>
+      </form>
     </div>
     <div class="popup--default xs mfp-hide" id="backcall">
       <div class="popup__header">ОСТАВЬТЕ ЗАЯВКУ<small>Мы перезвоним в ближайшее время</small></div>
-      <div class="popup__body">
-        <label>Ваш телефон</label>
-        <input type="tel">
-        <label>Ваше имя</label>
-        <input type="text">
+      <form class="popup__body" data-validate>
+        <div class="input--row">
+          <label>Ваш телефон</label>
+          <input type="tel" name="backcall-tel" required>
+        </div>
+        <div class="input--row">
+          <label>Ваше имя</label>
+          <input type="text" name="backcall-name" required>
+        </div>
+        <div class="input--row">
+          <label>Отдел</label>
+          <select data-select>
+            <option data-display=" ">Ничего не выбрано</option>
+            <option>Отдел 1</option>
+            <option>Отдел 2</option>
+            <option>Отдел 3</option>
+            <option>Отдел 4</option>
+            <option>Отдел 5</option>
+          </select>
+        </div>
         <button class="btn btn-default">Отправить заявку</button>
-      </div>
+      </form>
     </div>
     <!-- Scripts -->
     <script src="js/jquery-3.2.1.min.js"></script>

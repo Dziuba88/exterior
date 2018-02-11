@@ -274,9 +274,9 @@
 }
 @include mobile {
   .about--page .owl-carousel {margin: 0 0px;}
-  .about--page .owl-nav div.owl-next {right: 0px;}
-  .about--page .owl-nav div.owl-prev {left: 0px;}
-  .about--page .slider--partners .partner--info, .about--page .slider--clients .client--info {padding: 15px;font-size: 14px;}
+  .about--page .owl-nav div.owl-next {right: -10px;}
+  .about--page .owl-nav div.owl-prev {left: -10px;}
+  .about--page .slider--partners .partner--info, .about--page .slider--clients .client--info {padding: 15px 20px;font-size: 14px;line-height: 1.2;}
   .about--page .slider--clients .client--info p small {font-size: 11px;}
   .about--page .musthave {font-size: 16px;line-height: 24px;}
 }

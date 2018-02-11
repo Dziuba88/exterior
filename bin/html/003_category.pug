@@ -200,9 +200,8 @@ block content
     .category--items
       h1.category--title IP камеры для помещений
       .category--sort
-        a(href="" data-class-toggle="active").by-price
+        a(data-sort).by-price
           span Сортировать по цене
-          svg: use(xlink:href="#sort")
         a(href="").compare-items Сравнение товаров
       .row
         .col.md-4.sm-6
@@ -216,7 +215,7 @@ block content
               span.new--price 1499 леев
             .product--controls
               .number
-                input(type='text', value='1', min='1')
+                input(type='number', value='1', min='1')
                 .btn-plus: svg: use(xlink:href="#plus")
                 .btn-minus: svg: use(xlink:href="#minus")
               button.btn.add-to-basket
@@ -234,7 +233,7 @@ block content
               span.price 1499 леев
             .product--controls
               .number
-                input(type='text', value='1', min='1')
+                input(type='number', value='1', min='1')
                 .btn-plus: svg: use(xlink:href="#plus")
                 .btn-minus: svg: use(xlink:href="#minus")
               button.btn.add-to-basket
@@ -252,7 +251,7 @@ block content
               span.price 1499 леев
             .product--controls
               .number
-                input(type='text', value='1', min='1')
+                input(type='number', value='1', min='1')
                 .btn-plus: svg: use(xlink:href="#plus")
                 .btn-minus: svg: use(xlink:href="#minus")
               button.btn.add-to-basket
@@ -269,7 +268,7 @@ block content
             p: span.price 1499 леев
             .product--controls
               .number
-                input(type='text', value='1', min='1')
+                input(type='number', value='1', min='1')
                 .btn-plus: svg: use(xlink:href="#plus")
                 .btn-minus: svg: use(xlink:href="#minus")
               button.btn.add-to-basket
@@ -287,7 +286,7 @@ block content
               p: span.price 1499 леев
               .product--controls
                 .number
-                  input(type='text', value='1', min='1')
+                  input(type='number', value='1', min='1')
                   .btn-plus: svg: use(xlink:href="#plus")
                   .btn-minus: svg: use(xlink:href="#minus")
                 button.btn.add-to-basket
@@ -314,7 +313,7 @@ block content
               span.price 1499 леев
             .product--controls
               .number
-                input(type='text', value='1', min='1')
+                input(type='number', value='1', min='1')
                 .btn-plus: svg: use(xlink:href="#plus")
                 .btn-minus: svg: use(xlink:href="#minus")
               button.btn.add-to-basket
