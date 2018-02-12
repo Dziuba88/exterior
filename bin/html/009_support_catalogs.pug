@@ -3,7 +3,24 @@ block content
   include templates/header
   include templates/navbar
   .support--page
-    button.btn.btn--support Связаться с поддержкой
+    button.btn.btn--support(data-mfp-src="#suppurt") Связаться с поддержкой
+    #suppurt.popup--default.xs.mfp-hide
+          .popup__header Свяжитесь<br>с поддержкой
+          form.popup__body(data-validate)
+            .input--row
+              label Имя
+              input(type="text" name="suppurt-name" required)
+            .input--row
+              label Телефон
+              input(type="tel" name="restore-tel" required)
+            .input--row
+              label Сообщение
+              textarea(cols="30", rows="10", required, name="restore-message")
+            .input--row
+              .captcha--block
+                .g-recaptcha(data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW")
+                script(src='https://www.google.com/recaptcha/api.js')
+            button.btn.btn-default Отправить
     .container
       h1 Каталоги
       .row
@@ -15,6 +32,7 @@ block content
         li: a(href="") 3
         li: a(href="") 4
         li: a(href="") 5
+
 
 
   include templates/footer

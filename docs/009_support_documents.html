@@ -725,17 +725,37 @@
           </div>
           <div class="navbar--search">
             <input type="search" placeholder="Поиск ...">
-            <button>
-              <svg>
-                <use xlink:href="#search"></use>
-              </svg>
-            </button>
+            <button>Искать</button>
           </div>
         </div>
       </div>
     </div>
     <div class="support--page">
-      <button class="btn btn--support">Связаться с поддержкой</button>
+      <button class="btn btn--support" data-mfp-src="#suppurt">Связаться с поддержкой</button>
+      <div class="popup--default xs mfp-hide" id="suppurt">
+        <div class="popup__header">Свяжитесь<br>с поддержкой</div>
+        <form class="popup__body" data-validate>
+          <div class="input--row">
+            <label>Имя</label>
+            <input type="text" name="suppurt-name" required>
+          </div>
+          <div class="input--row">
+            <label>Телефон</label>
+            <input type="tel" name="restore-tel" required>
+          </div>
+          <div class="input--row">
+            <label>Сообщение</label>
+            <textarea cols="30" rows="10" required name="restore-message"></textarea>
+          </div>
+          <div class="input--row">
+            <div class="captcha--block">
+              <div class="g-recaptcha" data-sitekey="6LcePAATAAAAAGPRWgx90814DTjgt5sXnNbV5WaW"></div>
+              <script src="https://www.google.com/recaptcha/api.js"></script>
+            </div>
+          </div>
+          <button class="btn btn-default">Отправить</button>
+        </form>
+      </div>
       <div class="container">
         <h1 class="docs">Техническая документация</h1>
         <div class="row">
@@ -833,7 +853,7 @@
           <input type="password" name="signin-password" required id="s_pass">
         </div>
         <button class="btn btn-default">Войти</button>
-        <p><a href="">Забыли пароль?</a></p>
+        <p><a data-mfp-src="#restore">Забыли пароль?</a></p>
       </form>
     </div>
     <div class="popup--default xs mfp-hide" id="backcall">
@@ -859,6 +879,16 @@
           </select>
         </div>
         <button class="btn btn-default">Отправить заявку</button>
+      </form>
+    </div>
+    <div class="popup--default xs mfp-hide" id="restore">
+      <div class="popup__header">Восстановление<br>пароля</div>
+      <form class="popup__body" data-validate>
+        <div class="input--row">
+          <label>E-mail</label>
+          <input type="email" name="restore-email" required>
+        </div>
+        <button class="btn btn-default">Восстановить пароль</button>
       </form>
     </div>
     <!-- Scripts -->

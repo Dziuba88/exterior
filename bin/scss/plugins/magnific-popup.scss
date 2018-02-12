@@ -529,7 +529,7 @@ img.mfp-img {
   &--default.xs &__body {
     padding: 30px;
 
-    label, input {
+    label, input, textarea {
       display: block;
       width: 100%;
       font-size: 16px;
@@ -553,6 +553,20 @@ img.mfp-img {
       padding: 0 15px;
       border-radius: 6px;
       margin-bottom: 20px;
+
+      &.error {
+        border-color: #e63333;
+      }
+    }
+    textarea {
+      color: #050d33;
+      background-color: #fff;
+      border: 1px solid #cdcfd6; 
+      height: 120px;
+      padding: 5px 15px;
+      border-radius: 6px;
+      margin-bottom: 20px;
+      resize: none;
 
       &.error {
         border-color: #e63333;
@@ -845,9 +859,31 @@ img.mfp-img {
 }
 
 
+#restore {
+  .popup__header {background-color: #fff;font-size: 24px;line-height: 30px;}
+  .popup__body {padding: 0 60px 60px;
+    @include mobile {padding: 0 20px 40px;}
+  }
+}
 
+#suppurt {
+  .popup__header {background-color: #fff;font-size: 24px;line-height: 30px;}
+  .popup__body {padding: 0 30px 30px;
+    @include mobile {padding: 0 20px 30px;}
+    .captcha--block {overflow: hidden;margin-bottom: 25px;
 
-
+      .g-recaptcha {
+        transform: scale(1.02);
+        transform-origin: top left;
+      }
+    
+      @include mobile {
+        margin-bottom: 5px;
+        .g-recaptcha {transform: scale(.78);}
+      }
+    }
+  }
+}
 
 
 

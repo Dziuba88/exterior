@@ -50,7 +50,7 @@ footer.footer
       label(for="s_pass") Пароль
       input(type="password" name="signin-password" required)#s_pass
     button.btn.btn-default Войти
-    p: a(href="") Забыли пароль?
+    p: a(data-mfp-src="#restore") Забыли пароль?
 #backcall.popup--default.xs.mfp-hide
       .popup__header ОСТАВЬТЕ ЗАЯВКУ
         small Мы перезвоним в ближайшее время
@@ -71,3 +71,10 @@ footer.footer
             option Отдел 4
             option Отдел 5
         button.btn.btn-default Отправить заявку
+#restore.popup--default.xs.mfp-hide
+      .popup__header Восстановление<br>пароля
+      form.popup__body(data-validate)
+        .input--row
+          label E-mail
+          input(type="email" name="restore-email" required)
+        button.btn.btn-default Восстановить пароль
