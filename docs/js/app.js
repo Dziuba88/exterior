@@ -204,7 +204,7 @@ $(document).ready(function() {
   $('.compare--slider').owlCarousel({
     thumbs: false,nav: true,mouseDrag: true,
     navText: ['<svg><use xlink:href="#arrow_left_circle"></use></svg>', '<svg><use xlink:href="#arrow_right_circle"></use></svg>'],
-    responsive : {0 : { items: 1 },768 : { items: 2 },960 : { items: 3 },1200 : { items: 4 },}
+    responsive : {0 :{items:1},768:{items:2},960:{items:3},1200:{items:4},1440:{items:6}}
   });
 
   $('nav.categories .level--1').on('click', function (event) {
