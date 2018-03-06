@@ -466,7 +466,7 @@ $(document).ready(function() {
   $('[data-show=message').click(function () {
     $(this).hide();
     $(this).parent().find('label').hide();
-    $(this).parent().find('.message').delay(250).show(300);
+    $(this).parent().find('.message').show();
   });
 
 });
