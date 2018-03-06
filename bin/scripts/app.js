@@ -463,10 +463,10 @@ $(document).ready(function() {
     })
   });
 
-  $('[data-show=message').click(function () {
+  $('[data-show=message]').click(function () {
     $(this).hide();
     $(this).parent().find('label').hide();
-    $(this).parent().find('.message').show();
+    $(this).parent().find('.message').delay(100).show(300);
   });
 
 });
