@@ -241,7 +241,7 @@
 
                 &:after {
                   display: block;
-                  content: '';
+                  content: ''; 
                   position: absolute;
                   bottom: 0;left: 15px;right: 15px;
                   height: 1px;background-color: #e0e0e2;
@@ -262,10 +262,28 @@
                     color: #2475c7;
                   }
 
-                  &.level--1 {text-transform: uppercase;font-size: 14px;}
+                  &.level--1 {
+                    text-transform: uppercase;
+                    font-size: 14px;
+
+                    &:before {
+                      content: '';
+                      display: inherit;
+                      width: 10px;height: 10px;
+                      background: url(../ico/bullet-down.svg) no-repeat center center;
+                      background-size: 10px;
+                      transform: rotate(-90deg);
+                      margin-left: -20px;
+                    }
+                  
+                  }
 
                   &:before {display: none;}
 
+                }
+
+                &.open a.level--1:before {
+                  transform: rotate(0)
                 }
               }
             }

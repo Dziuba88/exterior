@@ -559,7 +559,10 @@ body {
         }
 
         img {
-          display: none;
+          visibility: hidden;
+          display: block;
+          width: 60px;
+          height: 60px;
         }
       }
     }
@@ -739,6 +742,8 @@ body {
 
     .input-group {
       display: flex;
+
+      .message {display: none;font-weight: 600;color: #ffffff;}
 
       input {
         position: fixed;
@@ -1277,6 +1282,7 @@ body {
       color: #050d33;
       padding: 10px;
       font-size: 16px;
+
     }
 
 
@@ -1291,6 +1297,8 @@ body {
         &:first-child, &:nth-child(4) {
           text-align: left;
         }
+
+        &:nth-child(4) {padding-left: 30px;}
       }
     }
 

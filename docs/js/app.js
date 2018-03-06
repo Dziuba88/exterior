@@ -457,9 +457,16 @@ $(document).ready(function() {
   });
 
   $(".btn--readmore").click(function () {
+    $(this).hide();
     $(this).text(function(i, text){
       return text === "Читать далее" ? "Свернуть" : "Читать далее";
     })
+  });
+
+  $('[data-show=message').click(function () {
+    $(this).hide();
+    $(this).parent().find('label').hide();
+    $(this).parent().find('.message').delay(250).show(300);
   });
 
 });

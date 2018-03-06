@@ -651,9 +651,26 @@
     background-size: cover;
     text-align: center;
   }
+
+  .projects--page .solutions--slider .owl-next, .projects--page .solutions--slider .owl-prev {
+    top: auto;
+    margin-top: 0;
+    bottom: 40px;
+  }
+
   .projects--page .solutions--slider .owl-carousel:before {display: none;}
-  .projects--page .solutions--slider .solutions--items {padding: 0;display: block;}
-  .projects--page .solutions--slider .solutions--items__link {width: 100%;}
-  .projects--page .solutions--slider .solutions--items__link:before {padding-top: 50%;}
+  .projects--page .solutions--slider .solutions--items {padding: 0;justify-content: center;}
+  .projects--page .solutions--slider .solutions--items__link {
+    width: 50%;
+
+    &:last-child {width: 100%;
+      &:before {
+        padding-top: 50%;
+      }
+    }
+  
+  }
+  .projects--page .solutions--slider .solutions--items__link:before {padding-top: 75%;}
+  .projects--page .solutions--slider .solutions--items__link .content {font-size: 12px;}
 }
 
