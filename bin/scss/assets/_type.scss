@@ -175,3 +175,10 @@ nav {
 a, button {transition: .15s ease-in-out;}
 
 * {user-select: none;}
+input, textarea {
+  -webkit-user-select: text;
+  -khtml-user-select: text;
+  -moz-user-select: text;
+  -ms-user-select: text;
+  user-select: text;
+}
