@@ -760,6 +760,10 @@ body {
           background-color: #fff;
           border-radius: 6px 0 0 6px;
           flex:1;cursor: pointer;
+          white-space: nowrap;
+          overflow: hidden;
+          text-overflow: ellipsis;
+          
         }
       }
 
