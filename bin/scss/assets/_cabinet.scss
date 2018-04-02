@@ -38,11 +38,18 @@
         h3 {
           font-size: 24px;
           margin: 0 0 20px;
+          line-height: 1;
+          height: 48px;
+          overflow: hidden;
         }
 
-        p {
-          margin: 0 0 20px;
+        .description {
+          line-height: 20px;
+          height: 80px;
+          overflow: hidden;
         }
+
+        p {margin: 0 0 20px;}
 
       }
 
