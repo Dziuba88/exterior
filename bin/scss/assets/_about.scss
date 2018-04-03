@@ -102,7 +102,39 @@
   .slider--partners {
     padding: 60px 0 10px;
 
-    .owl-thumbs .owl-thumb-item img {border-radius: 0 !important}
+    #sync1 {
+      margin-bottom: 40px;
+    }
+
+    #sync2 {
+      margin-bottom: 40px;
+    }
+
+    #sync2 img {
+      display: block;
+      width: 100%;
+    }
+    #sync2 .owl-stage {
+      display: flex;
+      align-items: center;
+
+      .item {
+        padding: 0 25px;
+        cursor: pointer;
+      }
+
+      .owl-item {
+        opacity: 0.5;
+
+        &.current {
+          opacity: 1;
+        }
+      }
+
+
+    }
+
+
 
     h2 {
       text-align: center;
@@ -137,6 +169,38 @@
     padding: 60px 0 10px;
     background-color: #f2f3f5;
 
+    #cl1 {
+      margin-bottom: 40px;
+    }
+
+    #cl2 {
+      margin-bottom: 40px;
+    }
+
+    #cl2 img {
+      display: block;
+      width: 100%;
+      border-radius: 8px;
+    }
+
+    #cl2 .owl-stage {
+      display: flex;
+      align-items: center;
+
+      .item {
+        padding: 0 25px;
+        cursor: pointer;
+      }
+
+      .owl-item {
+        opacity: 0.5;
+
+        &.current {
+          opacity: 1;
+        }
+      }
+    }
+    
     h2 {
       text-align: center;
       margin: 0;
@@ -279,4 +343,6 @@
   .about--page .slider--partners .partner--info, .about--page .slider--clients .client--info {padding: 15px 20px;font-size: 14px;line-height: 1.2;}
   .about--page .slider--clients .client--info p small {font-size: 11px;}
   .about--page .musthave {font-size: 16px;line-height: 24px;}
+
+  #sync2 {display: none;}
 }
