@@ -1022,7 +1022,11 @@ body {
             line-height: 20px;
             color: #050d33;
             text-align: center;
-
+            dt, dd {
+              white-space: nowrap;
+              overflow: hidden;
+              text-overflow: ellipsis;
+            }
             dt {display: none;}
             dd {
               display: block;
