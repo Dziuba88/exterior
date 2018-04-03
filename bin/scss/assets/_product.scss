@@ -429,6 +429,14 @@
   }
 }
 
+.product--page .item__icons {
+  &:after {
+    content: '';
+    display: block;
+    clear: both;
+  }
+}
+
 @include mediumDown {
   .product--page__sidebar {display: none;}
   .product--page__main {width: 100%;}

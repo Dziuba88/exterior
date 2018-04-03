@@ -55,7 +55,7 @@ $(document).ready(function() {
         closeMarkup: '<button title="%title%" class="mfp-close"><svg><use xlink:href="#close"></use></svg></button>',
         type: 'inline',
         callbacks: {open: function() {
-          $('html, body').css('overflow', 'hidden');
+          //$('html, body').css('overflow', 'hidden');
         }}
       });
   }

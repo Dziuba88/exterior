@@ -8,24 +8,35 @@
             span Меню
           ul.navbar--nav
             li
-              svg: use(xlink:href="#nav")
+              //svg: use(xlink:href="#nav")
               button(data-toggle="navbar")
             li.dropdown
-              a(data-toggle="dropdown") Каталог
+              a(data-toggle="dropdown")
+                svg: use(xlink:href="#nav")
+                span Каталог
               .dropdown--menu
                 include categories-navbar
                 a.new--products
                   svg: use(xlink:href="#certificate")
                   span Новые товары
-
-
-
-            li: a(href="") Проекты
-            li: a(href="") Сервис
-            li: a(href="") Скачать
-            li: a(href="") Новости
-            li: a(href="") О компании
-            li: a(href="") Контакты
+            li: a(href="")
+                svg: use(xlink:href="#nav")
+                span Проекты
+            li: a(href="")
+                svg: use(xlink:href="#nav")
+                span Сервис
+            li: a(href="")
+                svg: use(xlink:href="#nav")
+                span Скачать
+            li: a(href="")
+                svg: use(xlink:href="#nav")
+                span Новости
+            li: a(href="")
+                svg: use(xlink:href="#nav")
+                span О компании
+            li: a(href="")
+                svg: use(xlink:href="#nav")
+                span Контакты
         .navbar--right
           a.asign(href="") Выход 
           a.search(data-toggle="search")

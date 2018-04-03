@@ -85,8 +85,9 @@ body {
     }
     .system--item {
       height: 100%;
-      display: flex;
-      align-items: center;
+      //display: flex;
+      //align-items: center;
+      padding-top: 30px;padding-bottom: 30px;
       min-height: 300px;
       position: relative;
 
@@ -1337,7 +1338,21 @@ body {
         th {
           color: #fff;
           padding: 10px 20px;
-          &:first-child {text-align: left;}
+          text-align: right;
+          
+          &:first-child {
+            text-align: left; 
+
+            &.empty {
+              padding: 0;
+            }
+            //padding: 0;
+            /*.btn {
+              width: auto;
+              margin: 10px 20px;
+              display: block;
+            }*/
+          }
 
           .btn--submit {
             display: inline-block;
